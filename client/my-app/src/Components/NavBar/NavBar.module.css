@@ -1,0 +1,41 @@
+.container {
+}
+.navBar {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.linkOff,
+.link {
+  text-decoration: none;
+  padding: 1vh 2.5vh;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.link {
+  /* color: #f9004d; */
+}
+
+.linkOff:hover,
+.link:hover {
+  color: #f9004d;
+  transition: 0.4s;
+}
+
+.logo {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.spanLogo {
+  color: #f9004d;
+}

@@ -1,13 +1,13 @@
 .container {
-  background-color: red;
   position: relative;
 }
 
 nav.sticky {
   /* padding: 40px 100px; */
-  background: white;
+  background: rgba(255, 255, 255, 0.839);
+  backdrop-filter: blur(3px);
   width: 100%;
-  padding-top: 25px;
+  padding-top: 5px;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,10 +15,9 @@ nav.sticky {
 nav.sticky .link,
 nav.sticky .logo {
   color: black;
+  font-weight: bold;
 }
 
-nav.sticky .navBar {
-}
 .navBar {
   width: 100%;
   display: flex;
@@ -30,10 +29,34 @@ nav.sticky .navBar {
   z-index: 99999;
   transition: 0.6s;
 }
+
+.navBar ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.navBar ul li {
+  background: none;
+  position: relative;
+  list-style: none;
+}
+.navBar ul li a {
+  background: none;
+  position: relative;
+  margin: 0 1.5vh;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500px;
+}
+
 .menu {
   margin-left: 70vh;
   position: relative;
   background: none;
+  display: flex;
 }
 
 .link {
@@ -44,20 +67,26 @@ nav.sticky .navBar {
   color: white;
   font-weight: bold;
   text-transform: capitalize;
+  position: relative;
+  /* width: 10vw; */
 }
-
-.linkOff {
+.linkActive {
+  background: none;
+  position: relative;
   text-decoration: none;
   padding: 1vh 20px;
+  color: #f9004d;
   font-weight: bold;
   text-transform: capitalize;
-  color: #f9004d;
+  position: relative;
+  pointer-events: none;
+  /* opacity: 0.6; */
 }
 
-.linkOff:hover,
 .link:hover {
   color: #f9004d;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .logo {
@@ -69,6 +98,32 @@ nav.sticky .navBar {
   background: none;
 }
 
+.linkActive::after {
+  content: "";
+  height: 3px;
+  background: #f9004d;
+  left: 0;
+  bottom: 1px;
+  width: 0;
+  margin-left: 25%;
+  position: absolute;
+}
+
+.linkActive::after {
+  -webkit-animation: ease;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes run {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
 .spanLogo {
   color: #f9004d;
   background: none;
@@ -78,9 +133,6 @@ nav.sticky .navBar {
   .navBar {
     display: flex;
     flex-direction: column;
-  }
-  .linkOff,
-  .link {
   }
 }
 @media screen and (max-width: 650px) {

@@ -9,25 +9,21 @@ export default function Home() {
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
-    console.log("holis");
   };
 
   const about = useRef(null);
   const inicio = useRef(null);
-  const [viewAbout, setViewAbout] = useState(false);
 
   return (
     <body className={style.body}>
-      <div className={style.divNavbar}>
+      <div ref={inicio} className={style.divNavbar}>
         <NavBar
-          setViewAbout={setViewAbout}
-          viewAbout={viewAbout}
           scrollToSeccion={scrollToSeccion}
           about={about}
           inicio={inicio}
         />
       </div>
-      <div ref={inicio} className={style.contenedor}>
+      <div className={style.contenedor}>
         <div className={style.content}>
           <h4>Hola, mi nombre es</h4>
           <h1>Ramiro Ferradas</h1>
@@ -45,9 +41,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={viewAbout ? style.aboOn : style.aboOff}>
-        <About viewAbout={viewAbout} about={about} />
-      </div>
+      <About about={about} />
     </body>
   );
 }

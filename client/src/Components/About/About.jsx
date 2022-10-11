@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 export default function About({ about, viewAbout }) {
   const [viewButton, setViewButton] = useState(false);
-  useEffect(() => {}, [viewAbout]);
 
   setTimeout(() => {
     if (viewAbout) {

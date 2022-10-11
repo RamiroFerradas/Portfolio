@@ -1,23 +1,57 @@
+.container {
+  background-color: red;
+  position: relative;
+}
+
+nav.sticky {
+  /* padding: 40px 100px; */
+  background: white;
+  width: 100%;
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav.sticky .link,
+nav.sticky .logo {
+  color: black;
+}
+
+nav.sticky .navBar {
+}
 .navBar {
+  width: 100%;
   display: flex;
   justify-content: center;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 45px;
   padding-left: 8%;
   padding-right: 8%;
+  z-index: 99999;
+  transition: 0.6s;
 }
-.linkOff,
+.menu {
+  margin-left: 70vh;
+  position: relative;
+  background: none;
+}
+
 .link {
+  background: none;
+  position: relative;
   text-decoration: none;
   padding: 1vh 20px;
   color: white;
   font-weight: bold;
   text-transform: capitalize;
 }
-.link {
-  /* color: #f9004d; */
+
+.linkOff {
+  text-decoration: none;
+  padding: 1vh 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #f9004d;
 }
 
 .linkOff:hover,
@@ -32,10 +66,12 @@
   letter-spacing: 1px;
   cursor: pointer;
   font-weight: 600;
+  background: none;
 }
 
 .spanLogo {
   color: #f9004d;
+  background: none;
 }
 
 @media screen and (max-width: 1100px) {

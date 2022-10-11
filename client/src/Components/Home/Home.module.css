@@ -7,7 +7,7 @@
   background-position: center;
 }
 .contenedor {
-  margin-bottom: 84vh;
+  margin-bottom: 50%;
 }
 .content {
   position: absolute;
@@ -27,6 +27,9 @@
   50% {
     left: 15%;
   }
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .content h1 {
@@ -76,4 +79,11 @@
   padding: 100px;
   background-color: #191919;
   /* position: absolute; */
+}
+
+.aboOff {
+  display: none;
+}
+
+.divNavbar {
 }

@@ -153,3 +153,11 @@ nav.sticky .logo {
     justify-content: center;
   }
 }
+
+.hiden {
+  opacity: 0;
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+}

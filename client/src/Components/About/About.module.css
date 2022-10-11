@@ -144,6 +144,16 @@
   background-color: #191919;
 }
 
+.animationOff {
+  color: white;
+  font-size: 75px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  position: relative;
+  left: 0vw;
+}
 @keyframes runTitle {
   0% {
     left: -50vw;

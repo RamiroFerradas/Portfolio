@@ -9,9 +9,6 @@ import useObserver from "../../Hooks/useObserver";
 export default function About({ viewAbout, about }) {
   const [viewButton, setViewButton] = useState(false);
 
-  const root = useRef(null);
-  const target = useRef(null);
-
   const [observer, setElements, entries] = useObserver({
     threshold: 0.25,
     root: null,
@@ -24,6 +21,7 @@ export default function About({ viewAbout, about }) {
   console.log(entries, "observer");
 
   const intersecting = entries[0]?.isIntersecting;
+  // console.log(intersecting);
 
   setTimeout(() => {
     if (viewAbout) {
@@ -33,7 +31,7 @@ export default function About({ viewAbout, about }) {
     }
   }, 1000);
   return (
-    <div className={style.about} ref={target}>
+    <div className={style.about} ref={about}>
       <div className={style.main}>
         {intersecting && (
           <div className={style.image_wrapper}>

@@ -11,28 +11,28 @@
   margin-top: 50px;
   background: none;
 }
-.servicios_lista div {
+.servicios_lista i,
+.servicios_lista h2,
+.servicios_lista p {
+  background: none;
 }
-.section_servicios {
+.container h1 {
+  color: #fff;
+}
+.servicios_lista div {
   background: #262626;
   padding: 40px;
   font-size: 13px;
   font-weight: 300;
-  border-right: 10px;
-  transition: background 0.5s, transform;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
   /* background: none; */
   color: #fff;
-}
-.servicios_lista div:hover {
-  background: #ff004f;
-
-  transform: translate();
 }
 
 .servicios_lista div i {
   font-size: 50px;
   margin-bottom: 30px;
-  /* background: none; */
   color: #fff;
 }
 .servicios_lista div h2 {
@@ -40,7 +40,6 @@
   font-weight: 500;
   margin-bottom: 15px;
   color: #fff;
-  /* background: none; */
 }
 .servicios_lista div a {
   text-decoration: none;
@@ -48,4 +47,8 @@
   font-size: 12px;
   margin-top: 20px;
   display: inline-block;
+}
+.servicios_lista div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
 }

@@ -5,11 +5,11 @@ import style from "./Home.module.css";
 import Servicios from "../Servicios/Servicios";
 
 export default function Home() {
-  const about = useRef(null);
-  const servicios = useRef(null);
-  const inicio = useRef(null);
-  const habilidades = useRef(null);
-  const contacto = useRef(null);
+  const about = useRef();
+  const servicios = useRef();
+  const inicio = useRef();
+  const habilidades = useRef();
+  const contacto = useRef();
 
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({

@@ -11,13 +11,6 @@ export default function Home() {
   const habilidades = useRef(null);
   const contacto = useRef(null);
 
-  const [ref, setref] = useState();
-
-  useEffect(() => {
-    inicio ? setref(inicio) : setref(null);
-  }, [inicio]);
-  console.log(ref, "ref");
-
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,

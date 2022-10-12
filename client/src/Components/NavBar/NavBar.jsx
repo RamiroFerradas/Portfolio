@@ -24,7 +24,7 @@ export default function NavBar({
     { id: 4, text: "Trabajos", ref: trabajos },
     { id: 5, text: "Contacto", ref: contacto },
   ];
-  const [activeId, setActiveId] = useState();
+  const [activeId, setActiveId] = useState(1);
 
   return (
     <header className={style.container}>

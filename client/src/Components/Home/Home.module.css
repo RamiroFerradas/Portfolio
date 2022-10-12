@@ -2,9 +2,10 @@
   background-color: black;
   height: 100vh;
   width: 100%;
-  background-image: url("../../Assets/img/fondito.jpg");
+  background-image: url("../../Assets/img/fondito.jpg") !important;
   background-size: cover;
   background-position: center;
+  z-index: 99999;
 }
 .contenedor {
   /* margin-bottom: 50%; */

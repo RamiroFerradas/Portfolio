@@ -1,0 +1,80 @@
+.portfolio {
+  padding: 50px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+.trabajos_lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  background: none;
+  -webkit-animation: fadeInFromNone 1.5s ease-out;
+  -moz-animation: fadeInFromNone 1.5s ease-out;
+  -o-animation: fadeInFromNone 1.5s ease-out;
+  animation: fadeInFromNone 1.5s ease-out;
+  padding-left: 5vh;
+  padding-right: 5vh;
+}
+
+.imgTrabajos {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.trabajo {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.layer p,
+.layer i {
+  background: none;
+}
+.layer {
+  /* background: none; */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  font-size: 14px;
+  text-align: center;
+  height: 0%;
+  transition: height 0.3s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  background: none;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  text-align: center;
+}
+.trabajo:hover img {
+  transform: scale(1.1);
+}
+.trabajo:hover .layer {
+  height: 100%;
+}

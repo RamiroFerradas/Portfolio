@@ -4,7 +4,6 @@ import NavBar from "../NavBar/NavBar";
 import style from "./Home.module.css";
 import Servicios from "../Servicios/Servicios";
 import Trabajos from "../Trabajos/Trabajos";
-// import fondito from "../../Assets/img/byn/fondito.jpg";
 
 export default function Home() {
   const about = useRef();

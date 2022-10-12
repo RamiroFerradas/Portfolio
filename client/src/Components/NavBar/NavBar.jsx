@@ -29,7 +29,12 @@ export default function NavBar({
   return (
     <header className={style.container}>
       <nav className={style.navBar}>
-        <h2 className={style.logo}>
+        <h2
+          className={style.logo}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           Portfo<span className={style.spanLogo}>lio</span>
         </h2>
         <div className={style.menu}>

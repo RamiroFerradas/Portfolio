@@ -18,8 +18,8 @@ export default function Home() {
     });
   };
   return (
-    <body className={style.body}>
-      <div className={style.divNavbar} ref={inicio}>
+    <div className={style.body}>
+      <div className={style.divNavbar}>
         <NavBar
           scrollToSeccion={scrollToSeccion}
           about={about}
@@ -30,7 +30,7 @@ export default function Home() {
         />
       </div>
       <div>
-        <div className={style.contenedor}>
+        <div className={style.contenedor} ref={inicio}>
           <div className={style.content}>
             <h4>Hola, mi nombre es</h4>
             <h1>Ramiro Ferradas</h1>
@@ -51,6 +51,6 @@ export default function Home() {
       </div>
       <About about={about} />
       <Servicios servicios={servicios} />
-    </body>
+    </div>
   );
 }

@@ -3,6 +3,9 @@ import { useRef, useState, useEffect } from "react";
 export default function useObserver(options) {
   const [elements, setElements] = useState([]);
   const [entries, setEntries] = useState([]);
+
+  // console.log(elements, "elements");
+  // console.log(entries, "entries");
   const observer = useRef(
     new IntersectionObserver(function (observedEntries) {
       console.log(observedEntries, "acaa");

@@ -7,7 +7,8 @@
   background-position: center;
 }
 .contenedor {
-  margin-bottom: 50%;
+  /* margin-bottom: 50%; */
+  height: 100vh;
 }
 .content {
   position: absolute;

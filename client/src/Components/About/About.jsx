@@ -12,20 +12,18 @@ export default function About({ viewAbout, about }) {
   const root = useRef(null);
   const target = useRef(null);
 
-  // const [observer, setElements, entries] = useObserver({
-  //   threshold: 0.25,
-  //   root: null,
-  // });
+  const [observer, setElements, entries] = useObserver({
+    threshold: 0.25,
+    root: null,
+  });
 
-  const Component = () => {
-    const intersecting = useIntersection(about, {
-      root,
-      rootMargin: "100px",
-    });
-    return { intersecting };
-  };
-  const { intersecting } = Component();
-  // console.log(intersecting);
+  useEffect(() => {
+    const res = document.querySelectorAll(`.${style.about}`);
+    setElements(res);
+  }, [about, setElements]);
+  console.log(entries, "observer");
+
+  const intersecting = entries[0]?.isIntersecting;
 
   setTimeout(() => {
     if (viewAbout) {
@@ -35,14 +33,11 @@ export default function About({ viewAbout, about }) {
     }
   }, 1000);
   return (
-    <div className={style.about} ref={about}>
-      <div
-        // ref={target}
-        className={style.main}
-      >
+    <div className={style.about} ref={target}>
+      <div className={style.main}>
         {intersecting && (
           <div className={style.image_wrapper}>
-            <img src={yoImg} alt="ramiro" className={style.image1} />
+            <img src={yoImg} alt="ramiro" className="imagen" />
             <img src={yoImg} alt="ramiro" className={style.image2} />
             <img src={yoImg} alt="ramiro" className={style.image3} />
             <img src={yoImg} alt="ramiro" className={style.image4} />

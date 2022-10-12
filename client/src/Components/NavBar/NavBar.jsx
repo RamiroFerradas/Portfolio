@@ -7,7 +7,7 @@ export default function NavBar({
   about,
   inicio,
   servicios,
-  habilidades,
+  trabajos,
   contacto,
 }) {
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function NavBar({
     { id: 1, text: "Inicio", ref: inicio },
     { id: 2, text: "Sobre mi", ref: about },
     { id: 3, text: "Servicios", ref: servicios },
-    { id: 4, text: "Habilidades", ref: habilidades },
+    { id: 4, text: "Trabajos", ref: trabajos },
     { id: 5, text: "Contacto", ref: contacto },
   ];
   const [activeId, setActiveId] = useState();

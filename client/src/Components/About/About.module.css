@@ -209,12 +209,86 @@
   font-weight: bold;
   padding: 13px 30px;
   border-radius: 30px;
-  transition: 0.4s;
+  transition: 6s;
   right: 40vh;
   margin-left: 10vw;
   margin-right: -14vw;
   position: absolute;
   z-index: 1;
+
+  -webkit-animation: fadeInFromNone 6.5s ease-out;
+  -moz-animation: fadeInFromNone 6.5s ease-out;
+  -o-animation: fadeInFromNone 6.5s ease-out;
+  animation: fadeInFromNone 6.5s ease-out;
+  /* animation-delay: 20s; */
+}
+
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
 .buttonCVOff {
   display: none;

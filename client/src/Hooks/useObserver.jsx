@@ -8,7 +8,6 @@ export default function useObserver(options) {
   // console.log(entries, "entries");
   const observer = useRef(
     new IntersectionObserver(function (observedEntries) {
-      console.log(observedEntries, "acaa");
       setEntries(observedEntries);
     }, options)
   );

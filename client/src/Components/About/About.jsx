@@ -18,30 +18,28 @@ export default function About({ viewAbout, about }) {
     const res = document.querySelectorAll(`.${style.about}`);
     setElements(res);
   }, [about, setElements]);
-  console.log(entries, "observer");
 
   const intersecting = entries[0]?.isIntersecting;
-  // console.log(intersecting);
-
+  useEffect(() => {
+    !intersecting && setViewButton(false);
+  }, [intersecting]);
   setTimeout(() => {
-    if (viewAbout) {
+    if (intersecting) {
       setViewButton(true);
-    } else {
-      setViewButton(false);
     }
   }, 1000);
+
   return (
     <div className={style.about} ref={about}>
-      <div className={style.main}>
-        {intersecting && (
+      {intersecting && (
+        <div className={style.main}>
           <div className={style.image_wrapper}>
             <img src={yoImg} alt="ramiro" className="imagen" />
             <img src={yoImg} alt="ramiro" className={style.image2} />
             <img src={yoImg} alt="ramiro" className={style.image3} />
             <img src={yoImg} alt="ramiro" className={style.image4} />
           </div>
-        )}
-        {intersecting && (
+
           <div className={style.aboutText}>
             <h2>Sobre mi</h2>
 
@@ -57,18 +55,19 @@ export default function About({ viewAbout, about }) {
               independientemente de su dispositivo.
             </p>
           </div>
-        )}
-        <button className={viewButton ? style.buttonCV : style.buttonCVOff}>
-          <a
-            href={pdf}
-            target="_blank"
-            rel="noopener noreferrer"
-            download="CV-Ramiro_Ferradas.pdf"
-          >
-            Descargar CV
-          </a>
-        </button>
-      </div>
+
+          <button className={style.buttonCV}>
+            <a
+              href={pdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="CV-Ramiro_Ferradas.pdf"
+            >
+              Descargar CV
+            </a>
+          </button>
+        </div>
+      )}
       {/* </AnimationOnScroll> */}
     </div>
   );

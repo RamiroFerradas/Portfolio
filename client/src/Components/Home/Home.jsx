@@ -3,12 +3,14 @@ import About from "../About/About";
 import NavBar from "../NavBar/NavBar";
 import style from "./Home.module.css";
 import Servicios from "../Servicios/Servicios";
+import Trabajos from "../Trabajos/Trabajos";
+// import fondito from "../../Assets/img/byn/fondito.jpg";
 
 export default function Home() {
   const about = useRef();
   const servicios = useRef();
   const inicio = useRef();
-  const habilidades = useRef();
+  const trabajos = useRef();
   const contacto = useRef();
 
   const scrollToSeccion = (elementRef) => {
@@ -25,7 +27,7 @@ export default function Home() {
           about={about}
           inicio={inicio}
           servicios={servicios}
-          habilidades={habilidades}
+          trabajos={trabajos}
           contacto={contacto}
         />
       </div>
@@ -35,7 +37,7 @@ export default function Home() {
             <h4>Hola, mi nombre es</h4>
             <h1>Ramiro Ferradas</h1>
             <h3>Soy desarrollador web.</h3>
-            <div className={style.form_email}>
+            {/* <div className={style.form_email}>
               <form action="">
                 <input
                   type="email"
@@ -45,12 +47,13 @@ export default function Home() {
                 />
                 <input type="submit" name="submit" value="Empezemos" />
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <About about={about} />
       <Servicios servicios={servicios} />
+      <Trabajos trabajos={trabajos} />
     </div>
   );
 }

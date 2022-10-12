@@ -33,6 +33,7 @@ export default function NavBar({
           className={style.logo}
           onClick={() => {
             window.scrollTo(0, 0);
+            setActiveId(1);
           }}
         >
           Portfo<span className={style.spanLogo}>lio</span>

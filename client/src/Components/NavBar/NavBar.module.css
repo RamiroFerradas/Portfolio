@@ -2,7 +2,7 @@
   position: relative;
 }
 
-nav.sticky {
+.navBar.sticky {
   /* padding: 40px 100px; */
   background: rgba(255, 255, 255, 0.839);
   backdrop-filter: blur(3px);
@@ -12,8 +12,8 @@ nav.sticky {
   top: 0;
   left: 0;
 }
-nav.sticky .link,
-nav.sticky .logo {
+.navBar.sticky .link,
+.navBar.sticky .logo {
   color: black;
   font-weight: bold;
 }

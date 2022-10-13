@@ -121,18 +121,18 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
-  font-size: 14px;
+  font-size: 1.4vh;
   text-align: center;
   height: 0%;
   transition: height 0.3s;
 }
 .layer h3 {
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   background: none;
 }
 .layer a {
-  margin-top: 20px;
+  margin-top: 2vh;
   color: #ff004f;
   text-decoration: none;
   font-size: 18px;
@@ -143,8 +143,10 @@
   height: 60px;
   text-align: center;
 }
+
 .trabajo:hover img {
   transform: scale(1.1);
+  border-radius: 10px;
 }
 .trabajo:hover .layer {
   height: 100%;

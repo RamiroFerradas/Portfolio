@@ -1,12 +1,13 @@
 .contact {
   background-color: black;
   color: #fff;
-  height: 80vh;
+  max-height: 100vh;
   /* padding: 30vh 0; */
   background-image: url("../../Assets/img/fondito.jpg") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  overflow: auto;
 }
 .row {
   display: grid;
@@ -64,9 +65,31 @@ form textarea {
   display: inline-block;
   background: #ff004f;
 }
+.btn.btn2:disabled {
+  display: inline-block;
+  background: transparent;
+  cursor: not-allowed;
+}
 form .btn2 {
   padding: 14px 60px;
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+.send {
+  color: #61b752;
+  margin-top: 10px;
+  text-align: center;
+  margin-left: 20px;
+}
+.sendError {
+  color: #fc1717;
+  margin-top: 10px;
+  text-align: center;
+  margin-left: 20px;
+}
+textarea {
+  overflow: scroll;
+  resize: none;
 }

@@ -15,7 +15,6 @@ export default function Trabajos({ trabajos }) {
     const res = document.querySelectorAll(`.${style.portfolio}`);
     setElements(res);
   }, [setElements]);
-  console.log(entries[0]?.isIntersecting);
   const intersecting = entries[0]?.isIntersecting;
 
   return (
@@ -44,7 +43,7 @@ export default function Trabajos({ trabajos }) {
                   href="https://programax.vercel.app/"
                   rel="noreferrer"
                 >
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
             </div>
@@ -67,7 +66,7 @@ export default function Trabajos({ trabajos }) {
                   href="https://countriesapp-phi.vercel.app/"
                   rel="noreferrer"
                 >
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
             </div>
@@ -85,7 +84,7 @@ export default function Trabajos({ trabajos }) {
                   href="https://pi-pokemon-2.vercel.app/"
                   rel="noreferrer"
                 >
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
             </div>

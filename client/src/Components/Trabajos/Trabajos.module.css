@@ -148,4 +148,5 @@
 }
 .trabajo:hover .layer {
   height: 100%;
+  border-radius: 10px;
 }

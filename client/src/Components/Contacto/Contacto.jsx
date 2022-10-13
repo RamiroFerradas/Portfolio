@@ -1,13 +1,14 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import style from "./Contacto.module.css";
 import emailjs from "@emailjs/browser";
 
 export default function Contacto({ contacto }) {
   const form = useRef();
 
+  const [mensaje, setMensaje] = useState({ status: false, error: true });
   const sendEmail = (e) => {
-    console.log(form.current);
     e.preventDefault();
+
     emailjs
       .sendForm(
         "service_ncuo59s",
@@ -17,15 +18,15 @@ export default function Contacto({ contacto }) {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result);
+          setMensaje({ ...mensaje, status: true, error: false });
         },
         (error) => {
-          console.log(error.text);
+          setMensaje({ ...mensaje, status: true, error: true });
+          console.log(error);
         }
       );
   };
-
-  console.log(form.current);
 
   return (
     <div className={style.contact} ref={contacto}>
@@ -75,10 +76,31 @@ export default function Contacto({ contacto }) {
                 placeholder="Tu Email"
                 required
               />
-              <textarea name="user_message" id="" rows="6"></textarea>
-              <button className={`${style.btn} ${style.btn2}`} type="submit">
+              <textarea
+                name="user_message"
+                id=""
+                rows="6"
+                cols="30"
+                placeholder="Tu mensaje..."
+                required
+              ></textarea>
+              <button
+                disabled={mensaje.status}
+                className={`${style.btn} ${style.btn2}`}
+                type="submit"
+              >
                 Enviar
               </button>
+              {mensaje.status && !mensaje.error && (
+                <span id="msg" className={style.send}>
+                  Su mensaje ha sido enviado con exito !
+                </span>
+              )}
+              {mensaje.status && mensaje.error && (
+                <span id="msg" className={style.sendError}>
+                  Su mensaje no se pudo enviar, vuelve a intentar por favor.
+                </span>
+              )}
             </form>
           </div>
         </div>

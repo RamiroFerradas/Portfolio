@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import style from "./Contacto.module.css";
+import emailjs from "@emailjs/browser";
 
 export default function Contacto({ contacto }) {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    console.log(form.current);
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_ncuo59s",
+        "template_4m0h4gc",
+        form.current,
+        "7qmg76jqvEUupvvNI"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  console.log(form.current);
+
   return (
     <div className={style.contact} ref={contacto}>
       <div className={style.container}>
@@ -32,15 +57,25 @@ export default function Contacto({ contacto }) {
             </div>
           </div>
           <div>
-            <form action="" className={style.contacto_derecha}>
-              <input type="text" name="name" placeholder="Tu Nombre" required />
+            <form
+              action=""
+              className={style.contacto_derecha}
+              onSubmit={sendEmail}
+              ref={form}
+            >
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Tu Nombre"
+                required
+              />
               <input
                 type="email"
                 name="email"
                 placeholder="Tu Email"
                 required
               />
-              <textarea name="Mensaje" id="" rows="6">
+              <textarea name="user_message" id="" rows="6">
                 Tu Mensaje
               </textarea>
               <button className={`${style.btn} ${style.btn2}`} type="submit">

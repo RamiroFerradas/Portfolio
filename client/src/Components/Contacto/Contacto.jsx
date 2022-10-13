@@ -60,7 +60,7 @@ export default function Contacto({ contacto }) {
             <form
               action=""
               className={style.contacto_derecha}
-              onSubmit={sendEmail}
+              // onSubmit={sendEmail}
               ref={form}
             >
               <input

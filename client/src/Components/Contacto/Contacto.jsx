@@ -1,29 +1,29 @@
 import React, { useRef } from "react";
 import style from "./Contacto.module.css";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
 export default function Contacto({ contacto }) {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    console.log(form.current);
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_ncuo59s",
-        "template_4m0h4gc",
-        form.current,
-        "7qmg76jqvEUupvvNI"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  // const sendEmail = (e) => {
+  //   console.log(form.current);
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_ncuo59s",
+  //       "template_4m0h4gc",
+  //       form.current,
+  //       "7qmg76jqvEUupvvNI"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   console.log(form.current);
 

@@ -7,22 +7,15 @@ import { Provider } from "react-redux";
 import store from "./Redux/Store/store";
 import axios from "axios";
 // import dotenv from "dotenv";
-import { Auth0Provider } from "@auth0/auth0-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Auth0Provider
-    domain="dev-mp-bx1eb.us.auth0.com"
-    clientId="Z0yFy4SxEZTYErE6Lji63C3bdWsmtWGK"
-    redirectUri={window.location.origin}
-  >
-    <BrowserRouter>
-      {/* <Provider store={store}> */}
-      <App />
-      {/* </Provider> */}
-    </BrowserRouter>
-  </Auth0Provider>
+  <BrowserRouter>
+    {/* <Provider store={store}> */}
+    <App />
+    {/* </Provider> */}
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

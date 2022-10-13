@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import style from "./NavBar.module.css";
-import { useIntersection } from "use-intersection";
 
 export default function NavBar({
   scrollToSeccion,

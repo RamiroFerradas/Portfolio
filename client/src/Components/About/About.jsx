@@ -3,7 +3,6 @@ import style from "./About.module.css";
 import yoImg from "../../Assets/img/byn/ramiro.jpg";
 import pdf from "../../Assets/cv/cv.pdf";
 import { useEffect } from "react";
-import { useIntersection } from "use-intersection";
 import useObserver from "../../Hooks/useObserver";
 
 export default function About({ viewAbout, about }) {

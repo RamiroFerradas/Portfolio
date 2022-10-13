@@ -5,27 +5,51 @@ import emailjs from "@emailjs/browser";
 export default function Contacto({ contacto }) {
   const form = useRef();
 
-  const [mensaje, setMensaje] = useState({ status: false, error: true });
+  const [mensaje, setMensaje] = useState({
+    status: false,
+    error: true,
+    text: "",
+  });
+
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_ncuo59s",
-        "template_4m0h4gc",
-        form.current,
-        "7qmg76jqvEUupvvNI"
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          setMensaje({ ...mensaje, status: true, error: false });
-        },
-        (error) => {
-          setMensaje({ ...mensaje, status: true, error: true });
-          console.log(error);
-        }
-      );
+    if (/^\S+@\S+\.\S+$/.test(form.current[1].value)) {
+      emailjs
+        .sendForm(
+          "service_ncuo59s",
+          "template_4m0h4gc",
+          form.current,
+          "7qmg76jqvEUupvvNI"
+        )
+        .then(
+          (result) => {
+            console.log(result);
+            setMensaje({
+              ...mensaje,
+              status: true,
+              error: false,
+              text: "Su mensaje ha sido enviado con exito",
+            });
+          },
+          (error) => {
+            setMensaje({
+              ...mensaje,
+              status: false,
+              error: true,
+              mensaje:
+                "Su mensaje no se pudo enviar, vuelve a intentar por favor.",
+            });
+            console.log(error);
+          }
+        );
+    } else {
+      setMensaje({
+        ...mensaje,
+        status: false,
+        error: true,
+        text: "Escribe correctamente su direccionde mail",
+      });
+    }
   };
 
   return (
@@ -74,7 +98,7 @@ export default function Contacto({ contacto }) {
                 type="email"
                 name="user_email"
                 placeholder="Tu Email"
-                required
+                // required
               />
               <textarea
                 name="user_message"
@@ -91,14 +115,13 @@ export default function Contacto({ contacto }) {
               >
                 Enviar
               </button>
-              {mensaje.status && !mensaje.error && (
-                <span id="msg" className={style.send}>
-                  Su mensaje ha sido enviado con exito !
-                </span>
-              )}
-              {mensaje.status && mensaje.error && (
-                <span id="msg" className={style.sendError}>
-                  Su mensaje no se pudo enviar, vuelve a intentar por favor.
+
+              {mensaje && (
+                <span
+                  id="msg"
+                  className={mensaje.error ? style.sendError : style.send}
+                >
+                  {mensaje.text}
                 </span>
               )}
             </form>

@@ -15,10 +15,18 @@ export default function Contacto({ contacto }) {
               <i className="fas fa-phone-square-alt"></i> 3492528404
             </p>
             <div className={style.redes}>
-              <a href="https://github.com/RamiroFerradas">
+              <a
+                target="_blank"
+                href="https://github.com/RamiroFerradas"
+                rel="noreferrer"
+              >
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="https://www.linkedin.com/in/ramiro-ferradas/">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ramiro-ferradas/"
+                rel="noreferrer"
+              >
                 <i className="fab fa-github"></i>
               </a>
             </div>

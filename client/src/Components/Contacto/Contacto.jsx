@@ -53,11 +53,11 @@ export default function Contacto({ contacto }) {
   };
 
   return (
-    <div className={style.contact} ref={contacto}>
+    <div ref={contacto} className={style.contact}>
       <div className={style.container}>
         <div className={style.row}>
           <div className={style.contacto_izquierda}>
-            <h1 className={style.titulo}>Contactame</h1>
+            <h1 className={style.titulo}>Contáctame</h1>
             <p>
               <i className="fas fa-paper-plane"></i> ramiferra97@gmail.com
             </p>

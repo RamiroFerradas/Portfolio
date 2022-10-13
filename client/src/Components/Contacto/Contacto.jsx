@@ -71,13 +71,11 @@ export default function Contacto({ contacto }) {
               />
               <input
                 type="email"
-                name="email"
+                name="user_email"
                 placeholder="Tu Email"
                 required
               />
-              <textarea name="user_message" id="" rows="6">
-                Tu Mensaje
-              </textarea>
+              <textarea name="user_message" id="" rows="6"></textarea>
               <button className={`${style.btn} ${style.btn2}`} type="submit">
                 Enviar
               </button>

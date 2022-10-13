@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import style from "./NavBar.module.css";
+import { useLocalStorage } from "../../Hooks/useLocalStorage";
 
 export default function NavBar({
   scrollToSeccion,
@@ -23,7 +24,10 @@ export default function NavBar({
     { id: 4, text: "Trabajos", ref: trabajos },
     { id: 5, text: "Contacto", ref: contacto },
   ];
-  const [activeId, setActiveId] = useState(1);
+  // const [activeId, setActiveId] = useState(1);
+  const [activeIdCache, setActiveIdCache] = useLocalStorage({
+    id: ("id", "1"),
+  });
 
   return (
     <header className={style.container}>
@@ -32,7 +36,7 @@ export default function NavBar({
           className={style.logo}
           onClick={() => {
             window.scrollTo(0, 0);
-            setActiveId(1);
+            setActiveIdCache(1);
           }}
         >
           Portfo<span className={style.spanLogo}>lio</span>
@@ -43,9 +47,11 @@ export default function NavBar({
               return (
                 <li
                   key={e.id}
-                  className={activeId === e.id ? style.linkActive : style.link}
+                  className={
+                    activeIdCache === e.id ? style.linkActive : style.link
+                  }
                   onClick={() => {
-                    setActiveId(e.id);
+                    setActiveIdCache(e.id);
                     scrollToSeccion(e.ref);
                   }}
                 >

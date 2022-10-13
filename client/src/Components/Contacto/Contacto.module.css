@@ -1,0 +1,72 @@
+.contact {
+  background-color: black;
+  color: #fff;
+  height: 80vh;
+  /* padding: 30vh 0; */
+  background-image: url("../../Assets/img/fondito.jpg") !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.row {
+  display: grid;
+  grid-template-columns: 55% 75%;
+  justify-content: space-around;
+  padding-right: 40vh;
+  padding-left: 40vh;
+}
+.contacto_izquierda {
+  flex-basis: 35%;
+}
+.contacto_izquierda p {
+  flex-basis: 35%;
+}
+.contacto_izquierda p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.redes {
+  margin-top: 30px;
+}
+
+.redes a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+}
+.redes a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.contacto_derecha {
+  flex-basis: 60%;
+}
+.contacto_derecha form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}

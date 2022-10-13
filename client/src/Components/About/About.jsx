@@ -68,7 +68,6 @@ export default function About({ viewAbout, about }) {
           </button>
         </div>
       )}
-      {/* </AnimationOnScroll> */}
     </div>
   );
 }

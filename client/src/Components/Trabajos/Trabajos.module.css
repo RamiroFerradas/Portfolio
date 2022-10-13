@@ -1,8 +1,14 @@
 .portfolio {
-  padding: 50px 0;
+  padding: 10vh;
   color: white;
   background-color: black;
   text-align: center;
+
+  height: 100vh;
+  background-image: url("../../Assets/img/fondito.jpg") !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 .trabajos_lista {
   display: grid;
@@ -14,10 +20,75 @@
   -moz-animation: fadeInFromNone 1.5s ease-out;
   -o-animation: fadeInFromNone 1.5s ease-out;
   animation: fadeInFromNone 1.5s ease-out;
-  padding-left: 5vh;
-  padding-right: 5vh;
 }
 
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
 .imgTrabajos {
   object-fit: contain;
   width: 100%;

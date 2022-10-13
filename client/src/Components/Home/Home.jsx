@@ -4,6 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import style from "./Home.module.css";
 import Servicios from "../Servicios/Servicios";
 import Trabajos from "../Trabajos/Trabajos";
+import Contacto from "../Contacto/Contacto";
 
 export default function Home() {
   const about = useRef();
@@ -53,6 +54,7 @@ export default function Home() {
       <About about={about} />
       <Servicios servicios={servicios} />
       <Trabajos trabajos={trabajos} />
+      <Contacto contacto={contacto} />
     </div>
   );
 }

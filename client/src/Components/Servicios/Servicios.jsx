@@ -13,7 +13,6 @@ export default function Servicios({ servicios }) {
     setElements(res);
   }, [setElements]);
 
-  console.log(entries[0]?.isIntersecting);
   // useEffect(() => {
   //   if (entries[0]?.isIntersecting)
   //     entries?.target.classList.add(style.servicios_lista);

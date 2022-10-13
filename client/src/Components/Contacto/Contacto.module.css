@@ -64,6 +64,7 @@ form textarea {
 .btn.btn2 {
   display: inline-block;
   background: #ff004f;
+  margin-bottom: 30px;
 }
 .btn.btn2:disabled {
   display: inline-block;

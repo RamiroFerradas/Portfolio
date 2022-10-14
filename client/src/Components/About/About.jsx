@@ -33,7 +33,7 @@ export default function About({ viewAbout, about }) {
     <div className={style.about} ref={about}>
       <div className={style.main}>
         <div className={style.image_wrapper}>
-          <img src={yoImg} alt="ramiro" className="imagen" />
+          <img src={yoImg} alt="ramiro" className={style.image1} />
           <img src={yoImg} alt="ramiro" className={style.image2} />
           <img src={yoImg} alt="ramiro" className={style.image3} />
           <img src={yoImg} alt="ramiro" className={style.image4} />

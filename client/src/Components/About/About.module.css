@@ -7,12 +7,7 @@
   background-attachment: fixed;
   background-position: center;
   padding-top: 15vh;
-  /* top: 100vh; */
   position: relative;
-  /* position: absolute; */
-  /* float: left; */
-  /* left: 200px; */
-  /* margin-top: 100px; */
 }
 
 .main img {
@@ -70,9 +65,6 @@
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
 }
-/* .image_wrapper:hover .image3 {
-  transform: translate(0, 0);
-} */
 
 .image4 {
   -webkit-clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
@@ -88,9 +80,6 @@
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
 }
-/* .image_wrapper:hover .image4 {
-  transform: translate(0, 0);
-} */
 
 @keyframes imageRun {
   0% {
@@ -111,6 +100,7 @@
   width: 55vh;
   background-color: #191919;
   margin-left: 50vh;
+  overflow: hidden;
 }
 .main {
   width: 57vw;
@@ -189,6 +179,7 @@
   -webkit-animation-duration: 3s;
   background-color: #191919;
 }
+
 .spanLogo {
   color: #f9004d;
   background-color: #191919;
@@ -326,4 +317,65 @@
   text-decoration: none;
   color: white;
   /* background: none; */
+}
+@media screen and (max-width: 750px) {
+  .aboutText h2 {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  .image_wrapper {
+    /* flex-basis: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main img {
+    left: initial;
+    border-radius: 30px;
+    width: 40vh;
+  }
+  .aboutText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: none;
+    width: auto;
+    width: auto;
+    background-color: #191919;
+    margin-top: 10vh;
+    margin-left: 0vh;
+  }
+  .aboutText p {
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    font-size: 13px;
+  }
+  .aboutText h5 {
+    font-size: 15px;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+  }
+
+  .buttonCV {
+    border: 2px solid transparent;
+    font-weight: bold;
+
+    border-radius: 30px;
+
+    right: auto;
+    margin: auto;
+    position: absolute;
+    bottom: 4vh;
+  }
 }

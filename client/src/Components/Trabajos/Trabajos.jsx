@@ -17,12 +17,15 @@ export default function Trabajos({ trabajos }) {
     setElements(res);
   }, [setElements]);
   const intersecting = entries[0]?.isIntersecting;
+  console.log(intersecting);
 
   return (
     <div className={style.portfolio} ref={trabajos}>
       <div className={style.container}>
         <h1>Trabajos realizados</h1>
-        <div className={intersecting && style.trabajos_lista}>
+        <div
+          className={intersecting ? style.trabajos_lista : style.trabajosOff}
+        >
           <div className={style.trabajo}>
             <img
               src={programax}

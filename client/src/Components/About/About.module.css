@@ -213,12 +213,14 @@
   margin-right: -14vw;
   position: absolute;
   z-index: 1;
-
   -webkit-animation: fadeInFromNone 1.7s ease-out;
   -moz-animation: fadeInFromNone 1.7s ease-out;
   -o-animation: fadeInFromNone 1.7s ease-out;
   animation: fadeInFromNone 1.7s ease-out;
   /* animation-delay: 20s; */
+}
+.buttonCVOff {
+  display: none;
 }
 
 @-webkit-keyframes fadeInFromNone {

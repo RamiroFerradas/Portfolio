@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { React, useState } from "react";
 import style from "./About.module.css";
 import yoImg from "../../Assets/img/byn/ramiro.jpg";
 import pdf from "../../Assets/cv/cv.pdf";
@@ -19,8 +19,7 @@ export default function About({ viewAbout, about }) {
   }, [setElements]);
 
   const intersecting = entries[0]?.isIntersecting;
-  // const intersecting = true;
-  console.log(entries);
+
   useEffect(() => {
     !intersecting && setViewButton(false);
   }, [intersecting]);
@@ -56,7 +55,7 @@ export default function About({ viewAbout, about }) {
           </p>
         </div>
 
-        <button className={style.buttonCV}>
+        <button className={viewButton ? style.buttonCV : style.buttonCVOff}>
           <a
             href={pdf}
             target="_blank"

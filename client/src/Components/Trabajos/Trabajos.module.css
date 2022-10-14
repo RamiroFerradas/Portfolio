@@ -5,17 +5,18 @@
   background-color: black;
   text-align: center;
   height: 100vh;
-  background-image: url("../../Assets/img/fondito.jpg") !important;
+  /* background-image: url("../../Assets/img/fondito.jpg") !important; */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  overflow: hidden;
 }
 .container {
   padding-top: 10vh;
 }
 .trabajos_lista {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(22vw, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(22vw, 1fr));
   grid-gap: 40px;
   align-items: center;
   justify-content: center;
@@ -25,6 +26,9 @@
   -moz-animation: fadeInFromNone 1.5s ease-out;
   -o-animation: fadeInFromNone 1.5s ease-out;
   animation: fadeInFromNone 1.5s ease-out;
+}
+.trabajosOff {
+  display: none;
 }
 
 @-webkit-keyframes fadeInFromNone {

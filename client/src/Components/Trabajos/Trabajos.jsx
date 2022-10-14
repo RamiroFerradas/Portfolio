@@ -8,7 +8,7 @@ import useObserver from "../../Hooks/useObserver";
 
 export default function Trabajos({ trabajos }) {
   const [observer, setElements, entries] = useObserver({
-    threshold: 0.25,
+    threshold: 0,
     root: null,
   });
 

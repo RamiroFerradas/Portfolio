@@ -2,15 +2,15 @@
   /* padding-top: -50vh; */
   padding: 10vh;
   color: white;
-  background-color: black;
+  /* background-color: black; */
   text-align: center;
-  background-image: url("../../Assets/img/fondito.jpg") !important;
+  /* background-image: url("../../Assets/img/fondito.jpg") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center; */
   overflow: hidden;
-  background-size: cover;
-  height: 150vh;
+  /* background-size: cover; */
+  /* height: 150vh; */
 }
 .container {
   padding-top: 10vh;
@@ -29,7 +29,14 @@
   animation: fadeInFromNone 1.5s ease-out;
 }
 .trabajosOff {
-  display: none;
+  opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+  grid-gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background: none;
 }
 
 @-webkit-keyframes fadeInFromNone {
@@ -144,7 +151,7 @@
 }
 .layer a {
   margin-top: 2vh;
-  color: #ff004f;
+  /* color: #ff004f; */
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
@@ -164,7 +171,7 @@
 
 @media screen and (max-width: 1200px) {
   .portfolio {
-    height: 150vh;
+    height: 200vh;
     padding: 0vh 2vh;
   }
   .layer p,
@@ -207,6 +214,12 @@
     grid-template-columns: 1fr;
   }
   .trabajo {
-    height: 30vh;
+    /* height: 30vh; */
+  }
+}
+@media screen and (max-width: 500px) {
+  .portfolio {
+    height: 140vh;
+    padding: 20vh 2vh;
   }
 }

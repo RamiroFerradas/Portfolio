@@ -1,13 +1,13 @@
 .contact {
-  background-color: black;
+  /* background-color: black;
+  height: 80vh; */
   color: #fff;
-  height: 80vh;
   /* padding: 30vh 0; */
-  background-image: url("../../Assets/img/fondito.jpg") !important;
+  /* background-image: url("../../Assets/img/fondito.jpg") !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center; */
   /* overflow: auto; */
   overflow: hidden;
 }
@@ -113,7 +113,7 @@ textarea {
 /* @media screen and (max-width: 950px) { */
 @media screen and (max-width: 1400px) {
   .contact {
-    height: 120vh;
+    /* height: 120vh; */
     padding: 40px 0px;
   }
   .row {

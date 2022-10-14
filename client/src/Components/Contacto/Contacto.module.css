@@ -110,9 +110,9 @@ textarea {
 @media screen and (max-width: 750px) {
   .contact {
     height: 120vh;
+    padding: 40px 0px;
   }
   .row {
-    /* padding: 0 100px; */
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;

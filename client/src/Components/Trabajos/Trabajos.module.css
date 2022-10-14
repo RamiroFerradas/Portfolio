@@ -163,7 +163,7 @@
 
 @media screen and (max-width: 750px) {
   .portfolio {
-    height: 110vh;
+    height: 120vh;
     padding: 0vh 2vh;
   }
   .layer p,

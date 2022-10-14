@@ -97,3 +97,27 @@ textarea {
   overflow: scroll;
   resize: none;
 }
+
+@media screen and (max-width: 750px) {
+  .contact {
+    height: 120vh;
+  }
+  .row {
+    /* padding: 0 100px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+
+    /* padding-right: 40vh; */
+    /* padding-left: 40vh; */
+  }
+  .contacto_derecha,
+  .contacto_izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0vh;
+  }
+}

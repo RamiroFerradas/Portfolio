@@ -324,7 +324,9 @@
   .aboutText h2 {
     font-size: 40px;
     white-space: nowrap;
+    -webkit-animation-duration: 0.5s;
   }
+
   .image_wrapper {
     /* flex-basis: 100%; */
     display: flex;
@@ -371,11 +373,23 @@
     letter-spacing: 1.5px;
     line-height: 25px;
     font-size: 13px;
+    -webkit-animation-duration: 0.5s;
   }
   .aboutText h5 {
     font-size: 15px;
     margin-bottom: 35px;
     letter-spacing: 2px;
+    -webkit-animation-duration: 0.5s;
+  }
+  .image_wrapper .image1,
+  .image_wrapper .image2,
+  .image_wrapper .image3,
+  .image_wrapper .image4 {
+    -webkit-animation: ease;
+    -webkit-animation-name: imageRun;
+    -webkit-animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
   }
 
   .buttonCV {

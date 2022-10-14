@@ -5,7 +5,7 @@
   background-color: black;
   text-align: center;
   height: 100vh;
-  /* background-image: url("../../Assets/img/fondito.jpg") !important; */
+  background-image: url("../../Assets/img/fondito.jpg") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -163,7 +163,7 @@
 
 @media screen and (max-width: 750px) {
   .portfolio {
-    height: 100vh;
+    height: 110vh;
     padding: 0vh 2vh;
   }
   .layer p,
@@ -200,5 +200,9 @@
     line-height: 40px;
     height: 40px;
     width: 40px;
+  }
+  .trabajos_lista {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

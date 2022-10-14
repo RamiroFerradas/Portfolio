@@ -17,9 +17,10 @@
   justify-content: safe;
   /* padding-right: 40vh; */
   /* padding-left: 40vh; */
+  margin-right: 20vh;
 }
 .contacto_izquierda {
-  margin-left: 10vh;
+  margin-left: 50vh;
   flex-basis: 35%;
 }
 .contacto_izquierda p {
@@ -32,7 +33,7 @@
 }
 
 .redes {
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .redes a {
@@ -116,9 +117,10 @@ textarea {
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
-
+    margin-right: 10;
     /* padding-right: 40vh; */
     /* padding-left: 40vh; */
+    margin-right: 0vh;
   }
   .contacto_derecha,
   .contacto_izquierda {
@@ -126,6 +128,9 @@ textarea {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* margin-left: 20vh; */
+  }
+  .contacto_izquierda {
     margin-left: 0vh;
   }
 }

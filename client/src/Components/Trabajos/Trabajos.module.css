@@ -4,19 +4,20 @@
   color: white;
   background-color: black;
   text-align: center;
-  height: 100vh;
   background-image: url("../../Assets/img/fondito.jpg") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   overflow: hidden;
+  background-size: cover;
+  height: 150vh;
 }
 .container {
   padding-top: 10vh;
 }
 .trabajos_lista {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
   grid-gap: 40px;
   align-items: center;
   justify-content: center;

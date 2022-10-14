@@ -360,6 +360,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    width: 57vw;
+    margin: 0 20vw;
   }
   .main img {
     margin-left: 5%;
@@ -386,10 +389,13 @@
     margin-left: 0vh;
   }
   .aboutText p {
+    background: none;
     text-align: center;
     letter-spacing: 1.5px;
     line-height: 25px;
     font-size: 13px;
+    width: 25vh;
+    margin: auto;
     -webkit-animation-duration: 0.5s;
   }
   .aboutText h5 {

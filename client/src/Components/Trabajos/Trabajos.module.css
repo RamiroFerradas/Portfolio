@@ -162,9 +162,9 @@
   height: 100%;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
   .portfolio {
-    height: 125vh;
+    height: 150vh;
     padding: 0vh 2vh;
   }
   .layer p,
@@ -174,7 +174,7 @@
   .layer {
     /* background: none; */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
     border-radius: 10px;
     position: absolute;
@@ -205,5 +205,8 @@
   .trabajos_lista {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .trabajo {
+    height: 30vh;
   }
 }

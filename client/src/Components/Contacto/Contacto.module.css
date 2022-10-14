@@ -15,14 +15,15 @@
   /* padding: 0 100px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: safe;
+  justify-content: flex-end;
   /* padding-right: 40vh; */
   /* padding-left: 40vh; */
   margin-right: 20vh;
 }
 .contacto_izquierda {
-  margin-left: 50vh;
+  margin-left: auto;
   flex-basis: 35%;
+  margin-right: 100px;
 }
 .contacto_izquierda p {
   flex-basis: 35%;
@@ -67,7 +68,8 @@ form textarea {
   border-radius: 6px;
 }
 .btn.btn2 {
-  display: inline-block;
+  display: flex;
+  /* position: absolute; */
   background: #ff004f;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -108,7 +110,8 @@ textarea {
   }
 }
 
-@media screen and (max-width: 750px) {
+/* @media screen and (max-width: 950px) { */
+@media screen and (max-width: 1400px) {
   .contact {
     height: 120vh;
     padding: 40px 0px;

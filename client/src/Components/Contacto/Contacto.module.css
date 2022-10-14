@@ -103,7 +103,7 @@ textarea {
 
 @media screen and (max-width: 1400px) {
   .contact {
-    height: 110vh;
+    height: 120vh;
   }
 }
 
@@ -132,5 +132,8 @@ textarea {
   }
   .contacto_izquierda {
     margin-left: 0vh;
+  }
+  .redes {
+    margin-top: 10px;
   }
 }

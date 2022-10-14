@@ -14,7 +14,7 @@ export default function NavBar({
   useEffect(() => {
     window.addEventListener("scroll", function () {
       var nav = document.querySelector("nav");
-      nav.classList.toggle(style.sticky, window.scrollY > 100);
+      nav.classList.toggle(style.sticky, window.scrollY > 0);
     });
   }, []);
 

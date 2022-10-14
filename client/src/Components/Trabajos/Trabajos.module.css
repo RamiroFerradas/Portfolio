@@ -15,7 +15,7 @@
 }
 .trabajos_lista {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22vw, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(22vw, 1fr)); */
   grid-gap: 40px;
   align-items: center;
   justify-content: center;
@@ -155,4 +155,11 @@
 }
 .trabajo:hover .layer {
   height: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .portfolio {
+    height: 100vh;
+    padding: 0vh 2vh;
+  }
 }

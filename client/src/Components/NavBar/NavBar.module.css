@@ -142,10 +142,32 @@
     z-index: 9999;
     transition: 0.5s;
   }
-  .navBar.sticky ul {
+
+  .navBar.sticky {
+    /* padding: 40px 100px; */
+    background: none;
+    color: white;
+    backdrop-filter: none;
+    width: 100vw;
+    padding-top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .logo,
+  .logo span,
+  .navBar.sticky .logo {
+    color: transparent;
+  }
+  .navBar.sticky .link {
+    color: white;
+    font-weight: bold;
   }
 
   .navBar .openSidebar {
+    right: -0;
+  }
+  .navBar.navBar.sticky .openSidebar {
     right: -0;
   }
   .navBar ul li {
@@ -162,9 +184,6 @@
     top: 25px;
     left: 25px;
     cursor: pointer;
-  }
-  .navBar.sticky .icon {
-    color: black;
   }
 }
 

@@ -66,7 +66,6 @@ export default function About({ viewAbout, about }) {
           </a>
         </button>
       </div>
-      )
     </div>
   );
 }

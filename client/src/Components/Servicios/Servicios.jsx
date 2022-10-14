@@ -28,18 +28,19 @@ export default function Servicios({ servicios }) {
           <div className={style.servicios_lista}>
             <div className={style.section_servicios}>
               <i className="fa-solid fa-code"></i>
-              <h2>Web Desing</h2>
+              <h2>Diseño Web</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                ullam, aspernatur ratione necessitatibus perspiciatis
-                accusantium voluptatibus laboriosam, officiis quae repudiandae
-                iure error distinctio autem culpa dolorum ex totam officia
-                optio.
+                Planificación, diseño, implementación y mantenimiento de sitios
+                web. La unión de un buen diseño con una jerarquía bien elaborada
+                de contenidos, aumenta la eficiencia de la web como canal de
+                comunicación e intercambio de datos, que brinda posibilidades
+                como el contacto directo entre el productor y el consumidor de
+                contenidos.
               </p>
             </div>
             <div className={style.section_servicios}>
               <i className="fa-solid fa-crop"></i>
-              <h2>UI/UX Desing</h2>
+              <h2>Diseño UI/UX</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                 ullam, aspernatur ratione necessitatibus perspiciatis

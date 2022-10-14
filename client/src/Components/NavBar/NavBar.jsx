@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./NavBar.module.css";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
 
@@ -10,10 +10,11 @@ export default function NavBar({
   trabajos,
   contacto,
 }) {
+  const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", function () {
       var nav = document.querySelector("nav");
-      nav.classList.toggle(style.sticky, window.scrollY > 0);
+      nav.classList.toggle(style.sticky, window.scrollY > 100);
     });
   }, []);
 
@@ -43,7 +44,7 @@ export default function NavBar({
           Portfo<span className={style.spanLogo}>lio</span>
         </h2>
         <div className={style.menu}>
-          <ul>
+          <ul className={openMenu && style.openSidebar}>
             {values.map((e) => {
               return (
                 <li
@@ -61,7 +62,15 @@ export default function NavBar({
                 </li>
               );
             })}
+            <i
+              className={`fas fa-times ${style.icon}`}
+              onClick={() => setOpenMenu(!openMenu)}
+            ></i>
           </ul>
+          <i
+            onClick={() => setOpenMenu(!openMenu)}
+            className={`fas fa-bars ${style.icon}`}
+          ></i>
         </div>
       </nav>
     </header>

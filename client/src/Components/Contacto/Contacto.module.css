@@ -1,13 +1,13 @@
 .contact {
   background-color: black;
   color: #fff;
-  height: 100vh;
-  /* padding: 30vh 0; */
+  height: 120vh;
+  padding: 30vh 0;
   background-image: url("../../Assets/img/fondito.jpg") !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  overflow: auto;
+  /* overflow: auto; */
 }
 .row {
   display: grid;

@@ -1,4 +1,5 @@
 .portfolio {
+  /* padding-top: -50vh; */
   padding: 10vh;
   color: white;
   background-color: black;
@@ -8,6 +9,9 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+}
+.container {
+  padding-top: 10vh;
 }
 .trabajos_lista {
   display: grid;

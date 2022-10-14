@@ -8,15 +8,18 @@
   background-attachment: fixed;
   background-position: center;
   /* overflow: auto; */
+  overflow: hidden;
 }
 .row {
+  /* padding: 0 100px; */
   display: grid;
-  grid-template-columns: 55% 75%;
-  justify-content: space-around;
-  padding-right: 40vh;
-  padding-left: 40vh;
+  grid-template-columns: 1fr 1fr;
+  justify-content: safe;
+  /* padding-right: 40vh; */
+  /* padding-left: 40vh; */
 }
 .contacto_izquierda {
+  margin-left: 10vh;
   flex-basis: 35%;
 }
 .contacto_izquierda p {
@@ -51,7 +54,7 @@
 }
 form input,
 form textarea {
-  width: 100%;
+  width: 80%;
   border: 0;
   outline: none;
   background: #262626;

@@ -59,10 +59,12 @@ export default function Contacto({ contacto }) {
           <div className={style.contacto_izquierda}>
             <h1 className={style.titulo}>Contáctame</h1>
             <p>
-              <i className="fas fa-paper-plane"></i> ramiferra97@gmail.com
+              <i className="fas fa-paper-plane"></i>
+              <span>ramiferra97@gmail.com</span>
             </p>
             <p>
-              <i className="fas fa-phone-square-alt"></i> 3492528404
+              <i className="fas fa-phone-square"></i>
+              <span>3492528404</span>
             </p>
             <div className={style.redes}>
               <a

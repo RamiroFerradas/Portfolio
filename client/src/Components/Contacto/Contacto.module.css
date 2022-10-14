@@ -140,4 +140,8 @@ textarea {
   .redes {
     margin-top: 10px;
   }
+  .contacto_izquierda p span,
+  .contacto_izquierda p i {
+    font-size: 2.5vw;
+  }
 }

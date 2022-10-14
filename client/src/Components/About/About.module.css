@@ -322,19 +322,23 @@
 }
 @media screen and (max-width: 1600px) {
   .main {
-    width: 57vw;
+    width: 80vw;
     margin: 0 10vw;
     display: flex;
-    max-width: 95%;
+    /* max-width: 50%; */
     align-items: center;
     justify-content: center;
     background-color: #191919;
   }
   .buttonCV {
-    /* right: 20vw; */
-    margin-left: 10vw;
-    margin-right: -14vw;
     position: absolute;
+    bottom: 10vh;
+    right: 50vw;
+  }
+  .main img {
+    width: 500px;
+    left: 10vw;
+    margin-top: -15vh;
   }
 }
 @media screen and (max-width: 950px) {

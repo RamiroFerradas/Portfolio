@@ -68,6 +68,7 @@ form textarea {
   display: inline-block;
   background: #ff004f;
   margin-bottom: 30px;
+  border-radius: 10px;
 }
 .btn.btn2:disabled {
   display: inline-block;
@@ -79,6 +80,7 @@ form .btn2 {
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+  color: white;
 }
 
 .send {

@@ -154,9 +154,9 @@
     top: 0;
     left: 0;
   }
-  .logo,
-  .logo span,
-  .navBar.sticky .logo {
+
+  .navBar.sticky .logo,
+  .navBar.sticky .logo span {
     color: transparent;
   }
   .navBar.sticky .link {

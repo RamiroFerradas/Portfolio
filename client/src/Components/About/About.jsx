@@ -16,10 +16,11 @@ export default function About({ viewAbout, about }) {
   useEffect(() => {
     const res = document.querySelectorAll(`.${style.about}`);
     setElements(res);
-  }, [about, setElements]);
+  }, [setElements]);
 
-  // const intersecting = entries[0]?.isIntersecting;
-  const intersecting = true;
+  const intersecting = entries[0]?.isIntersecting;
+  // const intersecting = true;
+  console.log(entries);
   useEffect(() => {
     !intersecting && setViewButton(false);
   }, [intersecting]);
@@ -32,14 +33,14 @@ export default function About({ viewAbout, about }) {
   return (
     <div className={style.about} ref={about}>
       <div className={style.main}>
-        <div className={style.image_wrapper}>
+        <div className={intersecting && style.image_wrapper}>
           <img src={yoImg} alt="ramiro" className={style.image1} />
           <img src={yoImg} alt="ramiro" className={style.image2} />
           <img src={yoImg} alt="ramiro" className={style.image3} />
           <img src={yoImg} alt="ramiro" className={style.image4} />
         </div>
 
-        <div className={style.aboutText}>
+        <div className={intersecting && style.aboutText}>
           <h2>Sobre mi</h2>
 
           <h5>

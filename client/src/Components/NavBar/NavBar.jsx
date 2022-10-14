@@ -3,13 +3,19 @@ import style from "./NavBar.module.css";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
 
 export default function NavBar({
-  scrollToSeccion,
+  // scrollToSeccion,
   about,
   inicio,
   servicios,
   trabajos,
   contacto,
 }) {
+  const scrollToSeccion = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", function () {

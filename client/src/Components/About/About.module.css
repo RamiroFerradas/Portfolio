@@ -3,9 +3,16 @@
   height: 85vh;
   padding: 10px;
   background-color: #191919;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   padding-top: 15vh;
   /* top: 100vh; */
   position: relative;
+  /* position: absolute; */
+  /* float: left; */
+  /* left: 200px; */
+  /* margin-top: 100px; */
 }
 
 .main img {

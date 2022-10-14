@@ -10,7 +10,7 @@
 }
 .contenedor {
   /* margin-bottom: 50%; */
-  height: 89vh;
+  height: 100vh;
 }
 .content {
   position: absolute;
@@ -89,10 +89,6 @@
 }
 
 @media only screen and (max-width: 1400px) {
-  .contenedor {
-    /* margin-bottom: 50%; */
-    height: 85vh;
-  }
 }
 
 @media only screen and (max-width: 750px) {

@@ -400,5 +400,11 @@
     margin: auto;
     position: absolute;
     bottom: 4vh;
+    position: absolute;
+    z-index: 1;
+    -webkit-animation: fadeInFromNone 0.7s ease-out;
+    -moz-animation: fadeInFromNone 0.7s ease-out;
+    -o-animation: fadeInFromNone 0.7s ease-out;
+    animation: fadeInFromNone 0.7s ease-out;
   }
 }

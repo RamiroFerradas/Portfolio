@@ -21,13 +21,16 @@ export default function About({ viewAbout, about }) {
   const intersecting = entries[0]?.isIntersecting;
 
   useEffect(() => {
-    !intersecting && setViewButton(false);
-  }, [intersecting]);
-  setTimeout(() => {
-    if (intersecting) {
+    if (!intersecting) {
+      setViewButton(false);
+    } else {
       setViewButton(true);
     }
-  }, 1000);
+  }, [intersecting]);
+  // setTimeout(() => {
+  //   if (intersecting) {
+  //   }
+  // }, 1000);
 
   return (
     <div className={style.about} ref={about}>
@@ -55,7 +58,7 @@ export default function About({ viewAbout, about }) {
           </p>
         </div>
 
-        <button className={viewButton ? style.buttonCV : style.buttonCVOff}>
+        <button className={intersecting && style.buttonCV}>
           <a
             href={pdf}
             target="_blank"

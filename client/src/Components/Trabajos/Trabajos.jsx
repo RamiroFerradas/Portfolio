@@ -15,7 +15,7 @@ export default function Trabajos({ trabajos }) {
   });
   console.log(entries);
   useEffect(() => {
-    const res = document.querySelectorAll(`.${style.container}`);
+    const res = document.querySelectorAll(`.${style.portfolio}`);
     setElements(res);
   }, [setElements]);
   const intersecting = entries[0]?.isIntersecting;
@@ -66,12 +66,8 @@ export default function Trabajos({ trabajos }) {
           <div className={style.trabajo}>
             <img src={pokemon} alt="pokemon" className={style.imgTrabajos} />
             <div className={style.layer}>
-              <h3>Poke App</h3>
-              <p>
-                Esta página es un Proyecto Individual para el bootcamp de
-                SoyHenry. Aquí puede encontrar información sobre los diferentes
-                Pokemon y sus caracteristicas.
-              </p>
+              <h3>{text.work.pokemon.title}</h3>
+              <p>{text.work.pokemon.description}</p>
               <a
                 target="_blank"
                 href="https://pi-pokemon-2.vercel.app/"
@@ -88,13 +84,8 @@ export default function Trabajos({ trabajos }) {
               className={style.imgTrabajos}
             />
             <div className={style.layer}>
-              <h3>Videogames App</h3>
-              <p>
-                Esta página es un Proyecto Individual para el bootcamp de
-                SoyHenry. Se trata de una SPA(single Page Aplication) donde
-                puede encontrar información sobre diferentes videojuegos, de
-                multiples plataformas y sus caracteristicas.
-              </p>
+              <h3>{text.work.videogames.title}</h3>
+              <p>{text.work.videogames.description}</p>
               <a
                 target="_blank"
                 href="https://videogamesapp-nine.vercel.app"

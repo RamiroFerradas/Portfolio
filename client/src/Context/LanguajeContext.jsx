@@ -11,9 +11,9 @@ const LanguajeProvider = ({ children }) => {
     initialLanguaje ? initialLanguaje : `esp`
   );
   const [text, setText] = useState(translations[languaje]);
+  console.log(children);
 
   const handleLanguage = (value) => {
-    console.log(value);
     if (value === "esp") {
       setLanguaje("esp");
       setText(translations.esp);

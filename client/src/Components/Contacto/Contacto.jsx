@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
 import style from "./Contacto.module.css";
 import emailjs from "@emailjs/browser";
+import useLanguaje from "../../Hooks/useLanguaje";
 
 export default function Contacto({ contacto }) {
+  const { text } = useLanguaje();
   const form = useRef();
 
   const [mensaje, setMensaje] = useState({
@@ -57,7 +59,7 @@ export default function Contacto({ contacto }) {
       <div className={style.container}>
         <div className={style.row}>
           <div className={style.contacto_izquierda}>
-            <h1 className={style.titulo}>Contáctame</h1>
+            <h1 className={style.titulo}>{text.contact.title}</h1>
             <p>
               <i className="fas fa-paper-plane"></i>
               <span>ramiferra97@gmail.com</span>
@@ -93,13 +95,13 @@ export default function Contacto({ contacto }) {
               <input
                 type="text"
                 name="user_name"
-                placeholder="Tu Nombre"
+                placeholder={text.contact.placeholder.name}
                 required
               />
               <input
                 type="email"
                 name="user_email"
-                placeholder="Tu Email"
+                placeholder={text.contact.placeholder.email}
                 // required
               />
               <textarea
@@ -107,7 +109,7 @@ export default function Contacto({ contacto }) {
                 id=""
                 rows="6"
                 cols="30"
-                placeholder="Tu mensaje..."
+                placeholder={text.contact.placeholder.msg}
                 required
               ></textarea>
               <button
@@ -115,7 +117,7 @@ export default function Contacto({ contacto }) {
                 className={`${style.btn} ${style.btn2}`}
                 type="submit"
               >
-                Enviar
+                {text.contact.send}
               </button>
 
               {mensaje && (

@@ -10,7 +10,7 @@
   background-position: center; */
   overflow: hidden;
   /* background-size: cover; */
-  /* height: 150vh; */
+  /* height: 100vh; */
 }
 .container {
   padding-top: 10vh;
@@ -193,7 +193,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
-    font-size: 1vh;
+    font-size: 1.2vw;
     text-align: center;
     height: 0%;
     transition: height 0.3s;
@@ -211,7 +211,8 @@
   }
   .trabajos_lista {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+    grid-gap: 40px;
   }
   .trabajo {
     /* height: 30vh; */
@@ -221,5 +222,11 @@
   .portfolio {
     height: 140vh;
     padding: 20vh 2vh;
+  }
+  .trabajos_lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+    /* grid-template-columns: 1fr; */
+    /* grid-gap: 40px; */
   }
 }

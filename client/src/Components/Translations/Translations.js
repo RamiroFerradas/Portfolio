@@ -47,6 +47,25 @@ export const translations = {
         description:
           "Esta página es un Proyecto Individual para el bootcamp de Soy Henry. Aquí puede encontrar información sobre todos los países del mundo, como la población, las actividades turísticas que puede realizar allí.",
       },
+      videogames: {
+        title: "Videogames App",
+        description:
+          "Esta página es un Proyecto Individual para el bootcamp de SoyHenry. Se trata de una SPA(Single Page Aplication) donde puede encontrar información sobre diferentes videojuegos, de multiples plataformas y sus caracteristicas.",
+      },
+      pokemon: {
+        title: "Poke App",
+        description:
+          "Esta página es un Proyecto Individual para el bootcamp de Soy Henry. Aquí puede encontrar información sobre los diferentes Pokemon y sus caracteristicas.",
+      },
+    },
+    contact: {
+      title: "Contáctame",
+      placeholder: {
+        name: "Tu Nombre",
+        email: "Tu Email",
+        msg: "Tu Mensaje...",
+      },
+      send: "Enviar",
     },
   },
 
@@ -88,17 +107,36 @@ export const translations = {
       },
     },
     work: {
-      title: "Trabajos Realizados",
+      title: "My work",
       programax: {
         title: "Programax",
         description:
-          "En Programax, podrás postularte y encontrar a los desarrolladores que cubran tus necesidades... ¡Al alcance de un click! Contacta al desarrollador ideal, hazle una oferta, y paga por su trabajo de manera segura y sin costo adicional... ¡Y todo en un solo sitio!",
+          "In Programax, you will be able to apply and find the developers that meet your needs... Within reach of a click! Contact the ideal developer, make an offer, and pay for their work securely and at no additional cost... All in one place!",
       },
       countries: {
         title: "Countries App",
         description:
-          "Esta página es un Proyecto Individual para el bootcamp de Soy Henry. Aquí puede encontrar información sobre todos los países del mundo, como la población, las actividades turísticas que puede realizar allí.",
+          "This page is an Individual Project for the Soy Henry bootcamp. Here you can find information about all the countries of the world, such as the population, the tourist activities that you can do there.",
       },
+      videogames: {
+        title: "Videogames App",
+        description:
+          "This page is an Individual Project for the bootcamp of Soy Henry. It is a SPA (Single Page Application) where you can find information about different video games, from multiple platforms and their characteristics.",
+      },
+      pokemon: {
+        title: "Poke App",
+        description:
+          "This page is an Individual Project for the Soy Henry bootcamp. Here you can find information about the different Pokemon and their characteristics.",
+      },
+    },
+    contact: {
+      title: "Contact Me",
+      placeholder: {
+        name: "Your Name",
+        email: "Your Email",
+        msg: "Your Message...",
+      },
+      send: "Send",
     },
   },
 };

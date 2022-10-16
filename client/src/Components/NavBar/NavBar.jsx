@@ -35,9 +35,10 @@ export default function NavBar({
     { id: 5, text: `${text.navBar.Contacto}`, ref: contacto },
   ];
   const [activeId, setActiveId] = useState(1);
-  const [activeIdCache, setActiveIdCache] = useLocalStorage({
-    id: (`id`, activeId),
-  });
+  const [activeIdCache, setActiveIdCache] = useLocalStorage(
+    `id`,
+    activeId ? activeId : "1"
+  );
 
   return (
     <header className={style.container}>
@@ -77,28 +78,28 @@ export default function NavBar({
               className={`fas fa-times ${style.icon}`}
               onClick={() => setOpenMenu(!openMenu)}
             ></i>
+            <div className={style.flagsContainer}>
+              <button value="esp" onClick={(e) => handleLanguage("esp")}>
+                <img
+                  className={style.flagImg}
+                  src="https://flagcdn.com/es.svg"
+                  alt="Spanish"
+                />
+              </button>
+              <button value="eng" onClick={(e) => handleLanguage("eng")}>
+                <img
+                  className={style.flagImg}
+                  src="https://flagcdn.com/us.svg"
+                  alt="English"
+                />
+              </button>
+            </div>
           </ul>
 
           <i
             onClick={() => setOpenMenu(!openMenu)}
             className={`fas fa-bars ${style.icon}`}
           ></i>
-          <div className={style.flagsContainer}>
-            <button value="esp" onClick={(e) => handleLanguage("esp")}>
-              <img
-                className={style.flagImg}
-                src="https://flagcdn.com/es.svg"
-                alt="Spanish"
-              />
-            </button>
-            <button value="eng" onClick={(e) => handleLanguage("eng")}>
-              <img
-                className={style.flagImg}
-                src="https://flagcdn.com/us.svg"
-                alt="English"
-              />
-            </button>
-          </div>
         </div>
       </nav>
     </header>

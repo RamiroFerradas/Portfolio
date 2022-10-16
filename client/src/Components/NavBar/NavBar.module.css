@@ -210,20 +210,28 @@
     margin-left: 1vw;
     position: absolute;
   }
+  .flagImg {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    margin-right: 5vw;
+  }
+  .flagsContainer {
+    margin-left: 3vw;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 25vh;
+    flex-direction: column;
+  }
+  .flagsContainer button {
+    border: none;
+  }
 }
 
 @media screen and (max-width: 650px) {
-  .navBar {
-    /* margin-right: 30vw; */
-  }
-  .linkOff,
-  .link {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center; */
-  }
 }
 
 .hiden {

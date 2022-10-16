@@ -5,24 +5,25 @@ import countries from "../../Assets/trabajos/countries.png";
 import programax from "../../Assets/trabajos/programax.png";
 import videogames from "../../Assets/trabajos/videogames.png";
 import useObserver from "../../Hooks/useObserver";
+import useLanguaje from "../../Hooks/useLanguaje";
 
 export default function Trabajos({ trabajos }) {
+  const { text } = useLanguaje();
   const [observer, setElements, entries] = useObserver({
     threshold: 0,
     root: null,
   });
-
+  console.log(entries);
   useEffect(() => {
-    const res = document.querySelectorAll(`.${style.portfolio}`);
+    const res = document.querySelectorAll(`.${style.container}`);
     setElements(res);
   }, [setElements]);
   const intersecting = entries[0]?.isIntersecting;
-  console.log(intersecting);
 
   return (
     <div className={style.portfolio} ref={trabajos}>
       <div className={style.container}>
-        <h1>Trabajos realizados</h1>
+        <h1>{text.work.title}</h1>
         <div
           className={intersecting ? style.trabajos_lista : style.trabajosOff}
         >
@@ -33,14 +34,8 @@ export default function Trabajos({ trabajos }) {
               alt="programax"
             />
             <div className={style.layer}>
-              <h3>Programax</h3>
-              <p>
-                En Programax, podrás postularte y encontrar a los
-                desarrolladores que cubran tus necesidades... ¡Al alcance de un
-                click! Contacta al desarrollador ideal, hazle una oferta, y paga
-                por su trabajo de manera segura y sin costo adicional... ¡Y todo
-                en un solo sitio!
-              </p>
+              <h3>{text.work.programax.title}</h3>
+              <p>{text.work.programax.description}</p>
               <a
                 target="_blank"
                 href="https://programax.vercel.app/"
@@ -57,13 +52,8 @@ export default function Trabajos({ trabajos }) {
               alt="countries"
             />
             <div className={style.layer}>
-              <h3>Countreies App</h3>
-              <p>
-                Esta página es un Proyecto Individual para el bootcamp de
-                SoyHenry. Aquí puede encontrar información sobre todos los
-                países del mundo, como la población, las actividades turísticas
-                que puede realizar allí.
-              </p>
+              <h3>{text.work.countries.title}</h3>
+              <p>{text.work.countries.description}</p>
               <a
                 target="_blank"
                 href="https://countriesapp-phi.vercel.app/"

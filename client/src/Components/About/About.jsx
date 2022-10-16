@@ -4,8 +4,10 @@ import yoImg from "../../Assets/img/byn/ramiro.jpg";
 import pdf from "../../Assets/cv/cv.pdf";
 import { useEffect } from "react";
 import useObserver from "../../Hooks/useObserver";
+import useLanguaje from "../../Hooks/useLanguaje";
 
 export default function About({ viewAbout, about }) {
+  const { text } = useLanguaje();
   const [viewButton, setViewButton] = useState(false);
 
   const [observer, setElements, entries] = useObserver({
@@ -31,7 +33,7 @@ export default function About({ viewAbout, about }) {
   //   if (intersecting) {
   //   }
   // }, 1000);
-
+  console.log(text);
   return (
     <div className={style.about} ref={about}>
       <div className={style.main}>
@@ -43,19 +45,13 @@ export default function About({ viewAbout, about }) {
         </div>
 
         <div className={intersecting && style.aboutText}>
-          <h2>Sobre mi</h2>
+          <h2>{text.about.title}</h2>
 
           <h5>
-            Desarrollador <span className={style.spanLogo}>Full Stack</span>
+            {text.about.subtitle}
+            <span className={style.spanLogo}>Full Stack</span>
           </h5>
-          <p>
-            Soy desarrollador web Full Stack con preferencia en el front-end.
-            Puedo proporcionar un código limpio y un diseño perfecto de píxeles.
-            También hago que el sitio web sea cada vez más interactivo con
-            animaciones web. Un diseño responsivo hace que su sitio web sea
-            accesible para todos los usuarios, independientemente de su
-            dispositivo.
-          </p>
+          <p>{text.about.description}</p>
         </div>
 
         <button className={intersecting && style.buttonCV}>
@@ -65,10 +61,10 @@ export default function About({ viewAbout, about }) {
             rel="noopener noreferrer"
             download="CV-Ramiro_Ferradas.pdf"
           >
-            Descargar CV
+            {text.about.download}
           </a>
         </button>
       </div>
-    </div>
+    </div> /////
   );
 }

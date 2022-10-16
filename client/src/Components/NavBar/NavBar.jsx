@@ -1,7 +1,9 @@
-import { React, useEffect, useState } from "react";
+import { React, useContext, useEffect, useState } from "react";
 import style from "./NavBar.module.css";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
-
+import LanguajeContext from "../../Context/LanguajeContext";
+import useLanguaje from "../../Hooks/useLanguaje";
+import eng from "../../Assets/icons/eng.png";
 export default function NavBar({
   // scrollToSeccion,
   about,
@@ -10,6 +12,7 @@ export default function NavBar({
   trabajos,
   contacto,
 }) {
+  const { text, handleLanguage } = useLanguaje();
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
@@ -25,11 +28,11 @@ export default function NavBar({
   }, []);
 
   const values = [
-    { id: 1, text: "Inicio", ref: inicio },
-    { id: 2, text: "Sobre mi", ref: about },
-    { id: 3, text: "Servicios", ref: servicios },
-    { id: 4, text: "Trabajos", ref: trabajos },
-    { id: 5, text: "Contacto", ref: contacto },
+    { id: 1, text: `${text.navBar.inicio}`, ref: inicio },
+    { id: 2, text: `${text.navBar.Sobre_mi}`, ref: about },
+    { id: 3, text: `${text.navBar.Servicios}`, ref: servicios },
+    { id: 4, text: `${text.navBar.Trabajos}`, ref: trabajos },
+    { id: 5, text: `${text.navBar.Contacto}`, ref: contacto },
   ];
   const [activeId, setActiveId] = useState(1);
   const [activeIdCache, setActiveIdCache] = useLocalStorage({
@@ -49,6 +52,7 @@ export default function NavBar({
         >
           Portfo<span className={style.spanLogo}>lio</span>
         </h2>
+
         <div className={style.menu}>
           <ul className={openMenu && style.openSidebar}>
             {values.map((e) => {
@@ -68,15 +72,33 @@ export default function NavBar({
                 </li>
               );
             })}
+
             <i
               className={`fas fa-times ${style.icon}`}
               onClick={() => setOpenMenu(!openMenu)}
             ></i>
           </ul>
+
           <i
             onClick={() => setOpenMenu(!openMenu)}
             className={`fas fa-bars ${style.icon}`}
           ></i>
+          <div className={style.flagsContainer}>
+            <button value="esp" onClick={(e) => handleLanguage("esp")}>
+              <img
+                className={style.flagImg}
+                src="https://flagcdn.com/es.svg"
+                alt="Spanish"
+              />
+            </button>
+            <button value="eng" onClick={(e) => handleLanguage("eng")}>
+              <img
+                className={style.flagImg}
+                src="https://flagcdn.com/us.svg"
+                alt="English"
+              />
+            </button>
+          </div>
         </div>
       </nav>
     </header>

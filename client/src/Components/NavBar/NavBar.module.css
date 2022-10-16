@@ -99,7 +99,20 @@
   margin-left: 25%;
   position: absolute;
 }
-
+.flagImg {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+.flagsContainer {
+  margin-left: 3vw;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.flagsContainer button {
+  border: none;
+}
 .linkActive::after {
   -webkit-animation: ease;
   -webkit-animation-name: run;

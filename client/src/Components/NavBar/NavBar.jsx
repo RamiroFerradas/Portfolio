@@ -37,7 +37,9 @@ export default function NavBar({
     { id: 4, text: `${text.navBar.Trabajos}`, ref: trabajos },
     { id: 5, text: `${text.navBar.Contacto}`, ref: contacto },
   ];
-  const [activeIdCache, setActiveIdCache] = useLocalStorage(`id`, "1");
+
+  const [activeId, setActiveId] = useState(1);
+  const [activeIdCache, setActiveIdCache] = useLocalStorage(`id`, activeId);
   return (
     <header className={style.container}>
       <nav className={style.navBar}>
@@ -46,6 +48,7 @@ export default function NavBar({
           onClick={() => {
             window.scrollTo(0, 0);
             setActiveIdCache(1);
+            setActiveId(1);
           }}
         >
           Portfo<span className={style.spanLogo}>lio</span>
@@ -62,6 +65,7 @@ export default function NavBar({
                   }
                   onClick={() => {
                     setActiveIdCache(e.id);
+                    setActiveId(e.id);
                     scrollToSeccion(e.ref);
                   }}
                 >

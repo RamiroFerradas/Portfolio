@@ -14,13 +14,14 @@ export default function NavBar({
 }) {
   const eng = useRef(null);
   const esp = useRef(null);
-  const { text, handleLanguage } = useLanguaje();
+  const { text, handleLanguage, languaje } = useLanguaje();
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
   };
+  console.log(languaje, "lleng");
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", function () {
@@ -74,32 +75,22 @@ export default function NavBar({
               onClick={() => setOpenMenu(!openMenu)}
             ></i>
             <div className={style.flagsContainer}>
-              <button
-                value="esp"
-                onClick={(e) => {
-                  handleLanguage("esp");
-                  esp.current.classList.add(style.selected);
-                  eng.current.classList.remove(style.selected);
-                }}
-              >
+              <button value="esp" onClick={(e) => handleLanguage("esp")}>
                 <img
                   ref={esp}
-                  className={style.flagImg}
+                  className={
+                    languaje === "esp" ? style.selected : style.flagImg
+                  }
                   src="https://flagcdn.com/es.svg"
                   alt="Spanish"
                 />
               </button>
-              <button
-                value="eng"
-                onClick={(e) => {
-                  handleLanguage("eng");
-                  esp.current.classList.remove(style.selected);
-                  eng.current.classList.add(style.selected);
-                }}
-              >
+              <button value="eng" onClick={(e) => handleLanguage("eng")}>
                 <img
                   ref={eng}
-                  className={style.flagImg}
+                  className={
+                    languaje === "eng" ? style.selected : style.flagImg
+                  }
                   src="https://flagcdn.com/us.svg"
                   alt="English"
                 />

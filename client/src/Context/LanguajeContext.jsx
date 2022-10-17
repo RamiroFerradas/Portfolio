@@ -12,7 +12,7 @@ const LanguajeProvider = ({ children }) => {
   );
   const [text, setText] = useState(translations[languaje]);
 
-  const handleLanguage = (value) => {
+  const handleLanguage = (value, ref, style) => {
     if (value === "esp") {
       setLanguaje("esp");
       setText(translations.esp);
@@ -22,7 +22,7 @@ const LanguajeProvider = ({ children }) => {
     }
   };
 
-  const data = { text, handleLanguage };
+  const data = { text, handleLanguage, languaje };
   return (
     <LanguajeContext.Provider value={data}>{children}</LanguajeContext.Provider>
   );

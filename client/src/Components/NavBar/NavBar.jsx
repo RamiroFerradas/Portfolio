@@ -11,6 +11,7 @@ export default function NavBar({
   servicios,
   trabajos,
   contacto,
+  closeMenu,
 }) {
   const eng = useRef(null);
   const esp = useRef(null);
@@ -32,8 +33,8 @@ export default function NavBar({
       nav.classList.toggle(style.sticky, window.scrollY > 0);
     });
     window.addEventListener("scroll", handleScroll);
-    // openMenu && ul.current.classList.add(style.openSidebar);
-  }, []);
+    closeMenu && ul.current.classList.remove(style.openSidebar);
+  }, [closeMenu]);
 
   const [sectionActive, setsectionActive] = useState("home");
 

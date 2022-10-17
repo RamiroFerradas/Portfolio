@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import About from "./Components/About/About";
 import Contacto from "./Components/Contacto/Contacto";
 import Home from "./Components/Home/Home";
@@ -7,7 +7,6 @@ import Servicios from "./Components/Servicios/Servicios";
 import Trabajos from "./Components/Trabajos/Trabajos";
 import style from "./App.module.css";
 import { LanguajeProvider } from "./Context/LanguajeContext";
-import useObserver from "./Hooks/useObserver";
 
 function App() {
   const trabajos = useRef();
@@ -19,7 +18,7 @@ function App() {
   const [closeMenu, setCloseMenu] = useState(false);
 
   return (
-    <body className={style.app}>
+    <div className={style.app}>
       <LanguajeProvider>
         <NavBar
           closeMenu={closeMenu}
@@ -41,7 +40,7 @@ function App() {
           <Contacto contacto={contacto} />
         </section>
       </LanguajeProvider>
-    </body>
+    </div>
   );
 }
 

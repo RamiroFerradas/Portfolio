@@ -1,5 +1,4 @@
 import { React, useContext } from "react";
-import LanguajeContext from "../../Context/LanguajeContext";
 import useLanguaje from "../../Hooks/useLanguaje";
 import style from "./Home.module.css";
 

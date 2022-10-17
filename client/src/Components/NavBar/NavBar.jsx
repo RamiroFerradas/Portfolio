@@ -1,9 +1,6 @@
-import { React, useContext, useEffect, useRef, useState } from "react";
+import { React, useEffect, useRef, useState } from "react";
 import style from "./NavBar.module.css";
-import { useLocalStorage } from "../../Hooks/useLocalStorage";
-import LanguajeContext from "../../Context/LanguajeContext";
 import useLanguaje from "../../Hooks/useLanguaje";
-import eng from "../../Assets/icons/eng.png";
 export default function NavBar({
   // scrollToSeccion,
   about,

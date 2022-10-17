@@ -8,8 +8,6 @@ import useLanguaje from "../../Hooks/useLanguaje";
 
 export default function About({ viewAbout, about }) {
   const { text } = useLanguaje();
-  const [viewButton, setViewButton] = useState(false);
-
   const [observer, setElements, entries] = useObserver({
     threshold: 0.25,
     root: null,
@@ -22,25 +20,17 @@ export default function About({ viewAbout, about }) {
 
   const intersecting = entries[0]?.isIntersecting;
 
-  useEffect(() => {
-    if (!intersecting) {
-      setViewButton(false);
-    } else {
-      setViewButton(true);
-    }
-  }, [intersecting]);
-
   return (
     <section id="about" className={style.about} ref={about}>
       <div className={style.main}>
-        <div className={intersecting && style.image_wrapper}>
+        <div className={intersecting ? style.image_wrapper : undefined}>
           <img src={yoImg} alt="ramiro" className={style.image1} />
           <img src={yoImg} alt="ramiro" className={style.image2} />
           <img src={yoImg} alt="ramiro" className={style.image3} />
           <img src={yoImg} alt="ramiro" className={style.image4} />
         </div>
 
-        <div className={intersecting && style.aboutText}>
+        <div className={intersecting ? style.aboutText : undefined}>
           <h2>{text.about.title}</h2>
 
           <h5>
@@ -50,7 +40,7 @@ export default function About({ viewAbout, about }) {
           <p>{text.about.description}</p>
         </div>
 
-        <button className={intersecting && style.buttonCV}>
+        <button className={intersecting ? style.buttonCV : undefined}>
           <a
             href={pdf}
             target="_blank"
@@ -61,6 +51,6 @@ export default function About({ viewAbout, about }) {
           </a>
         </button>
       </div>
-    </section> /////
+    </section>
   );
 }

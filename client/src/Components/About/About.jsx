@@ -31,7 +31,7 @@ export default function About({ viewAbout, about }) {
   }, [intersecting]);
 
   return (
-    <div className={style.about} ref={about}>
+    <section id="about" className={style.about} ref={about}>
       <div className={style.main}>
         <div className={intersecting && style.image_wrapper}>
           <img src={yoImg} alt="ramiro" className={style.image1} />
@@ -61,6 +61,6 @@ export default function About({ viewAbout, about }) {
           </a>
         </button>
       </div>
-    </div> /////
+    </section> /////
   );
 }

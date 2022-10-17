@@ -20,82 +20,84 @@ export default function Trabajos({ trabajos }) {
   const intersecting = entries[0]?.isIntersecting;
 
   return (
-    <div className={style.portfolio} ref={trabajos}>
-      <div className={style.container}>
-        <h1>{text.work.title}</h1>
-        <div
-          className={intersecting ? style.trabajos_lista : style.trabajosOff}
-        >
-          <div className={style.trabajo}>
-            <img
-              src={programax}
-              className={style.imgTrabajos}
-              alt="programax"
-            />
-            <div className={style.layer}>
-              <h3>{text.work.programax.title}</h3>
-              <p>{text.work.programax.description}</p>
-              <a
-                target="_blank"
-                href="https://programax.vercel.app/"
-                rel="noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+    <section id="works">
+      <div className={style.portfolio} ref={trabajos}>
+        <div className={style.container}>
+          <h1>{text.work.title}</h1>
+          <div
+            className={intersecting ? style.trabajos_lista : style.trabajosOff}
+          >
+            <div className={style.trabajo}>
+              <img
+                src={programax}
+                className={style.imgTrabajos}
+                alt="programax"
+              />
+              <div className={style.layer}>
+                <h3>{text.work.programax.title}</h3>
+                <p>{text.work.programax.description}</p>
+                <a
+                  target="_blank"
+                  href="https://programax.vercel.app/"
+                  rel="noreferrer"
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className={style.trabajo}>
-            <img
-              src={countries}
-              className={style.imgTrabajos}
-              alt="countries"
-            />
-            <div className={style.layer}>
-              <h3>{text.work.countries.title}</h3>
-              <p>{text.work.countries.description}</p>
-              <a
-                target="_blank"
-                href="https://countriesapp-phi.vercel.app/"
-                rel="noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+            <div className={style.trabajo}>
+              <img
+                src={countries}
+                className={style.imgTrabajos}
+                alt="countries"
+              />
+              <div className={style.layer}>
+                <h3>{text.work.countries.title}</h3>
+                <p>{text.work.countries.description}</p>
+                <a
+                  target="_blank"
+                  href="https://countriesapp-phi.vercel.app/"
+                  rel="noreferrer"
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className={style.trabajo}>
-            <img src={pokemon} alt="pokemon" className={style.imgTrabajos} />
-            <div className={style.layer}>
-              <h3>{text.work.pokemon.title}</h3>
-              <p>{text.work.pokemon.description}</p>
-              <a
-                target="_blank"
-                href="https://pi-pokemon-2.vercel.app/"
-                rel="noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+            <div className={style.trabajo}>
+              <img src={pokemon} alt="pokemon" className={style.imgTrabajos} />
+              <div className={style.layer}>
+                <h3>{text.work.pokemon.title}</h3>
+                <p>{text.work.pokemon.description}</p>
+                <a
+                  target="_blank"
+                  href="https://pi-pokemon-2.vercel.app/"
+                  rel="noreferrer"
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className={style.trabajo}>
-            <img
-              src={videogames}
-              alt="videogames"
-              className={style.imgTrabajos}
-            />
-            <div className={style.layer}>
-              <h3>{text.work.videogames.title}</h3>
-              <p>{text.work.videogames.description}</p>
-              <a
-                target="_blank"
-                href="https://videogamesapp-nine.vercel.app"
-                rel="noreferrer"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+            <div className={style.trabajo}>
+              <img
+                src={videogames}
+                alt="videogames"
+                className={style.imgTrabajos}
+              />
+              <div className={style.layer}>
+                <h3>{text.work.videogames.title}</h3>
+                <p>{text.work.videogames.description}</p>
+                <a
+                  target="_blank"
+                  href="https://videogamesapp-nine.vercel.app"
+                  rel="noreferrer"
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -55,7 +55,7 @@ export default function Contacto({ contacto, entries, setElements }) {
   };
 
   return (
-    <div ref={contacto} className={style.contact}>
+    <section id="contact" ref={contacto} className={style.contact}>
       <div className={style.container}>
         <div className={style.row}>
           <div className={style.contacto_izquierda}>
@@ -132,6 +132,6 @@ export default function Contacto({ contacto, entries, setElements }) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

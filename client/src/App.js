@@ -33,10 +33,15 @@ function App() {
           servicios={servicios}
           trabajos={trabajos}
           contacto={contacto}
+          // sectionActive={sectionActive}
         />
+
         <Home inicio={inicio} />
+
         <About about={about} />
+
         <Servicios servicios={servicios} />
+
         <Trabajos trabajos={trabajos} />
 
         <Contacto contacto={contacto} />

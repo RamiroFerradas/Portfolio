@@ -62,7 +62,7 @@
   position: relative;
   /* width: 10vw; */
 }
-.linkActive {
+.active {
   background: none;
   position: relative;
   text-decoration: none;
@@ -89,7 +89,7 @@
   background: none;
 }
 
-.linkActive::after {
+.active::after {
   content: "";
   height: 3px;
   background: #f9004d;
@@ -121,7 +121,7 @@
 .flagsContainer button {
   border: none;
 }
-.linkActive::after {
+.active::after {
   -webkit-animation: ease;
   -webkit-animation-name: run;
   -webkit-animation-duration: 0.3s;
@@ -206,10 +206,10 @@
     left: 25px;
     cursor: pointer;
   }
-  .linkActive {
+  .active {
     color: rgb(34, 33, 33);
   }
-  .linkActive::after {
+  .active::after {
     content: "";
     height: 3px;
     background: rgb(34, 33, 33);

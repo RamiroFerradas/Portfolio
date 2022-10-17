@@ -14,6 +14,8 @@ export default function NavBar({
 }) {
   const eng = useRef(null);
   const esp = useRef(null);
+  const link = useRef(null);
+  const ul = useRef(null);
   const { text, handleLanguage, languaje } = useLanguaje();
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({
@@ -21,25 +23,71 @@ export default function NavBar({
       behavior: "smooth",
     });
   };
-  console.log(languaje, "lleng");
+
   const [openMenu, setOpenMenu] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", function () {
       var nav = document.querySelector("nav");
       nav.classList.toggle(style.sticky, window.scrollY > 0);
     });
+    window.addEventListener("scroll", handleScroll);
+    // openMenu && ul.current.classList.add(style.openSidebar);
   }, []);
 
+  const [sectionActive, setsectionActive] = useState("home");
+
+  const handleScroll = () => {
+    let current = "";
+    const section = document.querySelectorAll(`section`);
+    section.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (window.pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute("id");
+        setsectionActive(current);
+        // console.log("estas en", current);
+      }
+    });
+  };
+
   const values = [
-    { id: 1, text: `${text.navBar.inicio}`, ref: inicio },
-    { id: 2, text: `${text.navBar.Sobre_mi}`, ref: about },
-    { id: 3, text: `${text.navBar.Servicios}`, ref: servicios },
-    { id: 4, text: `${text.navBar.Trabajos}`, ref: trabajos },
-    { id: 5, text: `${text.navBar.Contacto}`, ref: contacto },
+    {
+      id: 1,
+      active: "home",
+      text: `${text.navBar.inicio}`,
+      scrollTo: inicio,
+      ref: link,
+    },
+    {
+      id: 2,
+      active: "about",
+      text: `${text.navBar.Sobre_mi}`,
+      scrollTo: about,
+      ref: link,
+    },
+    {
+      id: 3,
+      active: "services",
+      text: `${text.navBar.Servicios}`,
+      ref: link,
+      scrollTo: servicios,
+    },
+    {
+      id: 4,
+      active: "works",
+      text: `${text.navBar.Trabajos}`,
+      ref: link,
+      scrollTo: trabajos,
+    },
+    {
+      id: 5,
+      active: "contact",
+      ref: link,
+      text: `${text.navBar.Contacto}`,
+      scrollTo: contacto,
+    },
   ];
 
-  const [activeId, setActiveId] = useState(1);
-  const [activeIdCache, setActiveIdCache] = useLocalStorage(`id`, activeId);
   return (
     <header className={style.container}>
       <nav className={style.navBar}>
@@ -47,27 +95,24 @@ export default function NavBar({
           className={style.logo}
           onClick={() => {
             window.scrollTo(0, 0);
-            setActiveIdCache(1);
-            setActiveId(1);
           }}
         >
           Portfo<span className={style.spanLogo}>lio</span>
         </h2>
 
         <div className={style.menu}>
-          <ul className={openMenu && style.openSidebar}>
+          <ul ref={ul}>
             {values.map((e) => {
               return (
                 <li
                   key={e.id}
                   className={
-                    activeIdCache === e.id ? style.linkActive : style.link
+                    e?.active === sectionActive ? style.active : style.link
                   }
                   onClick={() => {
-                    setActiveIdCache(e.id);
-                    setActiveId(e.id);
-                    scrollToSeccion(e.ref);
+                    scrollToSeccion(e.scrollTo);
                   }}
+                  ref={e.ref}
                 >
                   <span>{e.text}</span>
                 </li>
@@ -76,7 +121,7 @@ export default function NavBar({
 
             <i
               className={`fas fa-times ${style.icon}`}
-              onClick={() => setOpenMenu(!openMenu)}
+              onClick={() => ul.current.classList.remove(style.openSidebar)}
             ></i>
             <div className={style.flagsContainer}>
               <button value="esp" onClick={(e) => handleLanguage("esp")}>
@@ -103,7 +148,7 @@ export default function NavBar({
           </ul>
 
           <i
-            onClick={() => setOpenMenu(!openMenu)}
+            onClick={() => ul.current.classList.add(style.openSidebar)}
             className={`fas fa-bars ${style.icon}`}
           ></i>
         </div>

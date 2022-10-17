@@ -19,12 +19,7 @@ function App() {
   const [closeMenu, setCloseMenu] = useState(false);
 
   return (
-    <div
-      className={style.app}
-      onClick={() => {
-        setCloseMenu(!closeMenu);
-      }}
-    >
+    <body className={style.app}>
       <LanguajeProvider>
         <NavBar
           closeMenu={closeMenu}
@@ -34,13 +29,19 @@ function App() {
           trabajos={trabajos}
           contacto={contacto}
         />
-        <Home inicio={inicio} />
-        <About about={about} />
-        <Servicios servicios={servicios} />
-        <Trabajos trabajos={trabajos} />
-        <Contacto contacto={contacto} />
+        <section
+          onClick={() => {
+            setCloseMenu(!closeMenu);
+          }}
+        >
+          <Home inicio={inicio} />
+          <About about={about} />
+          <Servicios servicios={servicios} />
+          <Trabajos trabajos={trabajos} />
+          <Contacto contacto={contacto} />
+        </section>
       </LanguajeProvider>
-    </div>
+    </body>
   );
 }
 

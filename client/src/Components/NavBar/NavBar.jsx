@@ -91,7 +91,12 @@ export default function NavBar({
 
   return (
     <header className={style.container}>
-      <nav className={style.navBar}>
+      <nav
+        onClick={() => {
+          console.log("adas");
+        }}
+        className={style.navBar}
+      >
         <h2
           className={style.logo}
           onClick={() => {

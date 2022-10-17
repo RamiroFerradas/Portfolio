@@ -160,7 +160,7 @@
     height: 100vh;
     padding-top: 50px;
     display: inline-block;
-    z-index: 9999;
+    z-index: 999999;
     transition: 0.5s;
   }
 
@@ -186,9 +186,11 @@
   }
 
   .navBar .openSidebar {
+    z-index: 9999;
     right: -0;
   }
   .navBar.navBar.sticky .openSidebar {
+    z-index: 9999;
     right: -0;
   }
   .navBar ul li {

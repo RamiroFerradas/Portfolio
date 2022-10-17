@@ -226,16 +226,10 @@
     object-fit: contain;
     margin-right: 5vw;
   }
-  .flagsContainer {
-    margin-left: 3vw;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    /* background-color: red; */
-    position: absolute;
-    bottom: 25vh;
-    flex-direction: column;
+  .selected {
+    margin-right: 5vw;
   }
+
   .flagsContainer button {
     border: none;
   }

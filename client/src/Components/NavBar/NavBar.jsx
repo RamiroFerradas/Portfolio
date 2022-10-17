@@ -25,8 +25,6 @@ export default function NavBar({
     });
   };
 
-  const [openMenu, setOpenMenu] = useState(false);
-
   useEffect(() => {
     window.addEventListener("scroll", function () {
       var nav = document.querySelector("nav");
@@ -91,12 +89,7 @@ export default function NavBar({
 
   return (
     <header className={style.container}>
-      <nav
-        onClick={() => {
-          console.log("adas");
-        }}
-        className={style.navBar}
-      >
+      <nav className={style.navBar}>
         <h2
           className={style.logo}
           onClick={() => {

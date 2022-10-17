@@ -1,8 +1,8 @@
 import { React, useEffect, useRef, useState } from "react";
 import style from "./NavBar.module.css";
 import useLanguaje from "../../Hooks/useLanguaje";
+import { useLocalStorage } from "../../Hooks/useLocalStorage";
 export default function NavBar({
-  // scrollToSeccion,
   about,
   inicio,
   servicios,
@@ -31,7 +31,7 @@ export default function NavBar({
     closeMenu && ul.current.classList.remove(style.openSidebar);
   }, [closeMenu]);
 
-  const [sectionActive, setsectionActive] = useState("home");
+  const [sectionActive, setsectionActive] = useLocalStorage("section", "home");
 
   const handleScroll = () => {
     let current = "";

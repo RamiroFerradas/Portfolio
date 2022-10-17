@@ -74,7 +74,8 @@
   pointer-events: none;
 }
 
-.link:hover {
+.link:hover,
+.navBar.sticky .link:hover {
   color: #f9004d;
   transition: 0.4s;
   cursor: pointer;
@@ -99,6 +100,33 @@
   margin-left: 25%;
   position: absolute;
 }
+.link::after {
+  content: "";
+  height: 3px;
+  background: #f9004d;
+  right: 0;
+  bottom: 1px;
+  width: 0;
+  margin-right: 25%;
+  position: absolute;
+  text-align: center;
+}
+
+.link:hover:after {
+  width: 50%;
+  transition: 0.4s;
+}
+
+.link:not(:hover):after {
+  right: 0;
+  left: auto;
+}
+
+.link.active:after {
+  background: #f9004d;
+  width: 100%;
+}
+
 .flagImg {
   height: 30px;
   width: 30px;

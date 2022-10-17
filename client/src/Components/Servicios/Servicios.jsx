@@ -19,7 +19,6 @@ export default function Servicios({ servicios }) {
   //   if (entries[0]?.isIntersecting)
   //     entries?.target.classList.add(style.servicios_lista);
   // }, [entries]);
-  console.log(text);
   const intersecting = entries[0]?.isIntersecting;
 
   return (

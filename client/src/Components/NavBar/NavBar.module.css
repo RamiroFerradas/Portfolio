@@ -103,6 +103,14 @@
   height: 30px;
   width: 30px;
   object-fit: contain;
+  margin-right: 0.5vw;
+}
+.selected {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  margin-right: 0.5vw;
+  opacity: 0.5;
 }
 .flagsContainer {
   margin-left: 3vw;

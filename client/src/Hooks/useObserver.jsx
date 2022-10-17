@@ -4,10 +4,9 @@ export default function useObserver(options) {
   const [elements, setElements] = useState([]);
   const [entries, setEntries] = useState([]);
 
-  // console.log(elements, "elements");
-  console.log(entries, "entries");
   const observer = useRef(
     new IntersectionObserver(function (observedEntries) {
+      // console.log(observedEntries, "observer");
       setEntries(observedEntries);
     }, options)
   );
@@ -24,6 +23,5 @@ export default function useObserver(options) {
       }
     };
   }, [elements]);
-
   return [observer.current, setElements, entries];
 }

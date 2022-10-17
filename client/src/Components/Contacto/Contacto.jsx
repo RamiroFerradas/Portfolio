@@ -3,7 +3,7 @@ import style from "./Contacto.module.css";
 import emailjs from "@emailjs/browser";
 import useLanguaje from "../../Hooks/useLanguaje";
 
-export default function Contacto({ contacto }) {
+export default function Contacto({ contacto, entries, setElements }) {
   const { text } = useLanguaje();
   const form = useRef();
 

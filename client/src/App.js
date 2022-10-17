@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import About from "./Components/About/About";
 import Contacto from "./Components/Contacto/Contacto";
 import Home from "./Components/Home/Home";
@@ -7,6 +7,7 @@ import Servicios from "./Components/Servicios/Servicios";
 import Trabajos from "./Components/Trabajos/Trabajos";
 import style from "./App.module.css";
 import { LanguajeProvider } from "./Context/LanguajeContext";
+import useObserver from "./Hooks/useObserver";
 
 function App() {
   const trabajos = useRef();
@@ -15,10 +16,25 @@ function App() {
   const servicios = useRef();
   const inicio = useRef();
 
+  const [observer, setElements, entries] = useObserver();
+  useEffect(() => {
+    const res = document.querySelectorAll(`.${style.trabajos}`);
+    console.log(res);
+    setElements(res);
+  }, [setElements]);
+  const [closeMenu, setCloseMenu] = useState(false);
+  console.log(entries);
+  console.log(observer);
   return (
-    <div className={style.app}>
+    <div
+      className={style.app}
+      onClick={() => {
+        setCloseMenu(!closeMenu);
+      }}
+    >
       <LanguajeProvider>
         <NavBar
+          closeMenu={closeMenu}
           about={about}
           inicio={inicio}
           servicios={servicios}
@@ -29,6 +45,7 @@ function App() {
         <About about={about} />
         <Servicios servicios={servicios} />
         <Trabajos trabajos={trabajos} />
+
         <Contacto contacto={contacto} />
       </LanguajeProvider>
     </div>

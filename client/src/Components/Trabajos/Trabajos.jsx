@@ -13,7 +13,6 @@ export default function Trabajos({ trabajos }) {
     threshold: 0,
     root: null,
   });
-  console.log(entries);
   useEffect(() => {
     const res = document.querySelectorAll(`.${style.portfolio}`);
     setElements(res);

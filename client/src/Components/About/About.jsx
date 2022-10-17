@@ -29,11 +29,7 @@ export default function About({ viewAbout, about }) {
       setViewButton(true);
     }
   }, [intersecting]);
-  // setTimeout(() => {
-  //   if (intersecting) {
-  //   }
-  // }, 1000);
-  console.log(text);
+
   return (
     <div className={style.about} ref={about}>
       <div className={style.main}>

@@ -16,15 +16,8 @@ function App() {
   const servicios = useRef();
   const inicio = useRef();
 
-  const [observer, setElements, entries] = useObserver();
-  useEffect(() => {
-    const res = document.querySelectorAll(`.${style.trabajos}`);
-    console.log(res);
-    setElements(res);
-  }, [setElements]);
   const [closeMenu, setCloseMenu] = useState(false);
-  console.log(entries);
-  console.log(observer);
+
   return (
     <div
       className={style.app}

@@ -60,28 +60,35 @@ export default function Contacto({ contacto, entries, setElements }) {
         <div className={style.row}>
           <div className={style.contacto_izquierda}>
             <h1 className={style.titulo}>{text.contact.title}</h1>
-            <p>
+            {/* <p>
               <i className="fas fa-paper-plane"></i>
               <span>ramiferra97@gmail.com</span>
-            </p>
-            <p>
+            </p> */}
+            {/* <p>
               <i className="fas fa-phone-square"></i>
               <span>3492528404</span>
-            </p>
+            </p> */}
             <div className={style.redes}>
               <a
                 target="_blank"
                 href="https://github.com/RamiroFerradas"
                 rel="noreferrer"
               >
-                <i className="fab fa-linkedin"></i>
+                <i className="fab fa-github"></i>
               </a>
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/ramiro-ferradas/"
                 rel="noreferrer"
               >
-                <i className="fab fa-github"></i>
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=3492528404"
+                rel="noreferrer"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
               </a>
             </div>
           </div>

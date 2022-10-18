@@ -43,6 +43,13 @@ export default function Trabajos({ trabajos }) {
                 >
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
+                {/* <a
+                  target="_blank"
+                  href="https://github.com/RamiroFerradas"
+                  rel="noreferrer"
+                >
+                  <i className="fab fa-github"></i>
+                </a> */}
               </div>
             </div>
             <div className={style.trabajo}>

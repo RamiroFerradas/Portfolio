@@ -2,15 +2,10 @@
   /* padding-top: -50vh; */
   padding: 10vh;
   color: white;
-  /* background-color: black; */
   text-align: center;
-  /* background-image: url("../../Assets/img/fondito.jpg") !important;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; */
+
+  min-height: 100px;
   overflow: hidden;
-  /* background-size: cover; */
-  /* height: 100vh; */
 }
 .container {
   padding-top: 10vh;
@@ -171,8 +166,8 @@
 
 @media screen and (max-width: 1200px) {
   .portfolio {
-    height: 200vh;
-    padding: 0vh 2vh;
+    /* height: 200vh;
+    padding: 0vh 2vh; */
   }
   .layer p,
   .layer i {

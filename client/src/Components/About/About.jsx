@@ -35,7 +35,7 @@ export default function About({ viewAbout, about }) {
 
           <h5>
             {text.about.subtitle}
-            <span className={style.spanLogo}>Full Stack</span>
+            <span className={style.spanLogo}> Full Stack</span>
           </h5>
           <p>{text.about.description}</p>
         </div>

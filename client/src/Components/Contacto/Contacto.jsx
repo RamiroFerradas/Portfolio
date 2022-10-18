@@ -112,22 +112,24 @@ export default function Contacto({ contacto, entries, setElements }) {
                 placeholder={text.contact.placeholder.msg}
                 required
               ></textarea>
-              <button
-                disabled={mensaje.status}
-                className={`${style.btn} ${style.btn2}`}
-                type="submit"
-              >
-                {text.contact.send}
-              </button>
-
-              {mensaje && (
-                <span
-                  id="msg"
-                  className={mensaje.error ? style.sendError : style.send}
+              <div className={style.sendMsj_Button}>
+                <button
+                  disabled={mensaje.status}
+                  className={`${style.btn} ${style.btn2}`}
+                  type="submit"
                 >
-                  {mensaje.text}
-                </span>
-              )}
+                  {text.contact.send}
+                </button>
+
+                {mensaje && (
+                  <span
+                    id="msg"
+                    className={mensaje.error ? style.sendError : style.send}
+                  >
+                    {mensaje.text}
+                  </span>
+                )}
+              </div>
             </form>
           </div>
         </div>

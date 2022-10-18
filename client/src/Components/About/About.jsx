@@ -23,14 +23,14 @@ export default function About({ viewAbout, about }) {
   return (
     <section id="about" className={style.about} ref={about}>
       <div className={style.main}>
-        <div className={intersecting ? style.image_wrapper : undefined}>
+        <div className={intersecting ? style.image_wrapper : style.opacity}>
           <img src={yoImg} alt="ramiro" className={style.image1} />
           <img src={yoImg} alt="ramiro" className={style.image2} />
           <img src={yoImg} alt="ramiro" className={style.image3} />
           <img src={yoImg} alt="ramiro" className={style.image4} />
         </div>
 
-        <div className={intersecting ? style.aboutText : undefined}>
+        <div className={intersecting ? style.aboutText : style.opacity}>
           <h2>{text.about.title}</h2>
 
           <h5>
@@ -40,7 +40,7 @@ export default function About({ viewAbout, about }) {
           <p>{text.about.description}</p>
         </div>
 
-        <button className={intersecting ? style.buttonCV : undefined}>
+        <button className={intersecting ? style.buttonCV : style.opacity}>
           <a
             href={pdf}
             target="_blank"

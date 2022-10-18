@@ -215,8 +215,8 @@
 }
 @media screen and (max-width: 500px) {
   .portfolio {
-    height: 140vh;
-    padding: 20vh 2vh;
+    /* height: 140vh;
+    padding: 20vh 2vh; */
   }
   .trabajos_lista {
     display: grid;

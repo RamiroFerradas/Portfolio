@@ -22,6 +22,9 @@
   border-radius: 30px;
   transform-origin: left;
 }
+.opacity {
+  opacity: 0;
+}
 
 .image1 {
   -webkit-clip-path: polygon(0 0, 0 32%, 28% 0);

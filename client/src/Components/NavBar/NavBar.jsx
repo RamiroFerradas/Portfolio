@@ -2,6 +2,8 @@ import { React, useEffect, useRef, useState } from "react";
 import style from "./NavBar.module.css";
 import useLanguaje from "../../Hooks/useLanguaje";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
+import useTheme from "../../Hooks/useTheme";
+import { useCallback } from "react";
 export default function NavBar({
   about,
   inicio,
@@ -10,6 +12,7 @@ export default function NavBar({
   contacto,
   closeMenu,
 }) {
+  const { handleTheme, theme } = useTheme();
   const eng = useRef(null);
   const esp = useRef(null);
   const link = useRef(null);
@@ -21,19 +24,9 @@ export default function NavBar({
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", function () {
-      var nav = document.querySelector("nav");
-      nav.classList.toggle(style.sticky, window.scrollY > 0);
-    });
-    window.addEventListener("scroll", handleScroll);
-    closeMenu && ul.current.classList.remove(style.openSidebar);
-  }, [closeMenu]);
-
   const [sectionActive, setsectionActive] = useLocalStorage("section", "home");
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     let current = "";
     const section = document.querySelectorAll(`section`);
     section.forEach((section) => {
@@ -44,7 +37,16 @@ export default function NavBar({
         // console.log("estas en", current);
       }
     });
-  };
+  }, [setsectionActive]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      nav.classList.toggle(style.sticky, window.scrollY > 0);
+    });
+    closeMenu && ul.current.classList.remove(style.openSidebar);
+    window.addEventListener("scroll", handleScroll);
+  }, [closeMenu, handleScroll]);
 
   const values = [
     {
@@ -120,7 +122,7 @@ export default function NavBar({
               onClick={() => ul.current.classList.remove(style.openSidebar)}
             ></i>
             <div className={style.flagsContainer}>
-              <button value="esp" onClick={(e) => handleLanguage("esp")}>
+              <button value="esp" onClick={(e) => handleLanguage("esp", e)}>
                 <img
                   ref={esp}
                   className={
@@ -130,7 +132,7 @@ export default function NavBar({
                   alt="Spanish"
                 />
               </button>
-              <button value="eng" onClick={(e) => handleLanguage("eng")}>
+              <button value="eng" onClick={(e) => handleLanguage("eng", e)}>
                 <img
                   ref={eng}
                   className={
@@ -140,6 +142,27 @@ export default function NavBar({
                   alt="English"
                 />
               </button>
+              {/* <input
+                type="radio"
+                value="dark"
+                name="theme"
+                id="dark"
+                defaultChecked="true"
+                onClick={() => handleTheme("dark")}
+              />
+              <label htmlFor="" style={{ color: "white" }}>
+                Oscuro
+              </label>
+              <input
+                type="radio"
+                value="light"
+                name="theme"
+                id="light"
+                onClick={() => handleTheme("light")}
+              />
+              <label htmlFor="" style={{ color: "white" }}>
+                Claro
+              </label> */}
             </div>
           </ul>
 

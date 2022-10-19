@@ -12,7 +12,7 @@ const LanguajeProvider = ({ children }) => {
   );
   const [text, setText] = useState(translations[languaje]);
 
-  const handleLanguage = (value, ref, style) => {
+  const handleLanguage = (value, e) => {
     if (value === "esp") {
       setLanguaje("esp");
       setText(translations.esp);

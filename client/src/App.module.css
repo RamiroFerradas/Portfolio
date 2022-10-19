@@ -9,3 +9,7 @@
   /* position: absolute; */
   z-index: 1;
 }
+.dark {
+  /* background-color: aliceblue; */
+  /* filter: invert(1); */
+}

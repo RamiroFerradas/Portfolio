@@ -36,6 +36,7 @@ export default function Trabajos({ trabajos }) {
               <div className={style.layer}>
                 <h3>{text.work.programax.title}</h3>
                 <p>{text.work.programax.description}</p>
+
                 <a
                   target="_blank"
                   href="https://programax.vercel.app/"

@@ -134,7 +134,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
-  font-size: 1.4vh;
+  font-size: 12px;
   text-align: center;
   height: 0%;
   transition: height 0.3s;
@@ -185,7 +185,7 @@
     /* height: 30vh; */
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .layer a {
     margin-top: -1vh;
     font-size: 8px;

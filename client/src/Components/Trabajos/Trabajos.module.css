@@ -202,14 +202,8 @@
   }
 }
 @media screen and (max-width: 560px) {
-  .portfolio {
-    /* height: 140vh;
-    padding: 20vh 2vh; */
-  }
   .trabajos_lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
-    /* grid-template-columns: 1fr; */
-    /* grid-gap: 40px; */
   }
 }

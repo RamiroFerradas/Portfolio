@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import About from "./Components/About/About";
 import Contacto from "./Components/Contacto/Contacto";
 import Home from "./Components/Home/Home";
@@ -7,7 +7,6 @@ import Servicios from "./Components/Servicios/Servicios";
 import Trabajos from "./Components/Trabajos/Trabajos";
 import style from "./App.module.css";
 import useTheme from "./Hooks/useTheme";
-import { useEffect } from "react";
 
 function App() {
   const trabajos = useRef();

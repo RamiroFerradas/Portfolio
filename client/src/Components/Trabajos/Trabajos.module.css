@@ -256,12 +256,20 @@
     grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
   }
   .arrow {
-    font-size: 15px;
-    margin-bottom: 5px;
+    /* font-size: 25px; */
+    /* margin-bottom: 15px; */
   }
-}
-@media screen and (max-width: 560px) {
   .layer p {
     font-size: 5px;
   }
+  .linksTrabajos i {
+    margin-top: 2vh;
+    font-size: 25px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 560px) {
 }

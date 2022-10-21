@@ -6,6 +6,7 @@ import programax from "../../Assets/trabajos/programax.png";
 import videogames from "../../Assets/trabajos/videogames.png";
 import useObserver from "../../Hooks/useObserver";
 import useLanguaje from "../../Hooks/useLanguaje";
+import { BsChevronDoubleUp } from "react-icons/bs";
 
 export default function Trabajos({ trabajos }) {
   const { text } = useLanguaje();
@@ -34,23 +35,25 @@ export default function Trabajos({ trabajos }) {
                 alt="programax"
               />
               <div className={style.layer}>
+                <BsChevronDoubleUp className={style.arrow} />
                 <h3>{text.work.programax.title}</h3>
                 <p>{text.work.programax.description}</p>
-
-                <a
-                  target="_blank"
-                  href="https://programax.vercel.app/"
-                  rel="noreferrer"
-                >
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-                {/* <a
-                  target="_blank"
-                  href="https://github.com/RamiroFerradas"
-                  rel="noreferrer"
-                >
-                  <i className="fab fa-github"></i>
-                </a> */}
+                <div className={style.linksTrabajos}>
+                  <a
+                    target="_blank"
+                    href="https://programax.vercel.app/"
+                    rel="noreferrer"
+                  >
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/FranNavarro27F/Proyecto_Final"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div className={style.trabajo}>
@@ -60,29 +63,49 @@ export default function Trabajos({ trabajos }) {
                 alt="countries"
               />
               <div className={style.layer}>
+                <BsChevronDoubleUp className={style.arrow} />
                 <h3>{text.work.countries.title}</h3>
                 <p>{text.work.countries.description}</p>
-                <a
-                  target="_blank"
-                  href="https://countriesapp-phi.vercel.app/"
-                  rel="noreferrer"
-                >
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <div className={style.linksTrabajos}>
+                  <a
+                    target="_blank"
+                    href="https://countriesapp-phi.vercel.app/"
+                    rel="noreferrer"
+                  >
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/RamiroFerradas/PI-COUNTRIES"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div className={style.trabajo}>
               <img src={pokemon} alt="pokemon" className={style.imgTrabajos} />
               <div className={style.layer}>
+                <BsChevronDoubleUp className={style.arrow} />
                 <h3>{text.work.pokemon.title}</h3>
                 <p>{text.work.pokemon.description}</p>
-                <a
-                  target="_blank"
-                  href="https://pi-pokemon-2.vercel.app/"
-                  rel="noreferrer"
-                >
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <div className={style.linksTrabajos}>
+                  <a
+                    target="_blank"
+                    href="https://pi-pokemon-2.vercel.app/"
+                    rel="noreferrer"
+                  >
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/RamiroFerradas/POKE-APP"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
               </div>
             </div>
             <div className={style.trabajo}>
@@ -92,15 +115,25 @@ export default function Trabajos({ trabajos }) {
                 className={style.imgTrabajos}
               />
               <div className={style.layer}>
+                <BsChevronDoubleUp className={style.arrow} />
                 <h3>{text.work.videogames.title}</h3>
                 <p>{text.work.videogames.description}</p>
-                <a
-                  target="_blank"
-                  href="https://videogamesapp-nine.vercel.app"
-                  rel="noreferrer"
-                >
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <div className={style.linksTrabajos}>
+                  <a
+                    target="_blank"
+                    href="https://videogamesapp-nine.vercel.app"
+                    rel="noreferrer"
+                  >
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/RamiroFerradas/VIDEOGAMES.git"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

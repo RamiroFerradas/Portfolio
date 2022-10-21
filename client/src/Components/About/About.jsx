@@ -39,7 +39,6 @@ export default function About({ viewAbout, about }) {
           </h5>
           <p>{text.about.description}</p>
         </div>
-
         <button className={intersecting ? style.buttonCV : style.opacity}>
           <a
             href={pdf}

@@ -85,7 +85,7 @@ export default function Contacto({ contacto, entries, setElements }) {
               </a>
               <a
                 target="_blank"
-                href="https://api.whatsapp.com/send?phone=3492528404"
+                href="https://api.whatsapp.com/send?phone=543492528404"
                 rel="noreferrer"
               >
                 <i className="fa-brands fa-whatsapp"></i>

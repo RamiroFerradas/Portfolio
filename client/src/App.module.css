@@ -16,6 +16,9 @@
 
 @media screen and (max-width: 750px) {
   .app {
-    background-image: url("./Assets/img/fonditoComprimido.jpg") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
   }
 }

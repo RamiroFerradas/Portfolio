@@ -178,8 +178,13 @@
   animation: MoveUpDown 0s;
 }
 .arrow {
-  font-size: 25px;
-  margin: auto;
+  opacity: 0.7;
+  font-size: 55px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+
+  /* padding-bottom: 10px; */
 }
 
 @media screen and (max-width: 1200px) {
@@ -193,14 +198,18 @@
     margin-top: 0;
     border-radius: 50%;
     font-size: 16px;
-    line-height: 40px;
-    height: 40px;
-    width: 40px;
+    line-height: 4vw;
+    height: 4vw;
+    width: 4vw;
   }
   .trabajos_lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
     grid-gap: 40px;
+  }
+  .arrow {
+    font-size: 35px;
+    margin-bottom: 22px;
   }
 }
 @media screen and (max-width: 800px) {
@@ -215,15 +224,33 @@
   .layer h3 {
     font-size: 15px;
   }
+
+  .trabajo:hover .layer {
+    height: 140%;
+    margin-bottom: 0vh;
+    animation: MoveUpDown 0s;
+  }
 }
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 600px) {
   .layer p {
-    font-size: 1.7vw;
+    font-size: 8px;
+  }
+  .linksTrabajos i {
+    margin-top: 2vh;
+    font-size: 25px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 15px;
   }
 }
 @media screen and (max-width: 560px) {
   .trabajos_lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
+  }
+  .arrow {
+    font-size: 25px;
+    margin-bottom: 52px;
   }
 }

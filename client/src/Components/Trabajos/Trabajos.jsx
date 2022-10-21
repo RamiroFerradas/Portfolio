@@ -36,6 +36,7 @@ export default function Trabajos({ trabajos }) {
               />
               <div className={style.layer}>
                 <BsChevronDoubleUp className={style.arrow} />
+
                 <h3>{text.work.programax.title}</h3>
                 <p>{text.work.programax.description}</p>
                 <div className={style.linksTrabajos}>

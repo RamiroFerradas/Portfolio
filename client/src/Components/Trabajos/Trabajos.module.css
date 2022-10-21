@@ -224,11 +224,17 @@
   .layer h3 {
     font-size: 15px;
   }
-
+  .layer p {
+    font-size: 12px;
+  }
   .trabajo:hover .layer {
-    height: 140%;
+    height: 160%;
     margin-bottom: 0vh;
     animation: MoveUpDown 0s;
+  }
+  .arrow {
+    font-size: 35px;
+    margin-bottom: 35px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -238,9 +244,9 @@
   .linksTrabajos i {
     margin-top: 2vh;
     font-size: 25px;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
     margin-left: 15px;
   }
 }
@@ -250,7 +256,12 @@
     grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
   }
   .arrow {
-    font-size: 25px;
-    margin-bottom: 52px;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .layer p {
+    font-size: 5px;
   }
 }

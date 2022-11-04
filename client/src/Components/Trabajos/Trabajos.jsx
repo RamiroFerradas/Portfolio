@@ -4,6 +4,7 @@ import pokemon from "../../Assets/trabajos/Captura de pantalla 2022-10-12 190024
 import countries from "../../Assets/trabajos/countries.png";
 import programax from "../../Assets/trabajos/programax.png";
 import videogames from "../../Assets/trabajos/videogames.png";
+import bikeTraining from "../../Assets/trabajos/bikeTraining.png";
 import useObserver from "../../Hooks/useObserver";
 import useLanguaje from "../../Hooks/useLanguaje";
 import { BsChevronDoubleUp } from "react-icons/bs";
@@ -130,6 +131,34 @@ export default function Trabajos({ trabajos }) {
                   <a
                     target="_blank"
                     href="https://github.com/RamiroFerradas/VIDEOGAMES.git"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className={style.trabajo}>
+              <img
+                src={bikeTraining}
+                alt="durandoBike"
+                className={style.imgTrabajos}
+              />
+              <div className={style.layer}>
+                <BsChevronDoubleUp className={style.arrow} />
+                <h3>{text.work.bikeTraining.title}</h3>
+                <p>{text.work.bikeTraining.description}</p>
+                <div className={style.linksTrabajos}>
+                  <a
+                    target="_blank"
+                    href="https://durandotraining.vercel.app/"
+                    rel="noreferrer"
+                  >
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/RamiroFerradas/BIKE-TRAINING.git"
                     rel="noreferrer"
                   >
                     <i className="fab fa-github"></i>

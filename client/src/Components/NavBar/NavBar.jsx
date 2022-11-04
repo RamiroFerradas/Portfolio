@@ -4,15 +4,15 @@ import useLanguaje from "../../Hooks/useLanguaje";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
 import useTheme from "../../Hooks/useTheme";
 import { useCallback } from "react";
+
 export default function NavBar({
+  closeMenu,
   about,
   inicio,
   servicios,
   trabajos,
   contacto,
-  closeMenu,
 }) {
-  const { handleTheme, theme } = useTheme();
   const eng = useRef(null);
   const esp = useRef(null);
   const link = useRef(null);

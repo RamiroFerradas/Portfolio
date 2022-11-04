@@ -57,6 +57,11 @@ export const translations = {
         description:
           "Esta página es un Proyecto Individual para el bootcamp de Soy Henry. Aquí puede encontrar información sobre los diferentes Pokemon y sus caracteristicas.",
       },
+      bikeTraining: {
+        title: "Bike Training",
+        description:
+          "Aplicacion en desarrollo, donde el proposito es poder crear un entrenamiento semanal para cada alumno para una escuela de ciclismo y poder descargarlo en forma de planilla de excel.",
+      },
     },
     contact: {
       title: "Contáctame",
@@ -127,6 +132,11 @@ export const translations = {
         title: "Poke App",
         description:
           "This page is an Individual Project for the Soy Henry bootcamp. Here you can find information about the different Pokemon and their characteristics.",
+      },
+      bikeTraining: {
+        title: "Bike Training",
+        description:
+          "Application in development, where the purpose is to be able to create a weekly training for each student for a cycling school and to be able to download it in the form of an excel spreadsheet",
       },
     },
     contact: {

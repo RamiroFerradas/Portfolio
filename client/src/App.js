@@ -17,13 +17,13 @@ function App() {
   const app = useRef();
   const { theme } = useTheme();
 
-  useEffect(() => {
-    if (theme === "dark") {
-      console.log(theme);
-    } else {
-      console.log(theme);
-    }
-  }, [theme]);
+  // useEffect(() => {
+  //   if (theme === "dark") {
+  //     console.log(theme);
+  //   } else {
+  //     console.log(theme);
+  //   }
+  // }, [theme]);
 
   const [closeMenu, setCloseMenu] = useState(false);
 

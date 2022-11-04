@@ -23,6 +23,7 @@ const LanguajeProvider = ({ children }) => {
   };
 
   const data = { text, handleLanguage, languaje };
+  
   return (
     <LanguajeContext.Provider value={data}>{children}</LanguajeContext.Provider>
   );

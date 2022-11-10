@@ -62,6 +62,11 @@ export const translations = {
         description:
           "Aplicacion en desarrollo, donde el proposito es poder crear un entrenamiento semanal para cada alumno para una escuela de ciclismo y poder descargarlo en forma de planilla de excel.",
       },
+      starwars: {
+        title: "Star Wars App",
+        description:
+          "Single-page application (SPA), la cual fue requerida para una prueba técnica. Se trata de una aplicaicon 100% responsiva para diferentes dispositivos, la cual fue basada en la serie de peliculas de 'Star Wars'.",
+      },
     },
     contact: {
       title: "Contáctame",
@@ -137,6 +142,11 @@ export const translations = {
         title: "Bike Training",
         description:
           "Application in development, where the purpose is to be able to create a weekly training for each student for a cycling school and to be able to download it in the form of an excel spreadsheet",
+      },
+      starwars: {
+        title: "Star Wars App",
+        description:
+          "Single-page application (SPA), which was required for a technical test. It is a 100% responsive application for different devices, which was based on the 'Star Wars' movie series.",
       },
     },
     contact: {

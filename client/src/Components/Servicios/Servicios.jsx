@@ -25,7 +25,6 @@ export default function Servicios({ servicios }) {
     <section id="services" className={style.servicios} ref={servicios}>
       <div className={style.container}>
         <h1>{text.services.title}</h1>
-
         <div
           className={intersecting ? style.servicios_lista : style.serviciosOff}
         >

@@ -1,9 +1,12 @@
-import { React, useContext } from "react";
+import { React } from "react";
 import useLanguaje from "../../Hooks/useLanguaje";
+import useScreenSize from "../../Hooks/useScreenSize";
 import style from "./Home.module.css";
 
 export default function Home({ inicio }) {
   const { text } = useLanguaje();
+
+  const { width, height } = useScreenSize();
 
   return (
     <section id="home" className={style.contenedor} ref={inicio}>

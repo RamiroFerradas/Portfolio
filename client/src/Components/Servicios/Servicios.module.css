@@ -1,5 +1,5 @@
 .servicios {
-  padding: 150px 0;
+  /* padding: 150px 0; */
   margin-top: 20vh;
   width: 100%;
   /* height: 100vh; */
@@ -10,9 +10,9 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center; */
-
-  min-height: 100px;
+  min-height: 100vh;
   overflow: hidden;
+  /* padding: 10vh; */
 }
 
 .servicios_lista {
@@ -23,14 +23,11 @@
   grid-gap: 20px;
   margin-top: 50px;
   background: none;
-  background-image: url("../../Assets/img/fondito.jpg") !important;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   -webkit-animation: fadeInFromNone 1.5s ease-out;
   -moz-animation: fadeInFromNone 1.5s ease-out;
   -o-animation: fadeInFromNone 1.5s ease-out;
   animation: fadeInFromNone 1.5s ease-out;
+  /* height: 200px; */
 }
 .serviciosOff {
   opacity: 0;
@@ -45,6 +42,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  /* min-height: auto; */
 }
 
 @-webkit-keyframes fadeInFromNone {

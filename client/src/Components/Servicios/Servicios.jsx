@@ -15,10 +15,6 @@ export default function Servicios({ servicios }) {
     setElements(res);
   }, [setElements]);
 
-  // useEffect(() => {
-  //   if (entries[0]?.isIntersecting)
-  //     entries?.target.classList.add(style.servicios_lista);
-  // }, [entries]);
   const intersecting = entries[0]?.isIntersecting;
 
   return (

@@ -2,7 +2,6 @@ import { React, useEffect, useRef, useState } from "react";
 import style from "./NavBar.module.css";
 import useLanguaje from "../../Hooks/useLanguaje";
 import { useLocalStorage } from "../../Hooks/useLocalStorage";
-import useTheme from "../../Hooks/useTheme";
 import { useCallback } from "react";
 
 export default function NavBar({
@@ -17,7 +16,7 @@ export default function NavBar({
   const esp = useRef(null);
   const link = useRef(null);
   const ul = useRef(null);
-  const { text, handleLanguage, languaje } = useLanguaje();
+  const { text, handleLanguage, languaje, check } = useLanguaje();
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
@@ -122,47 +121,34 @@ export default function NavBar({
               onClick={() => ul.current.classList.remove(style.openSidebar)}
             ></i>
             <div className={style.flagsContainer}>
-              <button value="esp" onClick={(e) => handleLanguage("esp", e)}>
-                <img
-                  ref={esp}
-                  className={
-                    languaje === "esp" ? style.selected : style.flagImg
-                  }
-                  src="https://flagcdn.com/es.svg"
-                  alt="Spanish"
-                />
-              </button>
-              <button value="eng" onClick={(e) => handleLanguage("eng", e)}>
-                <img
-                  ref={eng}
-                  className={
-                    languaje === "eng" ? style.selected : style.flagImg
-                  }
-                  src="https://flagcdn.com/us.svg"
-                  alt="English"
-                />
-              </button>
-              {/* <input
-                type="radio"
-                value="dark"
-                name="theme"
-                id="dark"
-                defaultChecked="true"
-                onClick={() => handleTheme("dark")}
-              />
-              <label htmlFor="" style={{ color: "white" }}>
-                Oscuro
-              </label>
-              <input
-                type="radio"
-                value="light"
-                name="theme"
-                id="light"
-                onClick={() => handleTheme("light")}
-              />
-              <label htmlFor="" style={{ color: "white" }}>
-                Claro
-              </label> */}
+              <div className={style.switch}>
+                <input
+                  onChange={(e) => handleLanguage(e)}
+                  id="language-toggle"
+                  className={`${style.check_toggle} ${style.check_toggle_round_flat}`}
+                  type="checkbox"
+                  defaultChecked={check}
+                ></input>
+                <label htmlFor="language-toggle"></label>
+                <span className={style.on}>
+                  <img
+                    ref={esp}
+                    className={style.flagImg}
+                    src="https://flagcdn.com/es.svg"
+                    alt="Spanish"
+                  />
+                </span>
+                <span className={style.off}>
+                  <div className={style.imgDiv}>
+                    <img
+                      ref={eng}
+                      className={style.flagImg}
+                      src="https://flagcdn.com/us.svg"
+                      alt="English"
+                    />
+                  </div>
+                </span>
+              </div>
             </div>
           </ul>
 

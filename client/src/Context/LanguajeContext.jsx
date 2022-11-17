@@ -11,19 +11,22 @@ const LanguajeProvider = ({ children }) => {
     initialLanguaje ? initialLanguaje : `esp`
   );
   const [text, setText] = useState(translations[languaje]);
+  const [check, setCheked] = useLocalStorage("check", false);
 
-  const handleLanguage = (value, e) => {
-    if (value === "esp") {
+  const handleLanguage = (e) => {
+    if (!e.target.checked) {
       setLanguaje("esp");
       setText(translations.esp);
+      setCheked(false);
     } else {
       setLanguaje("eng");
       setText(translations.eng);
+      setCheked(true);
     }
   };
 
-  const data = { text, handleLanguage, languaje };
-  
+  const data = { text, handleLanguage, languaje, check };
+
   return (
     <LanguajeContext.Provider value={data}>{children}</LanguajeContext.Provider>
   );

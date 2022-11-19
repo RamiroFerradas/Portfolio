@@ -355,7 +355,7 @@
 @media screen and (max-width: 1200px) {
   .buttonCV {
     left: 0vw;
-    bottom: 5vh;
+    bottom: 1vh;
   }
 }
 
@@ -367,7 +367,7 @@
   }
 
   .image_wrapper {
-    /* flex-basis: 100%; */
+    flex-basis: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -377,15 +377,14 @@
     margin-left: 5%;
   }
 
-  .main {
+  .about {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    width: 57vw;
-    margin: 0 20vw;
+    text-align: center;
   }
+
   .main img {
     margin-left: 5%;
     display: flex;
@@ -435,6 +434,8 @@
     -webkit-animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-delay: 0s;
+
+    object-fit: cover;
   }
 
   .buttonCV {

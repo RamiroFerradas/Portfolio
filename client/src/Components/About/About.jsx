@@ -49,22 +49,6 @@ export default function About({ viewAbout, about }) {
             {text.about.download}
           </a>
         </button>
-        {/* <div
-          className="badge-base LI-profile-badge"
-          data-locale="es_ES"
-          data-size="medium"
-          data-theme="dark"
-          data-type="VERTICAL"
-          data-vanity="ramiro-ferradas"
-          data-version="v1"
-        >
-          <a
-            className="badge-base__link LI-simple-link"
-            href="https://ar.linkedin.com/in/ramiro-ferradas?trk=profile-badge"
-          >
-            Ramiro Ferradas
-          </a>
-        </div> */}
       </div>
     </section>
   );

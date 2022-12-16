@@ -67,6 +67,11 @@ export const translations = {
         description:
           "Single-page application (SPA), la cual fue requerida para una prueba técnica. Se trata de una aplicaicon 100% responsiva para diferentes dispositivos, la cual fue basada en la serie de peliculas de 'Star Wars'.",
       },
+      jotaTe: {
+        title: "Jota Te Climatizacion",
+        description:
+          "Pagina web informativa y ecommerce en proceso para una empresa de climatizacion en general",
+      },
     },
     contact: {
       title: "Contáctame",
@@ -147,6 +152,11 @@ export const translations = {
         title: "Star Wars App",
         description:
           "Single-page application (SPA), which was required for a technical test. It is a 100% responsive application for different devices, which was based on the 'Star Wars' movie series.",
+      },
+      jotaTe: {
+        title: "Jota Te Climatizacion",
+        description:
+          "Informative website and ecommerce in progress for an air conditioning company in general",
       },
     },
     contact: {

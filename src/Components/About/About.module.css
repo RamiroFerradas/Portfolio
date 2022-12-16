@@ -9,6 +9,7 @@
   position: relative;
   min-height: 100px;
   overflow: hidden;
+  height: 80vh;
 }
 
 .main img {
@@ -20,6 +21,9 @@
 }
 .opacity {
   opacity: 0;
+}
+.opacity2 {
+  display: none;
 }
 
 .image1 {
@@ -99,9 +103,9 @@
   }
 }
 .aboutText {
-  width: 55vh;
+  width: 35vw;
   background-color: #191919;
-  margin-left: 50vh;
+  margin-left: 20vw;
   overflow: hidden;
 }
 .main {

@@ -18,6 +18,7 @@ export default function About({ viewAbout, about }) {
     setElements(res);
   }, [setElements]);
 
+  // const intersecting = entries[0]?.isIntersecting;
   const intersecting = entries[0]?.isIntersecting;
 
   return (
@@ -30,7 +31,7 @@ export default function About({ viewAbout, about }) {
           <img src={yoImg} alt="ramiro" className={style.image4} />
         </div>
 
-        <div className={intersecting ? style.aboutText : style.opacity}>
+        <div className={intersecting ? style.aboutText : style.opacity2}>
           <h2>{text.about.title}</h2>
 
           <h5>

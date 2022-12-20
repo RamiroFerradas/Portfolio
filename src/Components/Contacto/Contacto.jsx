@@ -70,8 +70,8 @@ export default function Contacto({ contacto, entries, setElements }) {
             </p> */}
             <div className={style.redes}>
               <a
-                target="_blank"
                 href="https://github.com/RamiroFerradas"
+                target="_blank"
                 rel="noreferrer"
               >
                 <i className="fab fa-github"></i>

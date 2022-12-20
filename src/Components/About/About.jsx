@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import style from "./About.module.css";
 import yoImg from "../../Assets/img/byn/ramiro.jpg";
-import pdf from "../../Assets/cv/cv.pdf";
+import pdf from "../../Assets/cv/CV RAMIRO FERRADAS.pdf";
 import { useEffect } from "react";
 import useObserver from "../../Hooks/useObserver";
 import useLanguaje from "../../Hooks/useLanguaje";

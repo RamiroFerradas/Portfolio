@@ -77,7 +77,6 @@ export default function Trabajos({ trabajos }) {
       github: "https://github.com/RamiroFerradas/JotaTe-Climatizacion",
     },
   ];
-  console.log(trabajosList.map((e) => e));
   return (
     <section id="works">
       <div className={style.portfolio} ref={trabajos}>

@@ -11,6 +11,7 @@ export default function NavBar({
   servicios,
   trabajos,
   contacto,
+  setCloseMenu,
 }) {
   const eng = useRef(null);
   const esp = useRef(null);
@@ -153,7 +154,10 @@ export default function NavBar({
           </ul>
 
           <i
-            onClick={() => ul.current.classList.add(style.openSidebar)}
+            onClick={() => {
+              setCloseMenu(false);
+              ul.current.classList.add(style.openSidebar);
+            }}
             className={`fas fa-bars ${style.icon}`}
           ></i>
         </div>

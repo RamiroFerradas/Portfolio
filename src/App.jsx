@@ -15,15 +15,6 @@ function App() {
   const servicios = useRef();
   const inicio = useRef();
   const app = useRef();
-  const { theme } = useTheme();
-
-  // useEffect(() => {
-  //   if (theme === "dark") {
-  //     console.log(theme);
-  //   } else {
-  //     console.log(theme);
-  //   }
-  // }, [theme]);
 
   const [closeMenu, setCloseMenu] = useState(false);
 
@@ -36,10 +27,11 @@ function App() {
         servicios={servicios}
         trabajos={trabajos}
         contacto={contacto}
+        setCloseMenu={setCloseMenu}
       />
       <section
         onClick={() => {
-          setCloseMenu(!closeMenu);
+          setCloseMenu(true);
         }}
       >
         <Home inicio={inicio} />

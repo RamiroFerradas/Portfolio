@@ -18,35 +18,43 @@ export default function NavBar({
   const link = useRef(null);
   const ul = useRef(null);
   const { text, handleLanguage, languaje, check } = useLanguaje();
+
   const scrollToSeccion = (elementRef) => {
     window.scrollTo({
       top: elementRef.current.offsetTop,
       behavior: "smooth",
     });
   };
+  const section = document.querySelectorAll(`section`);
   const [sectionActive, setsectionActive] = useLocalStorage("section", "home");
 
   const handleScroll = useCallback(() => {
-    let current = "";
-    const section = document.querySelectorAll(`section`);
     section.forEach((section) => {
+      let current = "";
+      console.log(section.offsetTop);
       const sectionTop = section.offsetTop;
-      if (window.pageYOffset >= sectionTop - 200) {
+      if (window.pageYOffset >= sectionTop) {
         current = section.getAttribute("id");
         setsectionActive(current);
-        // console.log("estas en", current);
       }
     });
-  }, [setsectionActive]);
+  }, [section, setsectionActive]);
+
+  const sticky = useCallback(() => {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle(style.sticky, window.scrollY > 0);
+  }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", function () {
-      var nav = document.querySelector("nav");
-      nav.classList.toggle(style.sticky, window.scrollY > 0);
-    });
     closeMenu && ul.current.classList.remove(style.openSidebar);
+    window.addEventListener("scroll", sticky);
     window.addEventListener("scroll", handleScroll);
-  }, [closeMenu, handleScroll]);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", sticky);
+    };
+  }, [closeMenu, handleScroll, section, sticky]);
 
   const values = [
     {

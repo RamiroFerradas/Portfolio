@@ -34,12 +34,15 @@
     "redux-thunk": "^2.3.0",
     "store": "^2.0.12",
     "swiper": "^8.4.4",
+    "vite-plugin-eslint": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.32.0",
+    "eslint-config-react-app": "^7.0.1",
     "vite": "^3.2.3"
   }
 }

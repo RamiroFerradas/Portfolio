@@ -72,6 +72,11 @@ export const translations = {
         description:
           "Pagina web informativa y ecommerce en proceso para una empresa de climatizacion en general",
       },
+      atc: {
+        title: "Alquila tu cancha challenge",
+        description:
+          "Prueba tecnica front end en la que el objetivo es crear 2 equipos de 5 jugadores de futbol a nivel mundia, seleccionandolos consumiendo una API. Poder modificar los equipos y como extra se le agrego un apartado para simular un partido.",
+      },
     },
     contact: {
       title: "Contáctame",
@@ -157,6 +162,11 @@ export const translations = {
         title: "Jota Te Climatizacion",
         description:
           "Informative website and ecommerce in progress for an air conditioning company in general",
+      },
+      atc: {
+        title: "Alquila tu cancha challenge",
+        description:
+          "Front end technical test in which the objective is to create 2 teams of 5 soccer players worldwide, selecting them by consuming an API. Being able to modify the teams and as an extra a section was added to simulate a match.",
       },
     },
     contact: {

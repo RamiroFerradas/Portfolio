@@ -25,6 +25,7 @@ export default function NavBar({
       behavior: "smooth",
     });
   };
+
   const section = document.querySelectorAll(`section`);
   const [sectionActive, setsectionActive] = useLocalStorage("section", "home");
 

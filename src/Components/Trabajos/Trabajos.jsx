@@ -12,6 +12,7 @@ import videogames from "../../Assets/trabajos/videogames.png";
 import bikeTraining from "../../Assets/trabajos/bikeTraining.png";
 import StarWars from "../../Assets/trabajos/StartWars.png";
 import jotaTe from "../../Assets/trabajos/jotaTe.png";
+import ATC from "../../Assets/trabajos/atc.jpg";
 
 export default function Trabajos({ trabajos }) {
   const { text } = useLanguaje();
@@ -27,6 +28,27 @@ export default function Trabajos({ trabajos }) {
 
   const intersecting = entries[0]?.isIntersecting;
   const trabajosList = [
+    {
+      img: jotaTe,
+      title: text.work.jotaTe.title,
+      description: text.work.jotaTe.description,
+      link: "https://jotate-climatizacion.vercel.app/",
+      github: "https://github.com/RamiroFerradas/JotaTe-Climatizacion",
+    },
+    {
+      img: ATC,
+      title: text.work.atc.title,
+      description: text.work.atc.description,
+      link: "https://alquilatucancha.vercel.app/",
+      github: "https://github.com/RamiroFerradas/Alquila-Tu-Cancha.git",
+    },
+    {
+      img: StarWars,
+      title: text.work.starwars.title,
+      description: text.work.starwars.description,
+      link: "https://technical-challenger-wannabe.vercel.app/",
+      github: "https://github.com/RamiroFerradas/Technical-Challenger-Wannabe",
+    },
     {
       img: programax,
       title: text.work.programax.title,
@@ -61,20 +83,6 @@ export default function Trabajos({ trabajos }) {
       description: text.work.bikeTraining.description,
       link: "https://durandotraining.vercel.app/",
       github: "https://github.com/RamiroFerradas/BIKE-TRAINING.git",
-    },
-    {
-      img: StarWars,
-      title: text.work.starwars.title,
-      description: text.work.starwars.description,
-      link: "https://technical-challenger-wannabe.vercel.app/",
-      github: "https://github.com/RamiroFerradas/Technical-Challenger-Wannabe",
-    },
-    {
-      img: jotaTe,
-      title: text.work.jotaTe.title,
-      description: text.work.jotaTe.description,
-      link: "https://jotate-climatizacion.vercel.app/",
-      github: "https://github.com/RamiroFerradas/JotaTe-Climatizacion",
     },
   ];
   return (

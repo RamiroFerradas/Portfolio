@@ -6,7 +6,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Servicios from "./Components/Servicios/Servicios";
 import Trabajos from "./Components/Trabajos/Trabajos";
 import style from "./App.module.css";
-import useTheme from "./Hooks/useTheme";
+import Chat from "./Components/Chat/Chat";
 
 function App() {
   const trabajos = useRef();
@@ -34,6 +34,7 @@ function App() {
           setCloseMenu(true);
         }}
       >
+        {/* <Chat /> */}
         <Home inicio={inicio} />
         <About about={about} />
         <Servicios servicios={servicios} />

@@ -77,6 +77,11 @@ export const translations = {
         description:
           "Prueba tecnica front end en la que el objetivo es crear 2 equipos de 5 jugadores de futbol a nivel mundia, seleccionandolos consumiendo una API. Poder modificar los equipos y como extra se le agrego un apartado para simular un partido.",
       },
+      StoryDots: {
+        title: "Story dots ecommerce challenge",
+        description:
+          "Prueba tecnica full stack en la que el objetivo es crear un ecommerce de productos, construyendo tanto el base de datos, backend y frontend. SI estamos logueados podremos crear modificar eliminar y traer productos/marcas. Ademas podremos agregar productos a un carrito de compras y simular un pago.",
+      },
     },
     contact: {
       title: "Contáctame",
@@ -167,6 +172,11 @@ export const translations = {
         title: "Alquila tu cancha challenge",
         description:
           "Front end technical test in which the objective is to create 2 teams of 5 soccer players worldwide, selecting them by consuming an API. Being able to modify the teams and as an extra a section was added to simulate a match.",
+      },
+      StoryDots: {
+        title: "Story dots ecommerce challenge",
+        description:
+          "full stack technical test in which the objective is to create an ecommerce of products, building both the database, backend and frontend. If we are logged in, we can create, modify, delete and bring products/brands. We can also add products to a shopping cart and simulate a payment.",
       },
     },
     contact: {

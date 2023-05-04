@@ -13,6 +13,7 @@ import bikeTraining from "../../Assets/trabajos/bikeTraining.png";
 import StarWars from "../../Assets/trabajos/StartWars.png";
 import jotaTe from "../../Assets/trabajos/jotaTe.png";
 import ATC from "../../Assets/trabajos/atc.jpg";
+import StoryDots from "../../Assets/trabajos/ecommerce_storydots.jpg";
 
 export default function Trabajos({ trabajos }) {
   const { text } = useLanguaje();
@@ -28,6 +29,13 @@ export default function Trabajos({ trabajos }) {
 
   const intersecting = entries[0]?.isIntersecting;
   const trabajosList = [
+    {
+      img: StoryDots,
+      title: text.work.StoryDots.title,
+      description: text.work.StoryDots.description,
+      link: "https://ecommerce-storydots.vercel.app/",
+      github: "https://github.com/RamiroFerradas/Ecommerce.git",
+    },
     {
       img: jotaTe,
       title: text.work.jotaTe.title,

@@ -14,6 +14,7 @@ import StarWars from "../../Assets/trabajos/StartWars.png";
 import jotaTe from "../../Assets/trabajos/jotaTe.png";
 import ATC from "../../Assets/trabajos/atc.jpg";
 import StoryDots from "../../Assets/trabajos/ecommerce_storydots.jpg";
+import Dolars from "../../Assets/trabajos/Dolars.png";
 
 export default function Trabajos({ trabajos }) {
   const { text } = useLanguaje();
@@ -29,6 +30,13 @@ export default function Trabajos({ trabajos }) {
 
   const intersecting = entries[0]?.isIntersecting;
   const trabajosList = [
+    {
+      img: Dolars,
+      title: text.work.Dolars.title,
+      description: text.work.Dolars.description,
+      link: "https://dolars.vercel.app/",
+      github: "https://github.com/RamiroFerradas/Dolars",
+    },
     {
       img: StoryDots,
       title: text.work.StoryDots.title,
@@ -71,27 +79,27 @@ export default function Trabajos({ trabajos }) {
       link: "https://countriesapp-phi.vercel.app/",
       github: "https://github.com/RamiroFerradas/PI-COUNTRIES",
     },
-    {
-      img: pokemon,
-      title: text.work.pokemon.title,
-      description: text.work.pokemon.description,
-      link: "https://pi-pokemon-2.vercel.app/",
-      github: "https://github.com/RamiroFerradas/POKE-APP",
-    },
-    {
-      img: videogames,
-      title: text.work.videogames.title,
-      description: text.work.videogames.description,
-      link: "https://videogamesapp-nine.vercel.app",
-      github: "https://github.com/RamiroFerradas/VIDEOGAMES.git",
-    },
-    {
-      img: bikeTraining,
-      title: text.work.bikeTraining.title,
-      description: text.work.bikeTraining.description,
-      link: "https://durandotraining.vercel.app/",
-      github: "https://github.com/RamiroFerradas/BIKE-TRAINING.git",
-    },
+    // {
+    //   img: pokemon,
+    //   title: text.work.pokemon.title,
+    //   description: text.work.pokemon.description,
+    //   link: "https://pi-pokemon-2.vercel.app/",
+    //   github: "https://github.com/RamiroFerradas/POKE-APP",
+    // },
+    // {
+    //   img: videogames,
+    //   title: text.work.videogames.title,
+    //   description: text.work.videogames.description,
+    //   link: "https://videogamesapp-nine.vercel.app",
+    //   github: "https://github.com/RamiroFerradas/VIDEOGAMES.git",
+    // },
+    // {
+    //   img: bikeTraining,
+    //   title: text.work.bikeTraining.title,
+    //   description: text.work.bikeTraining.description,
+    //   link: "https://durandotraining.vercel.app/",
+    //   github: "https://github.com/RamiroFerradas/BIKE-TRAINING.git",
+    // },
   ];
   return (
     <section id="works">

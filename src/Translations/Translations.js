@@ -82,6 +82,11 @@ export const translations = {
         description:
           "Prueba tecnica full stack en la que el objetivo es crear un ecommerce de productos, construyendo tanto el base de datos, backend y frontend. SI estamos logueados podremos crear modificar eliminar y traer productos/marcas. Ademas podremos agregar productos a un carrito de compras y simular un pago.",
       },
+      Dolars: {
+        title: "Dolars",
+        description:
+          "Aplicaicon para obtener las diferentes cotizaciones del dólar, euro, reservas, evolucion, riesgo pais, etc. Ademas podemos tener una seccion donde tendremos las diferentes cotizacions del dolar en diferenets bancos de Argentina. Finalmente tendremos una seccion paracalcular cantidad de dolares a comprar/vender a diferentes tipos de cotizaciones",
+      },
     },
     contact: {
       title: "Contáctame",
@@ -177,6 +182,11 @@ export const translations = {
         title: "Story dots ecommerce challenge",
         description:
           "full stack technical test in which the objective is to create an ecommerce of products, building both the database, backend and frontend. If we are logged in, we can create, modify, delete and bring products/brands. We can also add products to a shopping cart and simulate a payment.",
+      },
+      Dolars: {
+        title: "Dolars",
+        description:
+          "Application to obtain the different prices of the dollar, euro, reserves, evolution, country risk, etc. We can also have a section where we will have the different dollar prices in different banks in Argentina. Finally we will have a section to calculate the amount of dollars to buy/sell at different types of quotes",
       },
     },
     contact: {

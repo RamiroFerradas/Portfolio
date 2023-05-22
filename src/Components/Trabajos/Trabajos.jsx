@@ -14,7 +14,7 @@ import StarWars from "../../Assets/trabajos/StartWars.png";
 import jotaTe from "../../Assets/trabajos/jotaTe.png";
 import ATC from "../../Assets/trabajos/atc.jpg";
 import StoryDots from "../../Assets/trabajos/ecommerce_storydots.jpg";
-import Dolars from "../../Assets/trabajos/Dolars.png";
+import Dolars from "../../Assets/trabajos/dolars.png";
 
 export default function Trabajos({ trabajos }) {
   const { text } = useLanguaje();

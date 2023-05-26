@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
       <div className="md:hidden block">
         <FontAwesomeIcon
-          className={`text-2xl m-1  ${!sideBarMenu ? "hidden" : ""} md:block`}
+          className={`text-2xl m-1  ${sideBarMenu ? "hidden" : ""} md:block`}
           onClick={() => {
             setSideBarMenu(true);
           }}
@@ -37,7 +37,7 @@ const Navbar = () => {
       <div
         className={`p-5 md:flex justify-center items-center md:gap-5 gap-10 flex-col md:flex-row ${
           sideBarMenu
-            ? `bg-[#f9004d] absolute right-0 h-screen top-0 w-40`
+            ? `bg-[#f9004d] md:bg-transparent absolute md:block right-0 h-screen md:h-auto top-0 w-40 md:w-auto`
             : `hidden`
         }`}
       >

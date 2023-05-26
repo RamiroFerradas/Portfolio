@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Navigation({ md, sideBarMenu, setSideBarMenu }) {
   const { scrolled, sectionActive } = useScrollSections();
   const { text } = useLanguage();
-  console.log(sectionActive);
+
   return (
     <ul className={` flex relative flex-col md:flex-row gap-5 md:gap-0`}>
       {Routes.map((value, index) => (

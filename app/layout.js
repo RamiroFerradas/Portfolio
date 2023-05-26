@@ -3,7 +3,7 @@ import { LanguageProvider } from "./context/LanguajeContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./tailwind.globals.css";
 import { Josefin_Sans } from "next/font/google";
-import appBg from "../public/images/background/fondito.jpg";
+import appBg from "../public/images/background/fondito-min.jpg";
 import Image from "next/image";
 
 const inter = Josefin_Sans({
@@ -21,12 +21,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        {/* <Script
-          src="https://platform.linkedin.com/badges/js/profile.js"
-          async
-          defer
-          type="text/javascript"
-        /> */}
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -36,16 +30,14 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={inter.className}>
+        <Image
+          alt="background"
+          src={appBg}
+          className="fixed h-screen object-cover w-screen"
+          priority
+        />
         <ThemeProvider>
-          <LanguageProvider>
-            <Image
-              alt="background"
-              src={appBg}
-              className="fixed h-screen object-cover w-screen"
-              priority
-            />
-            {children}
-          </LanguageProvider>
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

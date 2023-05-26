@@ -1,3 +1,4 @@
+"use client";
 import style from "./About.module.css";
 import yoImg from "../../../public/images/byn/ramiro.jpg";
 import pdf from "../../../public/cv/CV RAMIRO FERRADAS.pdf";

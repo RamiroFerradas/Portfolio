@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-
+"use client";
 import style from "./Servicios.module.css";
 import useObserver from "@/app/hooks/useObserver";
 import { useLanguage } from "@/app/context/LanguajeContext";

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+"use client";
 import style from "./Trabajos.module.css";
 import FieldTrabajo from "./Field/FieldTrabajo";
 import useObserver from "@/app/hooks/useObserver";

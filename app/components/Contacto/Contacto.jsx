@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+"use client";
+import React, { useRef } from "react";
 import style from "./Contacto.module.css";
-import emailjs from "@emailjs/browser";
 import { useLanguage } from "@/app/context/LanguajeContext";
 import useSendEmail from "@/app/hooks/useSendEmail";
 

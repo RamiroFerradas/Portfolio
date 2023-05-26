@@ -3,7 +3,8 @@ import { LanguageProvider } from "./context/LanguajeContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./tailwind.globals.css";
 import { Josefin_Sans } from "next/font/google";
-import Script from "next/script";
+import appBg from "../public/images/background/fondito.jpg";
+import Image from "next/image";
 
 const inter = Josefin_Sans({
   subsets: ["latin"],
@@ -36,7 +37,15 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={inter.className}>
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <Image
+              alt="background"
+              src={appBg}
+              className="fixed h-screen object-cover w-screen"
+              priority
+            />
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

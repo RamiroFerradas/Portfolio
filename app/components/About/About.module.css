@@ -1,0 +1,63 @@
+.image1,
+.image2,
+.image3,
+.image4 {
+  position: absolute;
+  border-radius: 30px;
+}
+
+.image1 {
+  -webkit-clip-path: polygon(0 0, 0 32%, 28% 0);
+  clip-path: polygon(0 0, 0 32%, 28% 0);
+  transform: translate(-10px, -10px);
+  /* transition: transform 300ms ease; */
+  transform-origin: top;
+}
+
+.image2 {
+  -webkit-clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+  clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+  transform: translate(-30px, 5px);
+  transition: transform 300ms ease;
+}
+
+.image3 {
+  -webkit-clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+  clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+  transform: translate(-15px, -10px);
+  transition: transform 300ms ease;
+}
+.image4 {
+  -webkit-clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+  clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+  transform: translate(-32px, 5px);
+  transition: transform 300ms ease;
+  transform-origin: top;
+}
+
+.image_wrapper .image1,
+.image_wrapper .image3,
+.image_wrapper .image4,
+.image_wrapper .image2 {
+  -webkit-animation: ease;
+  -webkit-animation-name: imageRun;
+  -webkit-animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes imageRun {
+  0% {
+    /* left: -50vw; */
+  }
+  /* 80% {
+    left: -8vw;
+  } */
+  50% {
+    /* left: -9vw; */
+  }
+  100% {
+    transform: translate(0, 0);
+    /* left: -10vw; */
+  }
+}

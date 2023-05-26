@@ -1,0 +1,122 @@
+/* LANGUAJE */
+.flagsContainer {
+  /* margin-left: 3vw; */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.flagsContainer button {
+  border: none;
+}
+.flagImg {
+  height: 35px;
+  width: 28px;
+  margin-left: 10px;
+  object-fit: contain;
+  /* margin-right: 0.5vw; */
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 0px;
+  pointer-events: none;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check_toggle_round_flat:checked ~ .off {
+  color: #f36f25;
+}
+
+input.check_toggle_round_flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #f36f25;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+}
+
+.check_toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check_toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check_toggle_round_flat + label {
+  padding: 2px;
+  width: 100px;
+  height: 35px;
+  background-color: #c2c2c259;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check_toggle_round_flat + label:before,
+input.check_toggle_round_flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check_toggle_round_flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #f9004d;
+  -webkit--moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check_toggle_round_flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 48px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+  overflow: hidden;
+}
+
+input.check_toggle_round_flat:checked + label:after {
+  margin-left: 44px;
+}

@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useState, useContext } from "react";
-import { translations } from "../translations/Translations";
+import { translations } from "../translations";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const LanguageContext = createContext();

@@ -1,28 +1,25 @@
 "use client";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { translations } from "../translations";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const LanguageContext = createContext();
-const initialLanguage = "esp";
 
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useLocalStorage(
-    "language",
-    initialLanguage ? initialLanguage : "esp"
-  );
-
-  const [text, setText] = useState(translations[language]);
+  const [language, setLanguage] = useLocalStorage("language", "esp");
+  const [text, setText] = useLocalStorage("text", "");
   const [check, setChecked] = useLocalStorage("check", false);
+
+  useEffect(() => {
+    setText(translations[language]);
+  }, [language]);
 
   const handleLanguage = (e) => {
     if (!e.target.checked) {
       setLanguage("esp");
-      setText(translations.esp);
       setChecked(false);
     } else {
       setLanguage("eng");
-      setText(translations.eng);
       setChecked(true);
     }
   };

@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+// "use client";
+import { useEffect, useRef, useCallback } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const useScrollSections = () => {

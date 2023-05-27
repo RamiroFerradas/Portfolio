@@ -21,7 +21,7 @@ export default function MyServices() {
       ref={sectionRef}
     >
       <div className={isIntersecting ? `text-2xl text-white` : `opacity-0`}>
-        <p>{text.services.title}</p>
+        <p>{text?.services?.title}</p>
       </div>
 
       <div

@@ -15,7 +15,7 @@ export default function Contact() {
       id="contact"
       className="flex flex-col justify-center items-center gap-2 h-screen"
     >
-      <p className="text-3xl text-white">{text.contact.title}</p>
+      <p className="text-3xl text-white">{text?.contact?.title}</p>
       <NetworksIcons />
       <FormContact />
     </section>

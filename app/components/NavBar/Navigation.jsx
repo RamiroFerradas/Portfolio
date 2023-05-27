@@ -20,7 +20,7 @@ export default function Navigation() {
               sectionActive === value.active ? "text-black" : `text-white`
             } md:hover:text-[#f9004d] font-bold`}
           >
-            {text.navBar[value.text]}
+            {text?.navBar?.[value.text]}
             <span
               className={`block max-w-0 ${
                 sectionActive === value.active && `max-w-full`

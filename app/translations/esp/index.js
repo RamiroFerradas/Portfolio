@@ -4,6 +4,7 @@ import { about } from "./about.js";
 import { services } from "./services.js";
 import { work } from "./work.js";
 import { contact } from "./contact.js";
+import { footer } from "./footer.js";
 
 export const esp = {
   home,
@@ -12,4 +13,5 @@ export const esp = {
   services,
   work,
   contact,
+  footer,
 };

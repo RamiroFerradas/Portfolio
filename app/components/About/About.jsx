@@ -61,14 +61,14 @@ export default function About() {
               isIntersecting ? `animate-runTitle` : `opacity-0`
             }`}
           >
-            {text.about.title}
+            {text?.about?.title}
           </p>
           <p
             className={`text-lg md:text-xl text-white mb-[1rem] relative right-0 ${
               isIntersecting ? `animate-runSubtitle` : `opacity-0`
             }`}
           >
-            {text.about.subtitle}
+            {text?.about?.subtitle}
             <span className="text-[#f9004d]"> Front end</span>
           </p>
           <p
@@ -76,7 +76,7 @@ export default function About() {
               isIntersecting ? `animate-runDescription` : `opacity-0`
             }`}
           >
-            {text.about.description}
+            {text?.about?.description}
           </p>
         </div>
       </div>
@@ -92,7 +92,7 @@ export default function About() {
             rel="noopener noreferrer"
             download="CV-Ramiro_Ferradas.pdf"
           >
-            {text.about.download}
+            {text?.about?.download}
           </a>
         </button>
       </div>

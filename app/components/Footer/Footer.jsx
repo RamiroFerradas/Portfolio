@@ -1,25 +1,22 @@
+import { useLanguage } from "@/app/context/LanguajeContext";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
+  const { text } = useLanguage();
+
   return (
     <footer className=" backdrop-blur-sm bg-opacity-90 bg-gray-800 md:py-6 py-8 text-white relative md:h-48">
       <div className="container mx-auto flex justify-center">
         <div className="text-center">
-          <h2 className="text-lg font-bold mb-2">
-            ¡Gracias por visitar mi portfolio!
-          </h2>
-          <p className="mb-4">
-            Si estás interesado en colaborar o tienes alguna pregunta, no dudes
-            en contactarme.
-          </p>
+          <p className="text-lg font-bold mb-2">{text?.footer?.title}</p>
+          <p className="mb-4">{text?.footer?.text1}</p>
         </div>
       </div>
       <div className="mt-4 text-center">
         <p>
-          &copy; {new Date().getFullYear()} - Realizado con Next.js por Ramiro
-          Ferradas. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} - {text?.footer?.text2}
         </p>
       </div>
       <div className="my-2 absolute right-2">

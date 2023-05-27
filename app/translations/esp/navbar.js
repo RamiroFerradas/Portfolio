@@ -1,5 +1,5 @@
 export const navBar = {
-  inicio: "inicio",
+  inicio: "Inicio",
   Sobre_mi: "Sobre mi",
   Servicios: "Servicios",
   Trabajos: "Trabajos",

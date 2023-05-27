@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-background": "linear-gradient(rgba(0, 0, 0, 0.6), #ff004f)",
+      },
       keyframes: {
         runTitle: {
           "0%": {
@@ -63,6 +66,31 @@ module.exports = {
             left: "15%",
           },
         },
+
+        fadeInFromNone2: {
+          "0%": {
+            display: "none",
+            opacity: "0",
+          },
+
+          "1%": {
+            display: "block",
+            opacity: "0",
+          },
+
+          "100%": {
+            display: "block",
+            opacity: "1",
+          },
+        },
+        moveUpDown: {
+          "0%, 100%": {
+            bottom: "0",
+          },
+          "50%": {
+            bottom: "1vh",
+          },
+        },
       },
       animation: {
         runTitle: "run ease 3s",
@@ -70,6 +98,8 @@ module.exports = {
         runDescription: "run ease 3s",
         animationButton: "fadeInFromNone ease 3s",
         runHome: "runLeft ease 2s",
+        animationServices: "fadeInFromNone2 ease-out 1.5s",
+        animationWorksCard: "moveUpDown linear infinite 0.6s",
       },
     },
   },

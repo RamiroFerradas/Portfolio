@@ -1,12 +1,11 @@
+"use client";
 import { useLanguage } from "@/app/context/LanguajeContext";
 import useScrollSections from "@/app/hooks/useScrollSectrions";
 import { Routes } from "@/app/routes/routes";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Navigation({ md, sideBarMenu, setSideBarMenu }) {
-  const { scrolled, sectionActive } = useScrollSections();
+export default function Navigation() {
   const { text } = useLanguage();
+  const { scrolled, sectionActive } = useScrollSections();
 
   return (
     <ul className={` flex relative flex-col md:flex-row gap-5 md:gap-0`}>

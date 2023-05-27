@@ -1,5 +1,4 @@
 "use client";
-
 import { useLanguage } from "@/app/context/LanguajeContext";
 
 export default function Home() {
@@ -8,7 +7,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="h-screen text-white relative text-2xl flex flex-col justify-start "
+      className="h-screen text-white retive text-2xl flex flex-col justify-start "
     >
       <div className="md:left-20 left-8 top-40 absolute animate-runHome">
         <p className="text-[#fcfc] tracking-wider">{text.home.homeText1}</p>

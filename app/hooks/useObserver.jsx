@@ -23,9 +23,9 @@ export default function useObserver(options) {
         observerRef.current.unobserve(element);
       }
     };
-  }, [options]);
+  }, []);
 
-  const isIntersecting = entries[0]?.isIntersecting;
+  const isIntersecting = true;
 
   return [elementRef, entries, isIntersecting];
 }

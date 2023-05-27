@@ -9,7 +9,6 @@ export default function useSendEmail(ref) {
   });
 
   const sendEmail = (e) => {
-    console.log("hola");
     e.preventDefault();
     if (/^\S+@\S+\.\S+$/.test(ref.current[1].value)) {
       emailjs

@@ -8,7 +8,7 @@ import ATC from "../../../public/trabajos/atc.jpg";
 import StoryDots from "../../../public/trabajos/ecommerce_storydots.jpg";
 import Dolars from "../../../public/trabajos/dolars.png";
 
-export const trabajosList = (text) => [
+export const worksList = (text) => [
   {
     img: Dolars,
     title: text.work.Dolars.title,

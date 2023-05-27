@@ -30,14 +30,16 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={inter.className}>
-        <Image
-          alt="background"
-          src={appBg}
-          className="fixed h-screen object-cover w-screen"
-          priority
-        />
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <Image
+              alt="background"
+              src={appBg}
+              className="fixed h-screen object-cover w-screen"
+              priority
+            />
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

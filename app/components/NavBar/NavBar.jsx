@@ -16,7 +16,7 @@ const Navbar = () => {
       className={`top-0 left-0 w-full z-50 transition-all duration-300 fixed ${
         scrolled
           ? "bg-white px-2 py-2 text-black h-16 transition-all duration-300 backdrop-blur-sm bg-opacity-80"
-          : " bg-transparent px-2 py-8 text-white  transition-all duration-300"
+          : " bg-transparent px-2 py-4 text-white  transition-all duration-300"
       } flex justify-between items-center`}
     >
       <div>

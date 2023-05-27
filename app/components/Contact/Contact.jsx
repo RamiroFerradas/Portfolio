@@ -4,7 +4,7 @@ import style from "./Contacto.module.css";
 import { useLanguage } from "@/app/context/LanguajeContext";
 import useSendEmail from "@/app/hooks/useSendEmail";
 
-export default function Contacto() {
+export default function Contact() {
   const { text } = useLanguage();
   const form = useRef(null);
 
@@ -88,22 +88,6 @@ export default function Contacto() {
               </div>
             </form>
           </div>
-          {/* <div
-            className="badge-base LI-profile-badge"
-            data-locale="es_ES"
-            data-size="medium"
-            data-theme="dark"
-            data-type="VERTICAL"
-            data-vanity="ramiro-ferradas"
-            data-version="v1"
-          >
-            <a
-              className="badge-base__link LI-simple-link"
-              href="https://ar.linkedin.com/in/ramiro-ferradas?trk=profile-badge"
-            >
-              Ramiro Ferradas
-            </a>
-          </div> */}
         </div>
       </div>
     </section>

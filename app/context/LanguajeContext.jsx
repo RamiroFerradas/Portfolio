@@ -11,11 +11,11 @@ const LanguageProvider = ({ children }) => {
     "language",
     initialLanguage ? initialLanguage : "esp"
   );
+
   const [text, setText] = useState(translations[language]);
   const [check, setChecked] = useLocalStorage("check", false);
 
   const handleLanguage = (e) => {
-    console.log(text);
     if (!e.target.checked) {
       setLanguage("esp");
       setText(translations.esp);

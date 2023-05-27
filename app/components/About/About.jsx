@@ -12,13 +12,13 @@ export default function About() {
   const [sectionRef, entries] = useObserver({
     threshold: 0.25,
   });
-  const isIntersecting = entries[0]?.isIntersecting;
+  const isIntersecting = true;
 
   return (
     <section
       id="about"
       ref={sectionRef}
-      className={`flex flex-col h-screen md:min-h-[50vh] relative bg-[#191919] overflow-hidden gap-12 md:p-10 p-5 `}
+      className={`flex flex-col h-screen bg-[#191919] overflow-hidden gap-12 md:p-10 p-5`}
     >
       <div className="flex items-center md:justify-center justify-around flex-col md:flex-row tems-center gap-5 h-full">
         <div

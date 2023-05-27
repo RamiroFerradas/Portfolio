@@ -2,11 +2,8 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const useScrollSections = () => {
-  const [scrolled, setScrolled] = useLocalStorage("scrolled", false);
-  const [sectionActive, setSectionActive] = useLocalStorage(
-    "sectionActive",
-    "home"
-  );
+  const [scrolled, setScrolled] = useState("scrolled", false);
+  const [sectionActive, setSectionActive] = useState("sectionActive", "home");
   const sectionRef = useRef([]);
 
   useEffect(() => {

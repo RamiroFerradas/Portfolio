@@ -37,7 +37,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="text-white hover:text-[#f9004d]"
         >
-          <FontAwesomeIcon icon={faLinkedin} size="lg ml-2" />
+          {/* <FontAwesomeIcon icon={faLinkedin} size="ml-2" /> */}
         </a>
       </div>
     </footer>

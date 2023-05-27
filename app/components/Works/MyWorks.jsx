@@ -8,8 +8,8 @@ export default function Works() {
   const [sectionRef, entries] = useObserver({
     threshold: 0.25,
   });
-  const isIntersecting = true;
-  // const isIntersecting = true;
+  const isIntersecting = entries[0]?.isIntersecting;
+  // const isIntersecting = entries[0]?.isIntersecting;;
   const { text } = useLanguage();
   const listaTrabajos = worksList(text);
 
@@ -17,7 +17,7 @@ export default function Works() {
     <section
       id="works"
       ref={sectionRef}
-      className="flex flex-col items-center gap-10 min-h-[100vh]"
+      className="flex flex-col items-center gap-10 min-h-[100vh] py-10 px-4"
     >
       <h1 className="text-white text-3xl">{text.work.title}</h1>
       <div

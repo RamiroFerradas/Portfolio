@@ -25,7 +25,7 @@ export default function useObserver(options) {
     };
   }, []);
 
-  const isIntersecting = true;
+  const isIntersecting = entries[0]?.isIntersecting;
 
   return [elementRef, entries, isIntersecting];
 }

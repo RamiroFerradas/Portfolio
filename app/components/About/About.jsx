@@ -12,7 +12,7 @@ export default function About() {
   const [sectionRef, entries] = useObserver({
     threshold: 0.25,
   });
-  const isIntersecting = true;
+  const isIntersecting = entries[0]?.isIntersecting;
 
   return (
     <section

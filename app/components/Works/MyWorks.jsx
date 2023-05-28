@@ -1,8 +1,8 @@
 "use client";
-import FieldTrabajo from "./CardWork";
 import useObserver from "@/app/hooks/useObserver";
 import { useLanguage } from "@/app/context/LanguajeContext";
 import { worksList } from "./WorksList";
+import CardWork from "./CardWork";
 
 export default function Works() {
   const [sectionRef, entries] = useObserver({
@@ -29,7 +29,7 @@ export default function Works() {
       >
         {listaTrabajos?.map(({ img, title, description, link, github }, i) => {
           return (
-            <FieldTrabajo
+            <CardWork
               key={i}
               img={img}
               title={title}

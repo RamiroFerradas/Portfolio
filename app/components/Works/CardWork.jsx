@@ -4,18 +4,12 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 
-export default function FieldTrabajo({
-  img,
-  title,
-  description,
-  github,
-  link,
-}) {
+export default function CardWork({ img, title, description, github, link }) {
   return (
     <div className="relative overflow-hidden rounded-xl group text-white ">
       <Image
         src={img}
-        alt={title}
+        alt={title || "trabajo realizado"}
         className="object-contain w-full block transition-transform duration-500"
       />
 

@@ -2,7 +2,7 @@ import style from "./LanguajeSwitch.module.css";
 import { useLanguage } from "@/app/context/LanguajeContext";
 
 const LanguageSwitch = () => {
-  const { handleLanguage, check } = useLanguage();
+  const { handleLanguage, checked } = useLanguage();
 
   return (
     <div className={style.flagsContainer}>
@@ -12,8 +12,8 @@ const LanguageSwitch = () => {
           id="language-toggle"
           className={`${style.check_toggle} ${style.check_toggle_round_flat}`}
           type="checkbox"
-          defaultChecked={check}
-        ></input>
+          checked={checked}
+        />
         <label htmlFor="language-toggle"></label>
         <span className={style.on}>
           <img

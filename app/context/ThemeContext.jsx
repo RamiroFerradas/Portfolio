@@ -1,15 +1,12 @@
 "use client";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const ThemeContext = createContext();
 const initialTheme = "dark";
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage(
-    "theme",
-    initialTheme ? initialTheme : `dark`
-  );
+  const [theme, setTheme] = useState(initialTheme ? initialTheme : `dark`);
 
   const handleTheme = (value) => {
     if (value === "dark") {

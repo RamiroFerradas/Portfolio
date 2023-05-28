@@ -6,36 +6,25 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 const LanguageContext = createContext();
 
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useLocalStorage("language", "");
-  const [text, setText] = useLocalStorage("text", "");
-  const [check, setChecked] = useLocalStorage("check", false);
-
-  useEffect(() => {
-    // Lógica para language
-    setLanguage("esp");
-  }, []);
-
-  useEffect(() => {
-    // Lógica para text
-    setText(translations[language]);
-  }, [language]);
-
-  useEffect(() => {
-    // Lógica para check
-    setChecked(false);
-  }, []);
+  const [language, setLanguage] = useLocalStorage("language", "esp");
+  const [text, setText] = useLocalStorage("text", translations[language]);
+  const [checked, setChecked] = useLocalStorage("check", false);
 
   const handleLanguage = (e) => {
-    if (!e.target.checked) {
-      setLanguage("esp");
+    const checked = e.target.checked;
+    // console.log(checked);
+    if (!checked) {
       setChecked(false);
+      setLanguage("esp");
+      setText(translations.esp);
     } else {
-      setLanguage("eng");
       setChecked(true);
+      setLanguage("eng");
+      setText(translations.eng);
     }
   };
 
-  const data = { text, handleLanguage, language, check };
+  const data = { text, handleLanguage, language, checked };
 
   return (
     <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>

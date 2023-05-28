@@ -1,23 +1,33 @@
-"use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const useLocalStorage = (key, initialValue) => {
-  const [storedValue, setStoredValue] = useState(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      return initialValue;
-    }
-  });
+  const [storedValue, setStoredValue] = useState();
 
   const setValue = (value) => {
-    try {
-      setStoredValue(value);
-      window.localStorage.setItem(key, JSON.stringify(value));
-    } catch (error) {
-      console.error(error);
-    }
+    window.localStorage.setItem(key, JSON.stringify(value));
   };
-  return [storedValue, setValue];
+
+  useEffect(() => {
+    const value = window.localStorage.getItem(key);
+
+    if (value) {
+      try {
+        const parsed = JSON.parse(value);
+        setStoredValue(parsed);
+      } catch (error) {
+        console.log(error);
+        setStoredValue(initialValue);
+      }
+    } else {
+      setStoredValue(initialValue);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (storedValue) {
+      setValue(storedValue);
+    }
+  }, [storedValue]);
+
+  return [storedValue, setStoredValue];
 };

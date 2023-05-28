@@ -14,7 +14,7 @@ export default function Home() {
         <p className="md:text-7xl text-4xl md:my-5 my-2 mx-0 tracking-wider ">
           Ramiro Ferradas
         </p>
-        <p className="">{text?.home?.homeText2}.</p>
+        <p className="">{text?.home?.homeText2}</p>
       </div>
     </section>
   );

@@ -16,13 +16,13 @@ export default function FormContact() {
       <input
         type="text"
         name="user_name"
-        placeholder={text?.contact?.placeholder.name}
+        placeholder={text.contact.placeholder.name}
         className="md:w-[60vw] w-full border-0 outline-none bg-[#262626] py-2 px-4 my-3 text-white text-lg rounded-md"
       />
       <input
         type="text"
         name="user_email"
-        placeholder={text?.contact?.placeholder.email}
+        placeholder={text.contact.placeholder.email}
         // required
         className="md:w-[60vw] w-full border-0 outline-none bg-[#262626] py-2 px-4 my-3 text-white text-lg rounded-md"
       />
@@ -31,7 +31,7 @@ export default function FormContact() {
         id=""
         rows="6"
         cols="30"
-        placeholder={text?.contact?.placeholder.msg}
+        placeholder={text.contact.placeholder.msg}
         // required
         className="md:w-[60vw] w-full border-0 outline-none bg-[#262626] py-2 px-4 my-3 text-white text-lg rounded-md"
       />
@@ -41,7 +41,7 @@ export default function FormContact() {
           className={`
              animate-animationButton bg-[#f9004d] font-bold border-2 border-transparent px-8 py-3 rounded-3xl relative z-10 text-white hover:bg-transparent hover:border-2 hover:border-[#f9004d] transition-[1s] w-40`}
         >
-          {text?.contact?.send}
+          {text.contact.send}
         </button>
 
         {mensaje && (

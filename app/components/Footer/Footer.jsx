@@ -10,13 +10,13 @@ export default function Footer() {
     <footer className=" backdrop-blur-sm bg-opacity-90 bg-gray-800 md:py-6 py-8 text-white relative md:h-48">
       <div className="container mx-auto flex justify-center">
         <div className="text-center">
-          <p className="text-lg font-bold mb-2">{text?.footer?.title}</p>
-          <p className="mb-4">{text?.footer?.text1}</p>
+          <p className="text-lg font-bold mb-2">{text.footer.title}</p>
+          <p className="mb-4">{text.footer.text1}</p>
         </div>
       </div>
       <div className="mt-4 text-center">
         <p>
-          &copy; {new Date().getFullYear()} - {text?.footer?.text2}
+          &copy; {new Date().getFullYear()} - {text.footer.text2}
         </p>
       </div>
       <div className="my-2 absolute right-2">

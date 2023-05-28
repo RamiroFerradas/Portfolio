@@ -7,11 +7,16 @@ import Works from "./components/Works/MyWorks";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
+import { useLanguage } from "./context/LanguajeContext";
+import Loading from "./components/loading";
 
 export default function App() {
   const [sideBarMenu, setSideBarMenu] = useState(false);
+  const { text } = useLanguage();
 
-  return (
+  return !text ? (
+    <Loading />
+  ) : (
     <main className="relative" onClick={() => setSideBarMenu(false)}>
       <NavBar setSideBarMenu={setSideBarMenu} sideBarMenu={sideBarMenu} />
       <Home />

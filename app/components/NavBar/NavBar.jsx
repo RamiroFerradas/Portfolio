@@ -10,9 +10,7 @@ const Navbar = ({ setSideBarMenu, sideBarMenu }) => {
 
   return (
     <nav
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
+      onClick={(e) => {}}
       className={`top-0 left-0 w-full z-50 transition-all duration-300 fixed ${
         scrolled
           ? "bg-white px-2 py-2 text-black h-16 transition-all duration-300 backdrop-blur-sm bg-opacity-80"
@@ -39,6 +37,7 @@ const Navbar = ({ setSideBarMenu, sideBarMenu }) => {
       </div>
 
       <div
+        onClick={(e) => e.stopPropagation()}
         className={`p-5 md:flex justify-center items-center md:gap-5 gap-10 flex-col md:flex-row ${
           sideBarMenu
             ? `bg-[#f9004d] md:bg-transparent absolute md:block right-0 h-screen md:h-auto top-0 w-40 md:w-auto`

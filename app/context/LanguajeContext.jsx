@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext, useLayoutEffect } from "react";
 import { translations } from "../translations";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
@@ -10,7 +10,7 @@ const LanguageProvider = ({ children }) => {
   const [text, setText] = useLocalStorage("text", translations[language]);
   const [checked, setChecked] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     language === "esp" ? setChecked(false) : setChecked(true);
   }, [language]);
 

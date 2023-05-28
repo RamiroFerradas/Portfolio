@@ -52,12 +52,7 @@ export default function useSendEmail(ref) {
     }
 
     try {
-      const result = await emailjs.sendForm(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        ref.current,
-        PUBLIC_KEY
-      );
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, ref.current, PUBLIC_KEY);
       // console.log(result);
 
       setMensaje({

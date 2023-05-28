@@ -1,9 +1,5 @@
 "use client";
 import { useLanguage } from "@/app/context/LanguajeContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import FormContact from "./FormContact";
 import NetworksIcons from "./NetworksIcons";
 

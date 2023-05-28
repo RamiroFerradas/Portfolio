@@ -1,6 +1,5 @@
 "use client";
 import { useLanguage } from "@/app/context/LanguajeContext";
-import Loading from "../loading";
 
 export default function Home() {
   const { text } = useLanguage();

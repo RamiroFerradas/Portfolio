@@ -17,7 +17,7 @@ export default function Works() {
     <section
       id="works"
       ref={sectionRef}
-      className="flex flex-col items-center gap-10 min-h-[100vh] py-10 px-4"
+      className="flex flex-col items-center gap-10 py-10 px-4"
     >
       <h1 className="text-white text-3xl">{text?.work?.title}</h1>
       <div

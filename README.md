@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portafolio
 
-## Getting Started
+## Breve descripción del proyecto y su propósito
 
-First, run the development server:
+Este proyecto de portafolio desarrollado en Next.js tiene como objetivo mostrar mi experiencia, habilidades y proyectos destacados como desarrollador web. Proporciona una forma interactiva y atractiva de presentar mi trabajo a posibles empleadores o clientes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+El portafolio incluye una página de inicio que muestra una descripción general sobre mí y mis habilidades principales. Además, cuenta con secciones dedicadas a mis proyectos, donde se pueden ver capturas de pantalla, descripciones y enlaces a cada proyecto individual. También hay una página de contacto para que los visitantes puedan comunicarse conmigo fácilmente.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El propósito principal de este portafolio es destacar mis capacidades y logros en el desarrollo web, así como brindar una muestra visual de mi trabajo. Espero que este portafolio sea una herramienta efectiva para mostrar mi experiencia y atraer oportunidades profesionales.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+¡Gracias por visitar mi portafolio!
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Uso
 
-## Learn More
+1. Instala las dependencias: `npm install`
+2. Ejecuta el proyecto: `npm run dev`
+3. Abre tu navegador y ve a `http://localhost:3000` para ver el portafolio en funcionamiento.
 
-To learn more about Next.js, take a look at the following resources:
+## Despliegue
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este proyecto se encuentra desplegado en [Vercel](https://vercel.com). Puedes acceder al portafolio en vivo en [www.ramiroferradas.com.ar](https://www.ramiroferradas.com.ar).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Estructura del Proyecto
 
-## Deploy on Vercel
+- `/app`: Contiene los archivos principales de la aplicación.
+  - `/components`: Contiene los componentes utilizados en el proyecto.
+  - `/context`: Contiene los contextos de la aplicación.
+  - `/hooks`: Contiene los hooks personalizados.
+  - `/routes`: Contiene las rutas de la aplicación.
+  - `/translations`: Contiene los archivos de traducción.
+- `/public`: Contiene los archivos estáticos, como imágenes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribución
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+¡Se agradecen las contribuciones! Si deseas enviar una solicitud de extracción o informar un error, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu contribución: `git checkout -b mi-contribucion`
+3. Realiza los cambios y realiza commits: `git commit -m "Descripción de los cambios"`
+4. Envía la solicitud de extracción desde tu repositorio.
+
+## Licencia
+
+Este proyecto se distribuye bajo la [Licencia MIT](LICENSE).
+
+## Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme por correo electrónico a [ramiferra97@gmail.com](mailto:ramiferra97@gmail.com).

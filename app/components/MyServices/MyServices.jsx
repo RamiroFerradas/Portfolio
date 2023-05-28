@@ -20,7 +20,7 @@ export default function MyServices() {
       className={`in-h-[100vh] flex flex-col justify-center items-center gap-6 my-10 relative text-white`}
       ref={sectionRef}
     >
-      <div className={isIntersecting ? `text-2xl text-white` : `opacity-0`}>
+      <div className={isIntersecting ? `text-3xl text-white` : `opacity-0`}>
         <p>{text.services.title}</p>
       </div>
 

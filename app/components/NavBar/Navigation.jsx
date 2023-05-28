@@ -6,10 +6,11 @@ import { Routes } from "@/app/routes/routes";
 export default function Navigation() {
   const { text } = useLanguage();
   const { scrolled, sectionActive } = useScrollSections();
-
+  const Links = Routes(text.navBar);
+  console.log(text.navBar);
   return (
     <ul className={` flex relative flex-col md:flex-row gap-5 md:gap-0`}>
-      {Routes.map((value, index) => (
+      {Links?.map((value, index) => (
         <li
           key={index}
           className="group font-bold text-gray-600 transition duration-300 mx-2 flex flex-row"
@@ -20,12 +21,12 @@ export default function Navigation() {
               sectionActive === value.active ? "text-black" : `text-white`
             } md:hover:text-[#f9004d] font-bold`}
           >
-            {text.navBar[value.text]}
+            {value.text}
             <span
               className={`block max-w-0 ${
                 sectionActive === value.active && `max-w-full`
               } md:group-hover:max-w-full transition-all duration-500 h-[3px] md:bg-[#f9004d] bg-black`}
-            ></span>
+            />
           </a>
         </li>
       ))}

@@ -1,7 +1,7 @@
 export const navBar = {
-  inicio: "Inicio",
-  Sobre_mi: "Sobre mi",
-  Servicios: "Servicios",
-  Trabajos: "Trabajos",
-  Contacto: "Contacto",
+  Home: "Inicio",
+  About: "Sobre mi",
+  Services: "Servicios",
+  Works: "Trabajos",
+  Contact: "Contacto",
 };

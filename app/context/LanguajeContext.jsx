@@ -8,17 +8,19 @@ const LanguageContext = createContext();
 const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useLocalStorage("language", "esp");
   const [text, setText] = useLocalStorage("text", translations[language]);
-  const [checked, setChecked] = useLocalStorage("check", false);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    language === "esp" ? setChecked(false) : setChecked(true);
+  }, [language]);
 
   const handleLanguage = (e) => {
     const checked = e.target.checked;
-    // console.log(checked);
+
     if (!checked) {
-      setChecked(false);
       setLanguage("esp");
       setText(translations.esp);
     } else {
-      setChecked(true);
       setLanguage("eng");
       setText(translations.eng);
     }

@@ -9,7 +9,7 @@ const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("esp");
   const [text, setText] = useState(translations[language]);
   const [checked, setChecked] = useState(false);
-  console.log(text);
+
   useLayoutEffect(() => {
     language === "esp" ? setChecked(false) : setChecked(true);
   }, [language]);

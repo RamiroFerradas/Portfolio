@@ -14,13 +14,12 @@ import Chat from "./components/Chat/Chat";
 export default function App() {
   const [sideBarMenu, setSideBarMenu] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const { text } = useLanguage();
   const [load, setload] = useState(true);
   setTimeout(() => {
     setload(false);
-  }, 500);
+  }, 300);
 
-  return Object.keys(text).length === 0 || load ? (
+  return load ? (
     <Loading />
   ) : (
     <main

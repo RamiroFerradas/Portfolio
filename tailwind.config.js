@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        josefin: ["var(--font-josefin_sans)"],
+      },
       backgroundImage: {
         "custom-background": "linear-gradient(rgba(0, 0, 0, 0.6), #ff004f)",
       },

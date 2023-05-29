@@ -7,7 +7,7 @@ export default function Navigation() {
   const { text } = useLanguage();
   const { scrolled, sectionActive } = useScrollSections();
   const Links = Routes(text.navBar);
-  console.log(text.navBar);
+
   return (
     <ul className={` flex relative flex-col md:flex-row gap-5 md:gap-0`}>
       {Links?.map((value, index) => (

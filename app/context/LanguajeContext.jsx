@@ -6,10 +6,10 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 const LanguageContext = createContext();
 
 const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useLocalStorage("language", "esp");
-  const [text, setText] = useLocalStorage("text", translations[language]);
+  const [language, setLanguage] = useState("esp");
+  const [text, setText] = useState(translations[language]);
   const [checked, setChecked] = useState(false);
-
+  console.log(text);
   useLayoutEffect(() => {
     language === "esp" ? setChecked(false) : setChecked(true);
   }, [language]);

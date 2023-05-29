@@ -16,7 +16,9 @@ export default function App() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { text } = useLanguage();
 
-  return !text ? (
+  console.log(Object.keys(text).length);
+
+  return Object.keys(text).length === 0 ? (
     <Loading />
   ) : (
     <main

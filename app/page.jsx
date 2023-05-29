@@ -15,8 +15,12 @@ export default function App() {
   const [sideBarMenu, setSideBarMenu] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { text } = useLanguage();
+  const [load, setload] = useState(true);
+  setTimeout(() => {
+    setload(false);
+  }, 500);
 
-  return Object.keys(text).length === 0 ? (
+  return Object.keys(text).length === 0 || load ? (
     <Loading />
   ) : (
     <main

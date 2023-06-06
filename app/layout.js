@@ -42,6 +42,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Sans:wght@500&display=swap"
           // rel="stylesheet"
         />
+        <meta
+          name="google-site-verification"
+          content="lxRS46NXhq36gW0O8UDN2O_srvTL5d_Fd74kynCd6A0"
+        />
       </Head>
       <body className={inter.className}>
         <Image

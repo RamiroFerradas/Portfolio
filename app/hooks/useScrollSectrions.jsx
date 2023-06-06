@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import { useLocalStorage } from "./useLocalStorage";
 
 const useScrollSections = () => {
   const [scrolled, setScrolled] = useState(false);

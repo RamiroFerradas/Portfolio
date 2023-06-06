@@ -25,7 +25,6 @@ export default function App() {
     const tagManagerArgs = {
       gtmId: "GTM-M7TK9HN",
     };
-
     TagManager.initialize(tagManagerArgs);
   }, []);
 

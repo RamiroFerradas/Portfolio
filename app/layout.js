@@ -7,7 +7,6 @@ import { Josefin_Sans } from "next/font/google";
 
 import localFont from "@next/font/local";
 import Head from "next/head";
-import Script from "next/script";
 
 const josefinSans = localFont({
   src: [
@@ -33,6 +32,7 @@ export const metadata = {
   title: "Ramiro Ferradas",
   description: "Portafolio Ramiro Ferradas",
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

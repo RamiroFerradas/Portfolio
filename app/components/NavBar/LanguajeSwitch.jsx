@@ -1,5 +1,5 @@
-import style from "./LanguajeSwitch.module.css";
 import { useLanguage } from "@/app/context/LanguajeContext";
+import style from "./LanguajeSwitch.module.css";
 
 const LanguageSwitch = () => {
   const { handleLanguage, checked } = useLanguage();

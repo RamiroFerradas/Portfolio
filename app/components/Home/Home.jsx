@@ -1,4 +1,5 @@
 "use client";
+
 import { useLanguage } from "@/app/context/LanguajeContext";
 
 export default function Home() {

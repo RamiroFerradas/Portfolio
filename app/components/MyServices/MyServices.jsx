@@ -1,8 +1,9 @@
 "use client";
-import useObserver from "@/app/hooks/useObserver";
+
 import { useLanguage } from "@/app/context/LanguajeContext";
 import Card from "./Card";
 import { ListServices } from "./ListServices";
+import useObserver from "@/app/hooks/useObserver";
 
 export default function MyServices() {
   const { text } = useLanguage();

@@ -7,7 +7,6 @@ import {
   useEffect,
 } from "react";
 import { translations } from "../translations";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const LanguageContext = createContext();
 

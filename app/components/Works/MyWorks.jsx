@@ -1,8 +1,9 @@
 "use client";
 import useObserver from "@/app/hooks/useObserver";
-import { useLanguage } from "@/app/context/LanguajeContext";
+
 import { worksList } from "./WorksList";
 import CardWork from "./CardWork";
+import { useLanguage } from "@/app/context/LanguajeContext";
 
 export default function Works() {
   const [sectionRef, entries] = useObserver({

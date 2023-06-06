@@ -7,6 +7,7 @@ import { Josefin_Sans } from "next/font/google";
 
 import localFont from "@next/font/local";
 import Head from "next/head";
+import Script from "next/script";
 
 const josefinSans = localFont({
   src: [
@@ -32,7 +33,6 @@ export const metadata = {
   title: "Ramiro Ferradas",
   description: "Portafolio Ramiro Ferradas",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -46,8 +46,20 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="lxRS46NXhq36gW0O8UDN2O_srvTL5d_Fd74kynCd6A0"
         />
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtm.js?id=GTM-M7TK9HN`}
+        />
       </Head>
       <body className={inter.className}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M7TK9HN"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>
+        </noscript>
         <Image
           alt="background"
           src={appBg}

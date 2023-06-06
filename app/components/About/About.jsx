@@ -1,7 +1,7 @@
 "use client";
 import style from "./About.module.css";
 import yoImg from "../../../public/images/byn/ramiro.jpg";
-import pdf from "../../../public/cv/CV RAMIRO FERRADAS - FRONT END DEVELOPER.pdf";
+import pdf from "../../../public/cv/RAMIRO FERRADAS - FRONT END DEVELOPER .pdf";
 import Image from "next/image";
 import { useLanguage } from "@/app/context/LanguajeContext";
 import useObserver from "@/app/hooks/useObserver";

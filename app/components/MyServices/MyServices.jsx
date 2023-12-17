@@ -11,7 +11,7 @@ export default function MyServices() {
     threshold: 0.25,
   });
 
-  const isIntersecting = entries[0]?.isIntersecting;
+  const isIntersecting = true || entries[0]?.isIntersecting;
 
   const services = ListServices(text);
 

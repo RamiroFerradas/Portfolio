@@ -9,7 +9,7 @@ export default function Works() {
   const [sectionRef, entries] = useObserver({
     threshold: 0.25,
   });
-  const isIntersecting = entries[0]?.isIntersecting;
+  const isIntersecting = true || entries[0]?.isIntersecting;
   // const isIntersecting = entries[0]?.isIntersecting;;
   const { text } = useLanguage();
   const listaTrabajos = worksList(text);
@@ -17,7 +17,7 @@ export default function Works() {
   return (
     <section
       id="works"
-      ref={sectionRef}
+      // ref={sectionRef}
       className="flex flex-col items-center gap-10 py-10 px-4"
     >
       <h1 className="text-white text-3xl">{text?.work?.title}</h1>

@@ -5,18 +5,24 @@ import pdf from "../../../public/cv/RAMIRO FERRADAS - FRONT END DEVELOPER .pdf";
 import Image from "next/image";
 import { useLanguage } from "@/app/context/LanguajeContext";
 import useObserver from "@/app/hooks/useObserver";
+import useObserver2 from "../../hooks/useObserver2";
+import { animated, useSpring, useInView } from "@react-spring/web";
+// import { useInView, animated } from "@react-spring/web";
 
 export default function About() {
   const { text } = useLanguage();
-  const [sectionRef, entries] = useObserver({
-    threshold: 0.25,
-  });
-  const isIntersecting = entries[0]?.isIntersecting;
+  const [ref, inView] = useInView();
+  // const [sectionRef, entries] = useObserver({
+  //   threshold: 0.25,
+  // });
+  // const isIntersecting = entries[0]?.isIntersecting;
 
+  const isIntersecting = inView;
   return (
-    <section
+    <animated.section
       id="about"
-      ref={sectionRef}
+      ref={ref}
+      // style={animationProps}
       className={`flex flex-col h-screen bg-[#191919] overflow-hidden gap-12 md:p-10 p-5`}
     >
       <div className="flex items-center md:justify-center justify-around flex-col md:flex-row tems-center gap-5 h-full">
@@ -95,6 +101,6 @@ export default function About() {
           </a>
         </button>
       </div>
-    </section>
+    </animated.section>
   );
 }

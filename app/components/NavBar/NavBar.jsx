@@ -5,12 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = ({ setSideBarMenu, sideBarMenu }) => {
+const Navbar = ({ setSideBarMenu, sideBarMenu, activeSection }) => {
   const { scrolled } = useScrollSections();
 
   return (
     <nav
-      onClick={(e) => {}}
       className={`top-0 left-0 w-full z-50 transition-all duration-300 fixed ${
         scrolled
           ? "bg-white px-2 py-2 text-black h-16 transition-all duration-300 backdrop-blur-sm bg-opacity-80"
@@ -54,7 +53,7 @@ const Navbar = ({ setSideBarMenu, sideBarMenu }) => {
           />
         </div>
 
-        <Navigation sideBarMenu={sideBarMenu} setSideBarMenu={setSideBarMenu} />
+        <Navigation activeSection={activeSection} />
         <div className="mt-5 md:mt-0">
           <LanguageSwitch />
         </div>

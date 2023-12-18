@@ -12,22 +12,31 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Loading from "./components/loading";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function App() {
   const [sideBarMenu, setSideBarMenu] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("Inicio");
   const [load, setload] = useState(true);
   setTimeout(() => {
     setload(false);
   }, 300);
 
   useEffect(() => {
+    AOS.init();
     const tagManagerArgs = {
       gtmId: "GTM-M7TK9HN",
     };
     TagManager.initialize(tagManagerArgs);
   }, []);
 
+  const handleSectionVisibility = (isVisible, sectionName) => {
+    if (isVisible) {
+      setActiveSection(sectionName);
+    }
+  };
   return load ? (
     <Loading />
   ) : (
@@ -38,13 +47,17 @@ export default function App() {
         setIsChatOpen(false);
       }}
     >
-      <Navbar setSideBarMenu={setSideBarMenu} sideBarMenu={sideBarMenu} />
-      <Chat setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen} />
-      <Home />
-      <About />
-      <MyServices />
-      <Works />
-      <Contact />
+      <Navbar
+        setSideBarMenu={setSideBarMenu}
+        sideBarMenu={sideBarMenu}
+        activeSection={activeSection}
+      />
+      {/* <Chat setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen} handleSectionVisibility={handleSectionVisibility} /> */}
+      <Home handleSectionVisibility={handleSectionVisibility} />
+      <About handleSectionVisibility={handleSectionVisibility} />
+      <MyServices handleSectionVisibility={handleSectionVisibility} />
+      <Works handleSectionVisibility={handleSectionVisibility} />
+      <Contact handleSectionVisibility={handleSectionVisibility} />
       <Footer />
     </main>
   );

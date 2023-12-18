@@ -15,7 +15,7 @@ export const useLocalStorage = (key, initialValue) => {
         const parsed = JSON.parse(value);
         setStoredValue(parsed);
       } catch (error) {
-        console.log(error);
+        console.error(error);
         setStoredValue(initialValue);
       }
     } else {

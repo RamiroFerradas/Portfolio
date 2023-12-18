@@ -3,12 +3,12 @@
 import { useLanguage } from "@/app/context/LanguajeContext";
 import useScrollSections from "@/app/hooks/useScrollSectrions";
 import { Routes } from "@/app/routes/routes";
+import LinkScroll from "../LinkScroll";
 
-export default function Navigation() {
+export default function Navigation({ activeSection }) {
   const { text } = useLanguage();
-  const { scrolled, sectionActive } = useScrollSections();
+  const { scrolled } = useScrollSections();
   const Links = Routes(text.navBar);
-
   return (
     <ul className={` flex relative flex-col md:flex-row gap-5 md:gap-0`}>
       {Links?.map((value, index) => (
@@ -16,19 +16,20 @@ export default function Navigation() {
           key={index}
           className="group font-bold text-gray-600 transition duration-300 mx-2 flex flex-row"
         >
-          <a
-            href={value.href}
+          <LinkScroll
+            offset={-10}
+            to={value.href}
             className={` ${scrolled ? "md:text-black" : ` md:text-white`} ${
-              sectionActive === value.active ? "text-black" : `text-white`
+              activeSection === value.active ? "text-black" : `text-white`
             } md:hover:text-[#f9004d] font-bold`}
           >
             {value.text}
             <span
               className={`block max-w-0 ${
-                sectionActive === value.active && `max-w-full`
+                activeSection === value.active && `max-w-full`
               } md:group-hover:max-w-full transition-all duration-500 h-[3px] md:bg-[#f9004d] bg-black`}
             />
-          </a>
+          </LinkScroll>
         </li>
       ))}
     </ul>

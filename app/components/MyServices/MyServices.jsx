@@ -17,7 +17,7 @@ export default function MyServices({ handleSectionVisibility }) {
     >
       <section
         id="services"
-        className={`flex flex-col justify-center items-center gap-6 my-10 relative text-white h-[100vh]`}
+        className={`flex flex-col justify-center items-center gap-6 my-10 relative text-white h[100vh]`}
         data-aos="zoom-in-up"
       >
         <div className={`text-3xl text-white`}>

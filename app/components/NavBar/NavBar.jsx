@@ -16,7 +16,7 @@ const Navbar = ({ setSideBarMenu, sideBarMenu, activeSection }) => {
           : " bg-transparent px-2 py-4 text-white  transition-all duration-300"
       } flex justify-between items-center`}
     >
-      <div>
+      <div className="px-5">
         <a
           href="#home"
           className="text-4xl tracking-wider cursor-pointer font-semibold bg-transparent relative"
